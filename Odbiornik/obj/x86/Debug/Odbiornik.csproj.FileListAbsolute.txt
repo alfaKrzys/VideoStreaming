@@ -1,0 +1,19 @@
+C:\Users\Krzysiek\Documents\Visual Studio 2010\Projects\AudioVideoStreaming\Odbiornik\bin\Debug\Odbiornik.exe
+C:\Users\Krzysiek\Documents\Visual Studio 2010\Projects\AudioVideoStreaming\Odbiornik\bin\Debug\Odbiornik.pdb
+C:\Users\Krzysiek\Documents\Visual Studio 2010\Projects\AudioVideoStreaming\Odbiornik\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Krzysiek\Documents\Visual Studio 2010\Projects\AudioVideoStreaming\Odbiornik\obj\x86\Debug\Odbiornik.Properties.Resources.resources
+C:\Users\Krzysiek\Documents\Visual Studio 2010\Projects\AudioVideoStreaming\Odbiornik\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\Krzysiek\Documents\Visual Studio 2010\Projects\AudioVideoStreaming\Odbiornik\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\Krzysiek\Documents\Visual Studio 2010\Projects\AudioVideoStreaming\Odbiornik\obj\x86\Debug\Odbiornik.exe
+C:\Users\Krzysiek\Documents\Visual Studio 2010\Projects\AudioVideoStreaming\Odbiornik\obj\x86\Debug\Odbiornik.pdb
+C:\Users\Krzysiek\Documents\Visual Studio 2010\Projects\AudioVideoStreaming\Odbiornik\bin\Debug\MSR.LST.Net.Rtp.dll
+C:\Users\Krzysiek\Documents\Visual Studio 2010\Projects\AudioVideoStreaming\Odbiornik\obj\x86\Debug\Odbiornik.Form1.resources
+C:\Users\Krzysiek\Documents\Visual Studio 2010\Projects\AudioVideoStreaming\Odbiornik\bin\Debug\LSTCommon.DLL
+C:\Users\Krzysiek\Documents\Visual Studio 2010\Projects\AudioVideoStreaming\Odbiornik\bin\Debug\NetworkingBasics.dll
+C:\Users\os_al\GitHub\AudioVideoStreaming\Odbiornik\bin\Debug\Odbiornik.exe
+C:\Users\os_al\GitHub\AudioVideoStreaming\Odbiornik\bin\Debug\Odbiornik.pdb
+C:\Users\os_al\GitHub\AudioVideoStreaming\Odbiornik\obj\x86\Debug\Odbiornik.Form1.resources
+C:\Users\os_al\GitHub\AudioVideoStreaming\Odbiornik\obj\x86\Debug\Odbiornik.Properties.Resources.resources
+C:\Users\os_al\GitHub\AudioVideoStreaming\Odbiornik\obj\x86\Debug\Odbiornik.csproj.GenerateResource.Cache
+C:\Users\os_al\GitHub\AudioVideoStreaming\Odbiornik\obj\x86\Debug\Odbiornik.exe
+C:\Users\os_al\GitHub\AudioVideoStreaming\Odbiornik\obj\x86\Debug\Odbiornik.pdb

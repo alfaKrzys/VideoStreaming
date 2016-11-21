@@ -1,0 +1,1560 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>VisioForge.MediaInfo</name>
+    </assembly>
+    <members>
+        <member name="T:VisioForge.MediaInfo.MediaInfoNV">
+            <summary>
+            MediaInfoNV class.
+            </summary>
+            <summary>
+            MediaInfoNV class.
+            </summary>
+            <summary>
+            MediaInfoNV class.
+            </summary>
+        </member>
+        <member name="F:VisioForge.MediaInfo.MediaInfoNV.FList_AudioCodecs">
+            <summary>
+            Audio codecs.
+            </summary>
+        </member>
+        <member name="F:VisioForge.MediaInfo.MediaInfoNV.FList_VideoCodecs">
+            <summary>
+            Video codecs.
+            </summary>
+        </member>
+        <member name="F:VisioForge.MediaInfo.MediaInfoNV.FList_DirectShowFilters">
+            <summary>
+            DirectShow filters.
+            </summary>
+        </member>
+        <member name="F:VisioForge.MediaInfo.MediaInfoNV.FList_TVTuners">
+            <summary>
+            TV Tuners.
+            </summary>
+        </member>
+        <member name="F:VisioForge.MediaInfo.MediaInfoNV.FList_AudioCaptureDevices">
+            <summary>
+            Audio capture devices.
+            </summary>
+        </member>
+        <member name="F:VisioForge.MediaInfo.MediaInfoNV.FList_AudioRenderers">
+            <summary>
+            Audio renderers.
+            </summary>
+        </member>
+        <member name="F:VisioForge.MediaInfo.MediaInfoNV.FList_VideoCaptureDevices">
+            <summary>
+            Video capture devices.
+            </summary>
+        </member>
+        <member name="F:VisioForge.MediaInfo.MediaInfoNV.FSubtitles">
+            <summary>
+            Subtitles.
+            </summary>
+        </member>
+        <member name="F:VisioForge.MediaInfo.MediaInfoNV.FVideoStreams">
+            <summary>
+            Video streams.
+            </summary>
+        </member>
+        <member name="F:VisioForge.MediaInfo.MediaInfoNV.FAudioStreams">
+            <summary>
+            Audio streams.
+            </summary>
+        </member>
+        <member name="F:VisioForge.MediaInfo.MediaInfoNV.FDVDInfo">
+            <summary>
+            DVD Info.
+            </summary>
+        </member>
+        <member name="F:VisioForge.MediaInfo.MediaInfoNV.FDefVideoDuration">
+            <summary>
+            Default video duration.
+            </summary>
+        </member>
+        <member name="F:VisioForge.MediaInfo.MediaInfoNV.FDefVideoDurationMSec">
+            <summary>
+            Default video duration in milliseconds.
+            </summary>
+        </member>
+        <member name="F:VisioForge.MediaInfo.MediaInfoNV.FDefVideoDurationDouble">
+            <summary>
+            Default video duration.
+            </summary>
+        </member>
+        <member name="F:VisioForge.MediaInfo.MediaInfoNV.FDefAudioDuration">
+            <summary>
+            Default audio duration (string).
+            </summary>
+        </member>
+        <member name="F:VisioForge.MediaInfo.MediaInfoNV.FDefAudioDurationMSec">
+            <summary>
+            Audio duration milliseconds.
+            </summary>
+        </member>
+        <member name="M:VisioForge.MediaInfo.MediaInfoNV.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:VisioForge.MediaInfo.MediaInfoNV"/> class.
+            </summary>
+        </member>
+        <member name="M:VisioForge.MediaInfo.MediaInfoNV.Finalize">
+            <summary>
+            Finalizes an instance of the <see cref="T:VisioForge.MediaInfo.MediaInfoNV"/> class. 
+            </summary>
+        </member>
+        <member name="M:VisioForge.MediaInfo.MediaInfoNV.Audio_Codec_HasDialog(System.String,VisioForge.Types.VFPropertyPage)">
+            <summary>
+            Returns true if the audio codec has a settings dialog box.
+            </summary>
+            <param name="codecName">
+            Codec name.
+            </param>
+            <param name="pageType">
+            Page type.
+            </param>
+            <returns>
+            Returns true if the audio codec has a settings dialog box, otherwise returns false.
+            </returns>
+        </member>
+        <member name="M:VisioForge.MediaInfo.MediaInfoNV.Audio_Codec_ShowDialog(System.IntPtr,System.String,VisioForge.Types.VFPropertyPage)">
+            <summary>
+            Display the dialog box with the settings of the selected audio codec.
+            </summary>
+            <param name="parent">
+            Parent window. Can be IntPtr.Zero.
+            </param>
+            <param name="codecName">
+            Codec name.
+            </param>
+            <param name="pageType">
+            Page type.
+            </param>
+        </member>
+        <member name="M:VisioForge.MediaInfo.MediaInfoNV.Audio_Streams_Count">
+            <summary>
+            Returns audio streams count.
+            </summary>
+            <returns>
+            Returns audio streams count, 0 if error happen.
+            </returns>
+        </member>
+        <member name="M:VisioForge.MediaInfo.MediaInfoNV.Audio_Bitrate(System.Int32)">
+            <summary>
+            Audio bitrate.
+            </summary>
+            <param name="streamIndex">
+            Stream index.
+            </param>
+            <returns>
+            Returns audio bitrate.
+            </returns>
+        </member>
+        <member name="M:VisioForge.MediaInfo.MediaInfoNV.Audio_BPS(System.Int32)">
+            <summary>
+            Audio BPS.
+            </summary>
+            <param name="streamIndex">
+            Stream index.
+            </param>
+            <returns>
+            Returns audio BPS.
+            </returns>
+        </member>
+        <member name="M:VisioForge.MediaInfo.MediaInfoNV.Audio_Channels(System.Int32)">
+            <summary>
+            Audio channels count.
+            </summary>
+            <param name="streamIndex">
+            Stream index.
+            </param>
+            <returns>
+            Returns audio channels count.
+            </returns>
+        </member>
+        <member name="M:VisioForge.MediaInfo.MediaInfoNV.Audio_Codec(System.Int32)">
+            <summary>
+            Audio codec name.
+            </summary>
+            <param name="streamIndex">
+            Stream index.
+            </param>
+            <returns>
+            Returns audio codec name.
+            </returns>
+        </member>
+        <member name="M:VisioForge.MediaInfo.MediaInfoNV.Audio_CodecInfo(System.Int32)">
+            <summary>
+            Audio codec information.
+            </summary>
+            <param name="streamIndex">
+            Stream index.
+            </param>
+            <returns>
+            Returns audio codec information.
+            </returns>
+        </member>
+        <member name="M:VisioForge.MediaInfo.MediaInfoNV.Audio_Duration(System.Int32)">
+            <summary>
+            Audio duration in seconds.
+            </summary>
+            <param name="streamIndex">
+            Stream index.
+            </param>
+            <returns>
+            Returns audio duration in seconds. 
+            </returns>
+        </member>
+        <member name="M:VisioForge.MediaInfo.MediaInfoNV.Audio_DurationMSec(System.Int32)">
+            <summary>
+            Audio duration in milliseconds.
+            </summary>
+            <param name="streamIndex">
+            Stream index.
+            </param>
+            <returns>
+            Returns audio duration in milliseconds.
+            </returns>
+        </member>
+        <member name="M:VisioForge.MediaInfo.MediaInfoNV.Audio_SampleRate(System.Int32)">
+            <summary>
+            Audio sample rate.
+            </summary>
+            <param name="streamIndex">
+            Stream index.
+            </param>
+            <returns>
+            Returns audio sample rate.
+            </returns>
+        </member>
+        <member name="M:VisioForge.MediaInfo.MediaInfoNV.DVD_Fill_Title_Audio_Info(System.Int32,System.Int32)">
+            <summary>
+            Fills specified title audio info.
+            </summary>
+            <param name="titleIndex">
+            Title index.
+            </param>
+            <param name="streamIndex">
+            Audio stream index.
+            </param>
+        </member>
+        <member name="M:VisioForge.MediaInfo.MediaInfoNV.DVD_Fill_Title_Info(System.Int32)">
+            <summary>
+            Fills specified title info.
+            </summary>
+            <param name="titleIndex">
+            Title index.
+            </param>
+        </member>
+        <member name="M:VisioForge.MediaInfo.MediaInfoNV.DVD_Fill_Title_Subpicture_Info(System.Int32,System.Int32)">
+            <summary>
+            Fills specified title subpicture info.
+            </summary>
+            <param name="titleIndex">
+            Title index.
+            </param>
+            <param name="streamIndex">
+            Stream index.
+            </param>
+        </member>
+        <member name="M:VisioForge.MediaInfo.MediaInfoNV.DVD_Menu_Languages">
+            <summary>
+            Returns selected DVD menu languages.
+            </summary>
+            <returns>
+            Returns selected DVD menu languages, null if error happen.
+            </returns>
+        </member>
+        <member name="M:VisioForge.MediaInfo.MediaInfoNV.FillMediaType(DirectShowLib.AMMediaType,DirectShowLib.DES.IMediaDet)">
+            <summary>
+            Fills media type.
+            </summary>
+            <param name="mt">
+            Media type.
+            </param>
+            <param name="mediaDet">
+            IMediaDet interface.
+            </param>
+        </member>
+        <member name="M:VisioForge.MediaInfo.MediaInfoNV.DirectShow_Filter_HasDialog(System.String,VisioForge.Types.VFPropertyPage)">
+            <summary>
+            Returns true if the DirectShow filter has a settings dialog box.
+            </summary>
+            <param name="filterName">
+            Filter name.
+            </param>
+            <param name="pageType">
+            Page type.
+            </param>
+            <returns>
+            Returns true if the DirectShow filter has a settings dialog box, otherwise returns false.
+            </returns>
+        </member>
+        <member name="M:VisioForge.MediaInfo.MediaInfoNV.DirectShow_Filter_ShowDialog(System.IntPtr,System.String,VisioForge.Types.VFPropertyPage)">
+            <summary>
+            Display the dialog box with the settings of the selected DirectShow filter.
+            </summary>
+            <param name="parent">
+            Parent window handle. Can be IntPtr.Zero.
+            </param>
+            <param name="filterName">
+            Filter name.
+            </param>
+            <param name="pageType">
+            Page type.
+            </param>
+        </member>
+        <member name="M:VisioForge.MediaInfo.MediaInfoNV.FixBitrates">
+            <summary>
+            Fixes bitrates
+            </summary>
+        </member>
+        <member name="M:VisioForge.MediaInfo.MediaInfoNV.IsFilePlayable(System.String,VisioForge.Types.VFFilePlaybackError@,System.String@)">
+            <summary>
+            Returns true if the file is playable.
+            </summary>
+            <param name="fileName">
+            File name.
+            </param>
+            <param name="errorCode">
+            Error code.
+            </param>
+            <param name="errorText">
+            Error text.
+            </param>
+            <returns>
+            Returns true if the file is playable, otherwise returns false.
+            </returns>
+        </member>
+        <member name="M:VisioForge.MediaInfo.MediaInfoNV.GetAspectFromResolution(System.Int32,System.Int32,System.Int32@,System.Int32@)">
+            <summary>
+            Gets aspect ratio from resolution.
+            </summary>
+            <param name="width">
+            Width.
+            </param>
+            <param name="height">
+            Height.
+            </param>
+            <param name="w">
+            Aspect W.
+            </param>
+            <param name="h">
+            Aspect H.
+            </param>
+            <returns>
+            Returns aspect ratio.
+            </returns>
+        </member>
+        <member name="M:VisioForge.MediaInfo.MediaInfoNV.ReadDVDInfoMain">
+            <summary>
+            Reads DVD info.
+            </summary>
+            <returns>
+            Returns true if the operation was successful.
+            </returns>
+        </member>
+        <member name="M:VisioForge.MediaInfo.MediaInfoNV.List_AudioCodecs">
+            <summary>
+            Returns audio codec list.
+            </summary>
+            <returns>
+            Returns audio codec list, null if error happen.
+            </returns>
+        </member>
+        <member name="M:VisioForge.MediaInfo.MediaInfoNV.List_DirectShowFilters">
+            <summary>
+            Returns DirectShow filter list.
+            </summary>
+            <returns>
+            Returns DirectShow filter list, null if error happen.
+            </returns>
+        </member>
+        <member name="M:VisioForge.MediaInfo.MediaInfoNV.List_VideoCodecs">
+            <summary>
+            Returns video codec list.
+            </summary>
+            <returns>
+            Returns video codec list, null if error happen.
+            </returns>
+        </member>
+        <member name="M:VisioForge.MediaInfo.MediaInfoNV.List_TVTuners">
+            <summary>
+            Returns TV Tuner list.
+            </summary>
+            <returns>
+             Returns TV Tuner list, null if error happen.
+            </returns>
+        </member>
+        <member name="M:VisioForge.MediaInfo.MediaInfoNV.List_VideoCaptureDevices">
+            <summary>
+            Returns video capture device list.
+            </summary>
+            <returns>
+            Returns video capture device list, null if error happen.
+            </returns>
+        </member>
+        <member name="M:VisioForge.MediaInfo.MediaInfoNV.List_AudioCaptureDevices">
+            <summary>
+            Returns audio capture device list.
+            </summary>
+            <returns>
+            Returns audio capture device list, null if error happen.
+            </returns>
+        </member>
+        <member name="M:VisioForge.MediaInfo.MediaInfoNV.List_AudioOutputDevices">
+            <summary>
+            Returns audio output device list.
+            </summary>
+            <returns>
+            Returns audio output device list, null if error happen.
+            </returns>
+        </member>
+        <member name="M:VisioForge.MediaInfo.MediaInfoNV.ReadAdditionalStreams(DirectShowLib.IFilterGraph2)">
+            <summary>
+            Reads additional streams.
+            </summary>
+            <param name="filterGraph">
+            Filter graph.
+            </param>
+        </member>
+        <member name="M:VisioForge.MediaInfo.MediaInfoNV.ReadDVDInfo">
+            <summary>
+            Reads DVD info.
+            </summary>
+        </member>
+        <member name="M:VisioForge.MediaInfo.MediaInfoNV.ReadFileInfo">
+            <summary>
+            Reads file info.
+            </summary>
+        </member>
+        <member name="M:VisioForge.MediaInfo.MediaInfoNV.ReadInfoMain">
+            <summary>
+            Reads media info.
+            </summary>
+            <returns>
+            Returns true  if the operation was successful.
+            </returns>
+        </member>
+        <member name="M:VisioForge.MediaInfo.MediaInfoNV.ReadFilters">
+            <summary>
+            Reads lists of DirectShow filters, devices, audio and video codecs.
+            </summary>
+        </member>
+        <member name="M:VisioForge.MediaInfo.MediaInfoNV.SecondsToString(System.Int32)">
+            <summary>
+            Converts time to string.
+            </summary>
+            <param name="seconds">
+            Seconds.
+            </param>
+            <returns>
+            Returns time as a string.
+            </returns>
+        </member>
+        <member name="M:VisioForge.MediaInfo.MediaInfoNV.Text_Streams_Count">
+            <summary>
+            Returns text streams count.
+            </summary>
+            <returns>
+            Returns text streams count, 0 if error happen.
+            </returns>
+        </member>
+        <member name="M:VisioForge.MediaInfo.MediaInfoNV.Text_Codec(System.Int32)">
+            <summary>
+            Returns subtitle stream codec.
+            </summary>
+            <param name="streamIndex">
+            Stream index.
+            </param>
+            <returns>
+            Returns subtitle stream codec, empty string if error happen.
+            </returns>
+        </member>
+        <member name="M:VisioForge.MediaInfo.MediaInfoNV.Text_Language(System.Int32)">
+            <summary>
+            Returns subtitle stream language.
+            </summary>
+            <param name="streamIndex">
+            Stream index.
+            </param>
+            <returns>
+            Returns subtitle stream language, empty string if error happen.
+            </returns>
+        </member>
+        <member name="M:VisioForge.MediaInfo.MediaInfoNV.Text_Name(System.Int32)">
+            <summary>
+            Returns subtitle stream name.
+            </summary>
+            <param name="streamIndex">
+            Stream index.
+            </param>
+            <returns>
+            Returns subtitle stream name, empty string if error happen.
+            </returns>
+        </member>
+        <member name="M:VisioForge.MediaInfo.MediaInfoNV.Video_Codec_HasDialog(System.String,VisioForge.Types.VFPropertyPage)">
+            <summary>
+            Returns true if the video codec has a settings dialog box.
+            </summary>
+            <param name="codecName">
+            Codec name.
+            </param>
+            <param name="pageType">
+            Page type.
+            </param>
+            <returns>
+            Returns true if the video codec has a settings dialog box, otherwise returns false.
+            </returns>
+        </member>
+        <member name="M:VisioForge.MediaInfo.MediaInfoNV.Video_Codec_ShowDialog(System.IntPtr,System.String,VisioForge.Types.VFPropertyPage)">
+            <summary>
+            Display the dialog box with the settings of the selected video codec.
+            </summary>
+            <param name="parent">
+            Parent window. IntPtr.Zero can be used.
+            </param>
+            <param name="codecName">
+            Codec name.
+            </param>
+            <param name="pageType">
+            Page type.
+            </param>
+        </member>
+        <member name="M:VisioForge.MediaInfo.MediaInfoNV.Video_Streams_Count">
+            <summary>
+            Returns video streams count.
+            </summary>
+            <returns>
+            Returns video streams count, 0 if error happen or audio file.
+            </returns>
+        </member>
+        <member name="M:VisioForge.MediaInfo.MediaInfoNV.Video_AspectH(System.Int32)">
+            <summary>
+            The video stream's vertical aspect.
+            </summary>
+            <param name="streamIndex">
+            Stream index.
+            </param>
+            <returns>
+            The video stream's vertical aspect, 0 if error happen.
+            </returns>
+        </member>
+        <member name="M:VisioForge.MediaInfo.MediaInfoNV.Video_AspectRatio(System.Int32)">
+            <summary>
+            Returns video aspect ratio.
+            </summary>
+            <param name="streamIndex">
+            Stream index.
+            </param>
+            <returns>
+            Returns video aspect ratio, 0 if error happen.
+            </returns>
+        </member>
+        <member name="M:VisioForge.MediaInfo.MediaInfoNV.Video_AspectRatioStr(System.Int32)">
+            <summary>
+            Returns video aspect ratio as String.
+            </summary>
+            <param name="streamIndex">
+            Stream index.
+            </param>
+            <returns>
+            Returns video aspect ratio as string, empty string if error happen.
+            </returns>
+        </member>
+        <member name="M:VisioForge.MediaInfo.MediaInfoNV.Video_AspectW(System.Int32)">
+            <summary>
+            The video stream's horizontal aspect.
+            </summary>
+            <param name="streamIndex">
+            Stream index.
+            </param>
+            <returns>
+            The video stream's horizontal aspect, 0 if error happen.
+            </returns>
+        </member>
+        <member name="M:VisioForge.MediaInfo.MediaInfoNV.Video_Bitrate(System.Int32)">
+            <summary>
+            Returns video bitrate.
+            </summary>
+            <param name="streamIndex">
+            Stream index.
+            </param>
+            <returns>
+            Returns video bitrate, returns 0 if error happen or bitrate can not be determined.
+            </returns>
+        </member>
+        <member name="M:VisioForge.MediaInfo.MediaInfoNV.Video_Codec(System.Int32)">
+            <summary>
+            Returns video codec.
+            </summary>
+            <param name="streamIndex">
+            Stream index.
+            </param>
+            <returns>
+            Returns video codec, empty string if error happen.
+            </returns>
+        </member>
+        <member name="M:VisioForge.MediaInfo.MediaInfoNV.Video_Duration(System.Int32)">
+            <summary>
+            Returns video stream duration.
+            </summary>
+            <param name="streamIndex">
+            Stream index.
+            </param>
+            <returns>
+            Returns video stream duration, 0 if error happen.
+            </returns>
+        </member>
+        <member name="M:VisioForge.MediaInfo.MediaInfoNV.Video_DurationMSec(System.Int32)">
+            <summary>
+            Returns video stream duration in milliseconds.
+            </summary>
+            <param name="streamIndex">
+            Stream index.
+            </param>
+            <returns>
+            Returns video stream duration in milliseconds, 0 if error happen.
+            </returns>
+        </member>
+        <member name="M:VisioForge.MediaInfo.MediaInfoNV.Video_FourCC(System.Int32)">
+            <summary>
+            Returns video stream FourCC code.
+            </summary>
+            <param name="streamIndex">
+            Stream index.
+            </param>
+            <returns>
+            Returns video stream FourCC code, empty string if error happen.
+            </returns>
+        </member>
+        <member name="M:VisioForge.MediaInfo.MediaInfoNV.Video_FrameRate(System.Int32)">
+            <summary>
+            Returns video frame rate.
+            </summary>
+            <param name="streamIndex">
+            Stream index.
+            </param>
+            <returns>
+            Returns video frame rate, 0 if error happen.
+            </returns>
+        </member>
+        <member name="M:VisioForge.MediaInfo.MediaInfoNV.Video_FramesCount(System.Int32)">
+            <summary>
+            Returns video stream frames count.
+            </summary>
+            <param name="streamIndex">
+            Stream index.
+            </param>
+            <returns>
+            Returns video stream frames count, 0 if error happen.
+            </returns>
+        </member>
+        <member name="M:VisioForge.MediaInfo.MediaInfoNV.Video_Height(System.Int32)">
+            <summary>
+            Returns video height.
+            </summary>
+            <param name="streamIndex">
+            Stream index.
+            </param>
+            <returns>
+            Returns video height, 0 if error happen.
+            </returns>
+        </member>
+        <member name="M:VisioForge.MediaInfo.MediaInfoNV.Video_MPEGAudioTag(System.Int32)">
+            <summary>
+            Returns MPEG audio tag.
+            </summary>
+            <param name="streamIndex">
+            Stream index.
+            </param>
+            <returns>
+            Returns MPEG audio tag, empty string if tag not present.
+            </returns>
+        </member>
+        <member name="M:VisioForge.MediaInfo.MediaInfoNV.Video_Width(System.Int32)">
+            <summary>
+            Returns video width.
+            </summary>
+            <param name="streamIndex">
+            Stream index.
+            </param>
+            <returns>
+            Returns video width, 0 if error happen.
+            </returns>
+        </member>
+        <member name="M:VisioForge.MediaInfo.MediaInfoNV.EvalAudioCodec(System.UInt16)">
+            <summary>
+            Gets codec name.
+            </summary>
+            <param name="tag">
+            Audio tag.
+            </param>
+            <returns>
+            Returns codec name.
+            </returns>
+        </member>
+        <member name="M:VisioForge.MediaInfo.MediaInfoNV.EvalFourCC(System.String)">
+            <summary>
+            Gets codec name.
+            </summary>
+            <param name="srcFourCC">
+            FourCC code.
+            </param>
+            <returns>
+            Returns codec name.
+            </returns>
+        </member>
+        <member name="M:VisioForge.MediaInfo.MediaInfoNV.FillFileFormat">
+            <summary>
+            Fills file format.
+            </summary>
+        </member>
+        <member name="M:VisioForge.MediaInfo.MediaInfoNV.Filter_Supported_EVR">
+            <summary>
+            Returns <see langword="true"/> if the Enhanced Video Renderer present.
+            </summary>
+            <returns>
+            Returns <see langword="true"/> if the Enhanced Video Renderer present, otherwise returns <see langword="false"/>.
+            </returns>
+        </member>
+        <member name="M:VisioForge.MediaInfo.MediaInfoNV.Filter_Supported_VMR9">
+            <summary>
+            Returns <see langword="true"/> if the Video Mixing Renderer 9 present.
+            </summary>
+            <returns>
+            Returns <see langword="true"/> if the Video Mixing Renderer 9 present, otherwise returns <see langword="false"/>.
+            </returns>
+        </member>
+        <member name="M:VisioForge.MediaInfo.MediaInfoNV.LanguageFromIndex(System.Int32)">
+            <summary>
+            Returns language from index.
+            </summary>
+            <param name="index">
+            Item index.
+            </param>
+            <returns>
+            Returns language from index, empty string if error happen.
+            </returns>
+        </member>
+        <member name="P:VisioForge.MediaInfo.MediaInfoNV.Audio_Streams_AllInOne">
+            <summary>
+            Gets or sets a value indicating whether additional streams are enabled.
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.MediaInfoNV.DVD_Audio_CurrentStream">
+            <summary>
+            Gets current audio stream number.
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.MediaInfoNV.DVD_Audio_DefaultAudioLanguage">
+            <summary>
+            Gets default audio language.
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.MediaInfoNV.DVD_Audio_DefaultAudioLanguageS">
+            <summary>
+            Gets default audio language as String.
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.MediaInfoNV.DVD_Audio_DefaultAudioLanguageExt">
+            <summary>
+            Gets default audio language extension.
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.MediaInfoNV.DVD_Audio_StreamsCount">
+            <summary>
+            Gets audio streams count.
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.MediaInfoNV.DVD_DecoderCaps_AudioCaps">
+            <summary>
+            Gets audio caps.
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.MediaInfoNV.DVD_DecoderCaps_BwdMaxRateAudio">
+            <summary>
+            Gets maximum audio data rate in reverse direction. (0 if decoder does not support the smooth reverse mechanism.)
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.MediaInfoNV.DVD_DecoderCaps_BwdMaxRateSP">
+            <summary>
+            Gets maximum subpicture data rate in reverse direction. (0 if decoder does not support the smooth reverse mechanism.)
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.MediaInfoNV.DVD_DecoderCaps_BwdMaxRateVideo">
+            <summary>
+            Gets maximum video data rate in reverse direction. (0 if decoder does not support the smooth reverse mechanism.)
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.MediaInfoNV.DVD_DecoderCaps_FwdMaxRateAudio">
+            <summary>
+            Gets maximum audio data rate in forward direction.
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.MediaInfoNV.DVD_DecoderCaps_FwdMaxRateSP">
+            <summary>
+            Gets maximum subpicture data rate in forward direction.
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.MediaInfoNV.DVD_DecoderCaps_FwdMaxRateVideo">
+            <summary>
+            Gets maximum video data rate in forward direction.
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.MediaInfoNV.DVD_Disc_CountryCode_Byte0">
+            <summary>
+            Gets disc country code.
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.MediaInfoNV.DVD_Disc_CountryCode_Byte1">
+            <summary>
+            Gets disc country code.
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.MediaInfoNV.DVD_Disc_CurrentUOPS">
+            <summary>
+            Gets a set of flags indicating which navigation commands, if any, the content authors have explicitly disabled for the current disc location.
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.MediaInfoNV.DVD_Disc_DVD_Side">
+            <summary>
+            Gets DVD disc side.
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.MediaInfoNV.DVD_Disc_ID">
+            <summary>
+            Gets DVD disc ID.
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.MediaInfoNV.DVD_Disc_NumOfTitles">
+            <summary>
+            Gets titles count.
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.MediaInfoNV.DVD_Disc_NumOfVolumes">
+            <summary>
+            Gets volumes count.
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.MediaInfoNV.DVD_Disc_Volume">
+            <summary>
+            Gets current DVD disc volume.
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.MediaInfoNV.DVD_Menu_DefaultLanguage">
+            <summary>
+            Gets DVD menu default language.
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.MediaInfoNV.DVD_Menu_DefaultLanguageS">
+            <summary>
+            Gets DVD menu default language as String.
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.MediaInfoNV.DVD_Menu_VMG_Attributes_AudioAttributes_AppMode">
+            <summary>
+            Gets audio mode.
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.MediaInfoNV.DVD_Menu_VMG_Attributes_AudioAttributes_AppModeData">
+            <summary>
+            Gets audio mode data.
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.MediaInfoNV.DVD_Menu_VMG_Attributes_AudioAttributes_AudioFormat">
+            <summary>
+            Gets audio format.
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.MediaInfoNV.DVD_Menu_VMG_Attributes_AudioAttributes_Frequency">
+            <summary>
+            Gets audio sample rate.
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.MediaInfoNV.DVD_Menu_VMG_Attributes_AudioAttributes_HasMultichannelInfo">
+            <summary>
+            Gets a value indicating whether her multichannel attributes are present.
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.MediaInfoNV.DVD_Menu_VMG_Attributes_AudioAttributes_Language">
+            <summary>
+            Gets audio language.
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.MediaInfoNV.DVD_Menu_VMG_Attributes_AudioAttributes_LanguageS">
+            <summary>
+            Gets audio language as string.
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.MediaInfoNV.DVD_Menu_VMG_Attributes_AudioAttributes_LanguageExtension">
+            <summary>
+            Gets audio language extension.
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.MediaInfoNV.DVD_Menu_VMG_Attributes_AudioAttributes_NumberOfChannels">
+            <summary>
+            Gets audio channels count.
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.MediaInfoNV.DVD_Menu_VMG_Attributes_AudioAttributes_Quantization">
+            <summary>
+            Gets audio BPS. Zero indicates the BPS is unknown.
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.MediaInfoNV.DVD_Menu_VMG_Attributes_AudioPresent">
+            <summary>
+            Gets a value indicating whether audio stream is present.
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.MediaInfoNV.DVD_Menu_VMG_Attributes_CompatibleRegion">
+            <summary>
+            Gets a value indicating whether region is compatible. A value of false indicates
+            that the region is compatible (permitted). A value of true indicates that
+            the region is not compatible.
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.MediaInfoNV.DVD_Menu_VMG_Attributes_SubpicturePresent">
+            <summary>
+            Gets a value indicating whether subpicture stream present.
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.MediaInfoNV.DVD_Menu_VMG_Attributes_VideoAttributes_AspectX">
+            <summary>
+            Gets video stream's X aspect (4 or 16).
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.MediaInfoNV.DVD_Menu_VMG_Attributes_VideoAttributes_AspectY">
+            <summary>
+            Gets video stream's Y aspect (3 or 9).
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.MediaInfoNV.DVD_Menu_VMG_Attributes_VideoAttributes_Compression">
+            <summary>
+            Gets video compression type.
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.MediaInfoNV.DVD_Menu_VMG_Attributes_VideoAttributes_FrameHeight">
+            <summary>
+            Gets frame height in lines (525 for a frame rate of 60 Hz or 625 for 50 Hz).
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.MediaInfoNV.DVD_Menu_VMG_Attributes_VideoAttributes_FrameRate">
+            <summary>
+            Gets frame rate in hertz (Hz), either 25 or 30.
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.MediaInfoNV.DVD_Menu_VMG_Attributes_VideoAttributes_IsFilmMode">
+            <summary>
+            Gets a value indicating whether DVD is in Firm mode.
+            For 625/50 Hz systems, true means "film mode" and false means "camera mode."
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.MediaInfoNV.DVD_Menu_VMG_Attributes_VideoAttributes_IsSourceLetterboxed">
+            <summary>
+            Gets a value indicating whether source is letterboxed.
+            true means the source video is in letterbox format. Subpictures and menu buttons 
+            can only be displayed in the active video area.
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.MediaInfoNV.DVD_Menu_VMG_Attributes_VideoAttributes_LetterboxPermitted">
+            <summary>
+            Gets a value indicating whether source is letterboxed.
+            true means the picture can be shown as letterbox if the display aspect ratio is 4:3.
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.MediaInfoNV.DVD_Menu_VMG_Attributes_VideoAttributes_Line21Field1InGOP">
+            <summary>
+            Gets a value indicating whether user data present in line 21, field 1.
+            true means there is user data in line 21, field 1.
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.MediaInfoNV.DVD_Menu_VMG_Attributes_VideoAttributes_Line21Field2InGOP">
+            <summary>
+            Gets a value indicating whether user data present in line 21, field 2.
+            true means there is user data in line 21, field 2.
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.MediaInfoNV.DVD_Menu_VMG_Attributes_VideoAttributes_PanscanPermitted">
+            <summary>
+            Gets a value indicating whether panscan permitted.
+            true means the picture can be shown as pan-scan if the display aspect ratio is 4:3.
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.MediaInfoNV.DVD_Menu_VMG_Attributes_VideoAttributes_SourceResolutionX">
+            <summary>
+            Gets x-axis source resolution (352, 704, or 720).
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.MediaInfoNV.DVD_Menu_VMG_Attributes_VideoAttributes_SourceResolutionY">
+            <summary>
+            Gets y-axis source resolution (240, 480, 288, or 576).
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.MediaInfoNV.DVD_ParentalLevel">
+            <summary>
+            Gets the parental levels that are defined for a particular title. Result is DVD_PARENTAL_LEVEL enumeration.
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.MediaInfoNV.DVD_Subpicture_CurrentStream">
+            <summary>
+            Gets current subpicture stream.
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.MediaInfoNV.DVD_Subpicture_DefaultLanguage">
+            <summary>
+            Gets subpicture stream default language.
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.MediaInfoNV.DVD_Subpicture_DefaultLanguageS">
+            <summary>
+            Gets subpicture stream default language as string.
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.MediaInfoNV.DVD_Subpicture_DefaultLanguageExt">
+            <summary>
+            Gets subpicture streams default language extension.
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.MediaInfoNV.DVD_Subpicture_Enabled">
+            <summary>
+            Gets a value indicating whether subpicture stream is enabled.
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.MediaInfoNV.DVD_Subpicture_StreamsCount">
+            <summary>
+            Gets subpicture streams count.
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.MediaInfoNV.DVD_Title_MainAttributes_AppMode">
+            <summary>
+            Gets title mode.
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.MediaInfoNV.DVD_Title_MainAttributes_AudioAttributes_AppMode">
+            <summary>
+            Gets current audio mode.
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.MediaInfoNV.DVD_Title_MainAttributes_AudioAttributes_AppModeData">
+            <summary>
+            Gets current audio mode data.
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.MediaInfoNV.DVD_Title_MainAttributes_AudioAttributes_AudioFormat">
+            <summary>
+            Gets audio format.
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.MediaInfoNV.DVD_Title_MainAttributes_AudioAttributes_Frequency">
+            <summary>
+            Gets audio sample rate.
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.MediaInfoNV.DVD_Title_MainAttributes_AudioAttributes_HasMultichannelInfo">
+            <summary>
+            Gets a value indicating whether multichannel attributes are present.
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.MediaInfoNV.DVD_Title_MainAttributes_AudioAttributes_Language">
+            <summary>
+            Gets audio language.
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.MediaInfoNV.DVD_Title_MainAttributes_AudioAttributes_LanguageS">
+            <summary>
+            Gets audio language as string.
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.MediaInfoNV.DVD_Title_MainAttributes_AudioAttributes_LanguageExtension">
+            <summary>
+            Gets audio language extension.
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.MediaInfoNV.DVD_Title_MainAttributes_AudioAttributes_NumberOfChannels">
+            <summary>
+            Gets audio channels count.
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.MediaInfoNV.DVD_Title_MainAttributes_AudioAttributes_Quantization">
+            <summary>
+            Gets audio BPS. Zero indicates the BPS is unknown.
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.MediaInfoNV.DVD_Title_MainAttributes_MultichannelAudioAttributes">
+            <summary>
+            Gets DVD multichannel audio attributes.
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.MediaInfoNV.DVD_Title_MainAttributes_NumberOfAudioStreams">
+            <summary>
+            Gets audio streams count.
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.MediaInfoNV.DVD_Title_MainAttributes_NumberOfSubpictureStreams">
+            <summary>
+            Gets subpicture streams count.
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.MediaInfoNV.DVD_Title_MainAttributes_SubpictureAttributes_CodingMode">
+            <summary>
+            Gets stream coding mode.
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.MediaInfoNV.DVD_Title_MainAttributes_SubpictureAttributes_Language">
+            <summary>
+            Gets subpicture language.
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.MediaInfoNV.DVD_Title_MainAttributes_SubpictureAttributes_LanguageS">
+            <summary>
+            Gets subpicture language as string.
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.MediaInfoNV.DVD_Title_MainAttributes_SubpictureAttributes_LanguageExtension">
+            <summary>
+            Gets subpicture language extension.
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.MediaInfoNV.DVD_Title_MainAttributes_SubpictureAttributes_Type">
+            <summary>
+            Gets subpicture type.
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.MediaInfoNV.DVD_Title_MainAttributes_VideoAttributes_AspectX">
+            <summary>
+            Gets video stream's X aspect (4 or 16).
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.MediaInfoNV.DVD_Title_MainAttributes_VideoAttributes_AspectY">
+            <summary>
+            Gets video stream's Y aspect (3 or 9).
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.MediaInfoNV.DVD_Title_MainAttributes_VideoAttributes_Compression">
+            <summary>
+            Gets video compression type.
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.MediaInfoNV.DVD_Title_MainAttributes_VideoAttributes_FrameHeight">
+            <summary>
+            Gets frame height in lines (525 for a frame rate of 60 Hz or 625 for 50 Hz).
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.MediaInfoNV.DVD_Title_MainAttributes_VideoAttributes_FrameRate">
+            <summary>
+            Gets frame rate in hertz (Hz), either 50 or 60.
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.MediaInfoNV.DVD_Title_MainAttributes_VideoAttributes_IsFilmMode">
+            <summary>
+            Gets a value indicating whether DVD is in Film mode.
+            For 625/50 Hz systems, true means "film mode" and false means "camera mode."
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.MediaInfoNV.DVD_Title_MainAttributes_VideoAttributes_IsSourceLetterboxed">
+            <summary>
+            Gets a value indicating whether source is letterboxed.
+            true means the source video is in letterbox format. Subpictures and menu buttons can 
+            only be displayed in the active video area.
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.MediaInfoNV.DVD_Title_MainAttributes_VideoAttributes_LetterboxPermitted">
+            <summary>
+            Gets a value indicating whether letterbox permitted.
+            true means the picture can be shown as letterbox if the display aspect ratio is 4:3.
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.MediaInfoNV.DVD_Title_MainAttributes_VideoAttributes_Line21Field1InGOP">
+            <summary>
+            Gets a value indicating whether user data present in line 21, field 1.
+            true means there is user data in line 21, field 1.
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.MediaInfoNV.DVD_Title_MainAttributes_VideoAttributes_Line21Field2InGOP">
+            <summary>
+            Gets a value indicating whether user data present in line 21, field 2.
+            true means there is user data in line 21, field 2.
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.MediaInfoNV.DVD_Title_MainAttributes_VideoAttributes_PanscanPermitted">
+            <summary>
+            Gets a value indicating whether panscan permitted.
+            true means the picture can be shown as pan-scan if the display aspect ratio is 4:3.
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.MediaInfoNV.DVD_Title_MainAttributes_VideoAttributes_SourceResolutionX">
+            <summary>
+            Gets x-axis source resolution (352, 704, or 720).
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.MediaInfoNV.DVD_Title_MainAttributes_VideoAttributes_SourceResolutionY">
+            <summary>
+            Gets y-axis source resolution (240, 480, 288, or 576).
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.MediaInfoNV.DVD_Title_Menu_Attributes_AudioAttributes_AppMode">
+            <summary>
+            Gets current audio mode.
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.MediaInfoNV.DVD_Title_Menu_Attributes_AudioAttributes_AppModeData">
+            <summary>
+            Gets current audio mode data.
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.MediaInfoNV.DVD_Title_Menu_Attributes_AudioAttributes_AudioFormat">
+            <summary>
+            Gets audio format.
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.MediaInfoNV.DVD_Title_Menu_Attributes_AudioAttributes_Frequency">
+            <summary>
+            Gets audio sample rate.
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.MediaInfoNV.DVD_Title_Menu_Attributes_AudioAttributes_HasMultichannelInfo">
+            <summary>
+            Gets a value indicating whether multichannel attributes are present.
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.MediaInfoNV.DVD_Title_Menu_Attributes_AudioAttributes_Language">
+            <summary>
+            Gets audio language.
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.MediaInfoNV.DVD_Title_Menu_Attributes_AudioAttributes_LanguageS">
+            <summary>
+            Gets audio language as string.
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.MediaInfoNV.DVD_Title_Menu_Attributes_AudioAttributes_LanguageExtension">
+            <summary>
+            Gets audio language extension.
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.MediaInfoNV.DVD_Title_Menu_Attributes_AudioAttributes_NumberOfChannels">
+            <summary>
+            Gets audio channels count.
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.MediaInfoNV.DVD_Title_Menu_Attributes_AudioAttributes_Quantization">
+            <summary>
+            Gets audio BPS. Zero indicates the BPS is unknown.
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.MediaInfoNV.DVD_Title_Menu_Attributes_AudioPresent">
+            <summary>
+            Gets a value indicating whether audio stream is present.
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.MediaInfoNV.DVD_Title_Menu_Attributes_CompatibleRegion">
+            <summary>
+            Gets an array of bool values indicating with which DVD regions the 
+            disc's authored region is compatible. A value of false indicates that
+            the region is compatible (permitted). A value of true indicates that
+             the region is not compatible..
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.MediaInfoNV.DVD_Title_Menu_Attributes_SubpicturePresent">
+            <summary>
+            Gets a value indicating whether subpicture stream present.
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.MediaInfoNV.DVD_Title_Menu_Attributes_VideoAttributes_AspectX">
+            <summary>
+            Gets video stream's X aspect (4 or 16).
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.MediaInfoNV.DVD_Title_Menu_Attributes_VideoAttributes_AspectY">
+            <summary>
+            Gets video stream's Y aspect (3 or 9).
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.MediaInfoNV.DVD_Title_Menu_Attributes_VideoAttributes_Compression">
+            <summary>
+            Gets video compression type.
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.MediaInfoNV.DVD_Title_Menu_Attributes_VideoAttributes_FrameHeight">
+            <summary>
+            Gets frame height in lines (525 for a frame rate of 60 Hz or 625 for 50 Hz).
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.MediaInfoNV.DVD_Title_Menu_Attributes_VideoAttributes_FrameRate">
+            <summary>
+            Gets frame rate in hertz (Hz), either 50 or 60.
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.MediaInfoNV.DVD_Title_Menu_Attributes_VideoAttributes_IsFilmMode">
+            <summary>
+            Gets a value indicating whether DVD is in Film mode.
+            For 625/50 Hz systems, true means "film mode" and false means "camera mode".
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.MediaInfoNV.DVD_Title_Menu_Attributes_VideoAttributes_IsSourceLetterboxed">
+            <summary>
+            Gets a value indicating whether menu video source is letterboxed.
+            true means the source video is in letterbox format. Subpictures and menu buttons
+            can only be displayed in the active video area.
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.MediaInfoNV.DVD_Title_Menu_Attributes_VideoAttributes_LetterboxPermitted">
+            <summary>
+            Gets a value indicating whether letterbox is permitted.
+            true means the picture can be shown as letterbox if the display aspect ratio is 4:3.
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.MediaInfoNV.DVD_Title_Menu_Attributes_VideoAttributes_Line21Field1InGOP">
+            <summary>
+            Gets a value indicating whether user data present in line 21, field 1.
+            true means there is user data in line 21, field 1.
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.MediaInfoNV.DVD_Title_Menu_Attributes_VideoAttributes_Line21Field2InGOP">
+            <summary>
+            Gets a value indicating whether user data present in line 21, field 2.
+            true means there is user data in line 21, field 2.
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.MediaInfoNV.DVD_Title_Menu_Attributes_VideoAttributes_PanscanPermitted">
+            <summary>
+            Gets a value indicating whether panscan is permitted.
+            true means the picture can be shown as pan-scan if the display aspect ratio is 4:3.
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.MediaInfoNV.DVD_Title_Menu_Attributes_VideoAttributes_SourceResolutionX">
+            <summary>
+            Gets x-axis source resolution (352, 704, or 720).
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.MediaInfoNV.DVD_Title_Menu_Attributes_VideoAttributes_SourceResolutionY">
+            <summary>
+            Gets y-axis source resolution (240, 480, 288, or 576).
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.MediaInfoNV.DVD_Title_NumberOfChapters">
+            <summary>
+            Gets chapters count.
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.MediaInfoNV.DVD_Title_ParentalLevel">
+            <summary>
+            Gets parental level.
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.MediaInfoNV.DVD_Title_TimeCodeFlags">
+            <summary>
+            Gets time code flags.
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.MediaInfoNV.FileFormat">
+            <summary>
+            Gets file format.
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.MediaInfoNV.Filename">
+            <summary>
+            Gets or sets file name.
+            </summary>
+        </member>
+        <member name="T:VisioForge.MediaInfo.Resources.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.Resources.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.Resources.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.Resources.Resources.Cannot_play_back_the_file__the_format_is_not_supported">
+            <summary>
+              Looks up a localized string similar to Cannot play back the file: the format is not supported..
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.Resources.Resources.Caption_big">
+            <summary>
+              Looks up a localized string similar to Caption big..
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.Resources.Resources.Caption_children">
+            <summary>
+              Looks up a localized string similar to Caption children..
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.Resources.Resources.Caption_normal">
+            <summary>
+              Looks up a localized string similar to Caption normal..
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.Resources.Resources.Captions">
+            <summary>
+              Looks up a localized string similar to Captions..
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.Resources.Resources.CC_big">
+            <summary>
+              Looks up a localized string similar to CC big..
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.Resources.Resources.CC_children">
+            <summary>
+              Looks up a localized string similar to CC children..
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.Resources.Resources.CC_normal">
+            <summary>
+              Looks up a localized string similar to CC normal..
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.Resources.Resources.Director_comments_1">
+            <summary>
+              Looks up a localized string similar to Director comments 1..
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.Resources.Resources.Director_comments_2">
+            <summary>
+              Looks up a localized string similar to Director comments 2..
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.Resources.Resources.Director_comments_big">
+            <summary>
+              Looks up a localized string similar to Director comments big..
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.Resources.Resources.Director_comments_children">
+            <summary>
+              Looks up a localized string similar to Director comments children..
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.Resources.Resources.Director_comments_normal">
+            <summary>
+              Looks up a localized string similar to Director comments normal..
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.Resources.Resources.Extended">
+            <summary>
+              Looks up a localized string similar to Extended..
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.Resources.Resources.Failure">
+            <summary>
+              Looks up a localized string similar to Failure..
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.Resources.Resources.Forced">
+            <summary>
+              Looks up a localized string similar to Forced..
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.Resources.Resources.Karaoke">
+            <summary>
+              Looks up a localized string similar to Karaoke..
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.Resources.Resources.Language">
+            <summary>
+              Looks up a localized string similar to Language..
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.Resources.Resources.No_combination_of_dsFilters_could_be_found_to_render_the_stream">
+            <summary>
+              Looks up a localized string similar to No combination of dsFilters could be found to render the stream..
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.Resources.Resources.No_combination_of_intermediate_dsFilters_could_be_found_to_make_the_connection">
+            <summary>
+              Looks up a localized string similar to No combination of intermediate DirectShow filters could be found to make the connection..
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.Resources.Resources.None">
+            <summary>
+              Looks up a localized string similar to None..
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.Resources.Resources.Not_specified">
+            <summary>
+              Looks up a localized string similar to Not specified..
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.Resources.Resources.Other">
+            <summary>
+              Looks up a localized string similar to Other..
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.Resources.Resources.Partial_success__some_of_the_streams_in_this_movie_are_in_an_unsupported_format">
+            <summary>
+              Looks up a localized string similar to Partial success; some of the streams in this movie are in an unsupported format..
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.Resources.Resources.Partial_success__the_audio_was_not_rendered">
+            <summary>
+              Looks up a localized string similar to Partial success; the audio was not rendered..
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.Resources.Resources.Run_length">
+            <summary>
+              Looks up a localized string similar to Run length..
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.Resources.Resources.Some_of_the_streams_in_this_movie_are_in_an_unsupported_format">
+            <summary>
+              Looks up a localized string similar to Some of the streams in this movie are in an unsupported format..
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.Resources.Resources.Success">
+            <summary>
+              Looks up a localized string similar to Success..
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.Resources.Resources.Surround">
+            <summary>
+              Looks up a localized string similar to Surround..
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.Resources.Resources.The_file_format_is_invalid">
+            <summary>
+              Looks up a localized string similar to The file format is invalid..
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.Resources.Resources.The_media_type_of_this_file_is_not_recognized">
+            <summary>
+              Looks up a localized string similar to The media type of this file is not recognized..
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.Resources.Resources.The_source_filter_for_this_file_could_not_be_loaded">
+            <summary>
+              Looks up a localized string similar to The source filter for this file could not be loaded..
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.Resources.Resources.Unknown_error">
+            <summary>
+              Looks up a localized string similar to Unknown error..
+            </summary>
+        </member>
+        <member name="P:VisioForge.MediaInfo.Resources.Resources.Visually_impaired">
+            <summary>
+              Looks up a localized string similar to Visually impaired..
+            </summary>
+        </member>
+        <member name="T:VisioForge.MediaInfo.VFDVDInfo">
+            <summary>
+            VFDVDInfo class.
+            </summary>
+        </member>
+        <member name="M:VisioForge.MediaInfo.VFDVDInfo.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:VisioForge.MediaInfo.VFDVDInfo"/> class.
+            </summary>
+        </member>
+    </members>
+</doc>

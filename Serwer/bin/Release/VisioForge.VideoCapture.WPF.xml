@@ -1,0 +1,3451 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>VisioForge.VideoCapture.WPF</name>
+    </assembly>
+    <members>
+        <member name="T:VisioForge.VideoCapture.WPF.VideoCapture">
+            <summary>
+            Video Capture control for WPF.
+            </summary>
+            <summary>
+            Video Capture control for WPF.
+            </summary>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Audio_CaptureDevice_Formats">
+            <summary>
+            The Audio_CaptureDevice_Formats method retrieves an audio capture device formats.
+            </summary>
+            <returns>
+            Returns audio capture device formats.
+            </returns>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Audio_CaptureDevice_Formats_Fill">
+            <summary>
+            Fills audio capture device input line list.
+            </summary>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Audio_CaptureDevice_Lines">
+            <summary>
+            The Audio_CaptureDevice_Lines method retrieves an audio capture device lines.
+            </summary>
+            <returns>
+            Returns audio capture device lines.
+            </returns>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Audio_CaptureDevice_Lines_Fill">
+            <summary>
+            Fills audio capture device input line list.
+            </summary>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Audio_CaptureDevice_SettingsDialog_Exists">
+            <summary>
+            Returns <see langword="true"/> if the audio capture device has a settings dialog box.
+            </summary>
+            <returns>
+            Returns <see langword="true"/> if the audio capture device has a settings dialog box, otherwise method returns <see langword="false"/>.
+            </returns>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Audio_CaptureDevice_SettingsDialog_Show(System.IntPtr)">
+            <summary>
+            Displays the dialog box with the settings of the selected audio capture device filter.
+            </summary>
+            <param name="parent">Parent handle.</param>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Audio_CaptureDevice_SetVolume(System.Int32,System.Boolean)">
+            <summary>
+            Sets the volume of the audio capturing device.
+            </summary>
+            <param name="volume">Volume level.</param>
+            <param name="autoGain">Enables auto gain.</param>
+            <returns>Returns <see langword="true"/>, if the operation was successful.</returns>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Audio_Codec_Has_Dialog(System.String,VisioForge.Types.VFPropertyPage)">
+            <summary>
+            Returns <see langword="true"/> if the audio codec has a settings dialog box.
+            </summary>
+            <param name="name">Codec name.</param>
+            <param name="pageType">Page type.</param>
+            <returns>Returns <see langword="true"/> if the audio codec has a settings dialog box, otherwise method returns <see langword="false"/>.</returns>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Audio_Codec_Show_Dialog(System.IntPtr,System.String,VisioForge.Types.VFPropertyPage)">
+            <summary>
+            Displays the dialog box with the settings of the selected audio codec.
+            </summary>
+            <param name="parent">Parent handle.</param>
+            <param name="name">Codec name.</param>
+            <param name="pageType">Page type.</param>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Audio_Effects_Add(VisioForge.Types.VFAudioEffectType,System.Boolean)">
+            <summary>
+            Adds audio effect.
+            </summary>
+            <param name="type">Effect type.</param>
+            <param name="enabled"><see langword="true"/> if enabled, <see langword="false"/> if disabled.</param>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Audio_Effects_Amplify(System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            Sets parameters for the amplify effect.
+            </summary>
+            <param name="id">Effect ID.</param>
+            <param name="volume">
+            Sets the amplification for a channel. Default value is 10000, which means that no amplification occurs. 
+            A value of 20000 raises the amplification by 2. If separate is True, then every channel will be amplified 
+            by it's channel amplification value. If separate is False, then every channel is amplified with the value 
+            of channel 0.
+            </param>
+            <param name="separate">
+            Enables or Disables separate amplification. If Enabled every channel will be amplified by it's own 
+            amplification value. If Disabled every channel will be amplified with the amplification value of channel 0.
+            </param>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Audio_Effects_BandPass(System.Int32,System.Single,System.Single,System.Boolean)">
+            <summary>
+            Sets the parameters for the Band Pass effect.
+            </summary>
+            <param name="id">Effect ID.</param>
+            <param name="cutOffHigh">Specifies the high cutoff frequency for a specific channel.</param>
+            <param name="cutOffLow">Specifies the low cutoff frequency for a specific channel.</param>
+            <param name="separate">Enables or Disables separate cutoff. If Enabled every channel will be 
+            processed by it's own cutoff value. If disabled every channel will be processed with 
+            the cutoff value of channel 0.</param>
+            <remarks>Filter to cutoff a certain Frequency Range. Each Channel can separate cutoff the Frequency range.</remarks>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Audio_Effects_ChannelOrder(System.Int32,System.Byte)">
+            <summary>
+            Sets parameters for the channel order effect.
+            </summary>
+            <param name="id">Effect ID.</param>
+            <param name="order">Specifies the order of the channels.</param>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Audio_Effects_Clear">
+            <summary>
+            Deletes all the inserted audio effects.
+            </summary>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Audio_Effects_Count">
+            <summary>
+            Returns the count of audio effects in use. 
+            </summary>
+            <returns>Returns the count of audio effects in use, 0 if error happen.</returns>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Audio_Effects_DS_Chorus(System.Int32,System.Single,System.Single,System.Single,System.Single,System.Int32,System.Boolean,System.Single)">
+            <summary>
+            Sets the parameters for the DS Chorus effect.
+            </summary>
+            <param name="id">Effect ID.</param>
+            <param name="delay">Specifies the delay of the filter (0 - 20.0).</param>
+            <param name="depth">Specifies the depth of the filter (0 - 100.0).</param>
+            <param name="feedback">Specifies the feedback of the filter (-99.0 - 99.0)</param>
+            <param name="frequency">Specifies the frequency of the filter (0 - 10.0)</param>
+            <param name="phase">
+            Specifies the phase angle. Use one of the following values. 0 for a phase shift of -180 degrees. 
+            1 for a phase shift of -90 degrees. 2 for no phase shift. 3 for a phase shift of 90 degrees. 
+            4 for a phase shift of 180 degrees. (0 - 4)
+            </param>
+            <param name="waveformTriangle">
+            Specifies the waveform type of the filter. Use True for a triangle waveform and False for a sine waveform.
+            </param>
+            <param name="wetDryMix">Specifies the wet and dry mix (0 - 100.0)</param>
+            <remarks>
+            Chorus is a voice-doubling effect created by echoing the original sound with a slight delay 
+            and slightly modulating the delay of the echo. 
+            </remarks>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Audio_Effects_DS_Compressor(System.Int32,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+            Sets the parameters for the DS Compressor effect.
+            </summary>
+            <param name="id">Effect ID.</param>
+            <param name="attack">Specifies the attack time in ms (0.01 - 500).</param>
+            <param name="gain">Specifies the gain of the filter (-60.0 - 60.0).</param>
+            <param name="preDelay">Specifies the pre-delay of the filter (0.0 - 4.0)</param>
+            <param name="ratio">Specifies the ratio of the filter (1.0 - 100.0).</param>
+            <param name="release">Specifies the release time in ms (50.0 - 3000.0)</param>
+            <param name="threshold">Specifies the threshold of the filter (-60.0 - 0.0)</param>
+            <remarks>Compression is a reduction in the fluctuation of a signal above a certain amplitude.</remarks>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Audio_Effects_DS_Distortion(System.Int32,System.Single,System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+            Sets the parameters for the DS Distortion effect.
+            </summary>
+            <param name="id">Effect ID.</param>
+            <param name="edge">Specifies the edge of the filter (0.0 - 100.0).</param>
+            <param name="gain">Specifies the gain of the filter (-60.0 - 0).</param>
+            <param name="postEQBandwidth">Specifies the bandwidth of the equalizer (100.0 - 8000.0).</param>
+            <param name="postEQCenterFrequency">Specifies the center frequency of the distortion equalizer (100.0 - 8000.0).</param>
+            <param name="preLowpassCutoff">Specifies the low pass cutoff of the filter (100.0 - 8000.0).</param>
+            <remarks>
+            Distortion is achieved by adding harmonics to the signal in such a way that, as the level increases, 
+            the top of the waveform becomes squared off or clipped. 
+            </remarks>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Audio_Effects_DS_Echo(System.Int32,System.Single,System.Single,System.Single,System.Single,System.Boolean,System.Single)">
+            <summary>
+            Sets the parameters for the DS Echo effect.
+            </summary>
+            <param name="id">Effect ID.</param>
+            <param name="feedback">Specifies the feedback of the filter (0 - 100.0).</param>
+            <param name="leftDelay">Specifies the left delay of the filter (1.0 - 2000.0).</param>
+            <param name="rightDelay">Specifies the right delay of the filter (1.0 - 2000.0).</param>
+            <param name="panDelay">Specifies the pan delay of the filter (0 - 1).</param>
+            <param name="panDelayUseMax">Use maximum pan delay.</param>
+            <param name="wetDryMix">Specifies the wet and dry mix of the filter (0.0 - 100.0).</param>
+            <remarks>
+            An echo effect causes sounds to be repeated after a fixed delay, usually at a diminished volume.
+            As the repeated sounds are fed back into the mix, they are repeated again.
+            </remarks>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Audio_Effects_DS_Flanger(System.Int32,System.Single,System.Single,System.Single,System.Single,System.Int32,System.Boolean,System.Single)">
+            <summary>
+            Sets the parameters for the DS Flanger effect.
+            </summary>
+            <param name="id">Effect ID.</param>
+            <param name="delay">Specifies the delay of the filter (0.0 - 4.0).</param>
+            <param name="depth">Specifies the depth of the filter (0.0 - 100.0).</param>
+            <param name="feedback">Specifies the feedback of the filter (-99.0 - 99.0).</param>
+            <param name="frequency">Specifies the frequency of the filter (0.0 - 10.0).</param>
+            <param name="phase">
+            Specifies the phase angle. Use one of the following values. 0 for a phase shift of -180 degrees.
+             1 for a phase shift of -90 degrees. 2 for no phase shift. 3 for a phase shift of 90 degrees.
+             4 for a phase shift of 180 degrees. (0 - 4).
+            </param>
+            <param name="waveformTriangle">Specifies the waveform type of the filter. Use True for a triangle waveform and False for a sine waveform.</param>
+            <param name="wetDryMix">Specifies the wet and dry mix of the filter (0.0 - 100.0).</param>
+            <remarks>
+            Flange, also called flanger, is an echo effect in which the delay between the original signal and 
+            its echo is very short and varies over time. The result is sometimes referred to as a sweeping sound.
+            The term flange originated with the practice of grabbing the flanges of a tape reel to change the speed.</remarks>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Audio_Effects_DS_Gargle(System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            Sets the parameters for the DS Gargle effect.
+            </summary>
+            <param name="id">Effect ID.</param>
+            <param name="rateHz">Specifies the frequency of the gargle filter (1 - 1000).</param>
+            <param name="waveFormTriangle">
+            Specifies the waveform type of the filter. Use <see langword="true"/> for a triangle 
+            waveform and <see langword="false"/> for a sine waveform.
+            </param>
+            <remarks>The gargle effect modulates the amplitude of the signal.</remarks>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Audio_Effects_DS_ParamEQ(System.Int32,System.Single,System.Single,System.Single)">
+            <summary>
+            Sets the parameters for the DS ParamEQ effect.
+            </summary>
+            <param name="id">Effect ID.</param>
+            <param name="bandwidth">Specifies the bandwidth of the equalizer (1.0 - 36.0).</param>
+            <param name="center">Specifies the center frequency of the equalizer (80.0 - 16000.0).</param>
+            <param name="gain">Specifies the gain of the equalizer (-15.0 - 15.0).</param>
+            <remarks>
+            A parametric equalizer amplifies or attenuates signals of a given frequency. 
+            Parametric equalizer effects for different pitches can be applied in parallel 
+            by setting multiple instances of the effect on the same buffer. In this way,
+            the application can have tone control similar to that provided by a hardware equalizer. 
+            </remarks>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Audio_Effects_DS_Reverb(System.Int32,System.Single,System.Single,System.Single,System.Single,System.Single,System.String,System.Int32,System.Int32,System.Single,System.Int32,System.Single,System.Int32,System.Int32,System.Single)">
+            <summary>
+            Sets the parameters for the DS Reverb effect.
+            </summary>
+            <param name="id">Effect ID.</param>
+            <param name="decayHFRatio">Specifies the decay HF ratio for the filter (0.1 - 2.0, 0.83 by default).</param>
+            <param name="decayTime">Specifies the decay time for the filter (0.1 - 20.0, 1.49 by default).</param>
+            <param name="density">Specifies the density value for the filter (0 - 100.0, 100.0 by default).</param>
+            <param name="diffusion">Specifies the diffusion value for the filter (0 - 100.0, 100.0 by default).</param>
+            <param name="hfreference">Specifies the HF reference for the filter (20.0 - 20000.0, 5000.0 by default).</param>
+            <param name="preset">Specifies the preset name of the filter.</param>
+            <param name="quality">Specifies the quality of the filter (0 - 3, 2 by default).</param>
+            <param name="reflections">Specifies the reflections value for the filter (-10000 - -1000, -2602 by default).</param>
+            <param name="reflectionsDelay">Specifies the reflections delay for the filter (0.0 - 0.3, 0.007 by default).</param>
+            <param name="reverb">Specifies the reverb value for the filter (-10000 - 2000, 200 by default).</param>
+            <param name="reverbDelay">Specifies the reverb delay for the filter (0.0 - 0.1, 0.011 by default).</param>
+            <param name="room">Specifies the room value for the filter (-10000 - 0, -1000 by default).</param>
+            <param name="roomHF">Specifies the room HF value of the filter (-10000 - 0, -100 by default).</param>
+            <param name="roomRollOffFactor">Specifies the room roll off factor for the filter (0.0 - 10.0, 0.0 by default).</param>
+            <remarks>
+            Environmental Reverberation filter. 
+            </remarks>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Audio_Effects_DS_WavesReverb(System.Int32,System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+            Sets the parameters for the DS Waves Reverb effect.
+            </summary>
+            <param name="id">Effect ID.</param>
+            <param name="highFreqRTRatio">Specifies the high frequency ratio (0.001 - 0.999, 0.001 by default).</param>
+            <param name="inGain">Specifies in-gain of the filter (-96.0 - 0.0, 0.0 by default). </param>
+            <param name="reverbMix">Specifies the reverb mix of the filter (-96.0 - 0.0, 0.0 by default).</param>
+            <param name="reverbTime">Specifies the reverb time of the filter (0.001 - 3000.0, 1000.0 by default).</param>
+            <remarks>
+            The waves reverberation effect is intended for use with music. The waves reverberation DirectX Media Object (DMO) 
+            is based on the Waves MaxxVerb technology, which is licensed to Microsoft. 
+            </remarks>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Audio_Effects_DynamicAmplify(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Sets the parameters for the Dynamic Amplify effect.
+            </summary>
+            <param name="id">Effect ID.</param>
+            <param name="attackTime">Specifies the amplification value than will be used when amplifying.</param>
+            <param name="maxAmplification">
+            Sets the amplification for a channel. Default value is 10000, which means that no amplification occurs. 
+            A value of 20000 raises the amplification by 2.
+            </param>
+            <param name="releaseTime">
+            Specifies the time in milliseconds that the DSP will wait to continue amplification, 
+            after the maximum has been reached.
+            </param>
+            <remarks>DSP Filter to automatically keep the volume eat a specific maximum value.</remarks>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Audio_Effects_DynamicAmplify_GetCurrentAmp(System.Int32)">
+            <summary>
+            Returns the value for the current amplification level.
+            </summary>
+            <param name="id">Effect ID.</param>
+            <returns>Returns the value for the current amplification level, 0 if error happen.</returns>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Audio_Effects_EchoDelay(System.Int32,System.Int32,System.Int32,System.Boolean,System.Boolean,System.Byte)">
+            <summary>
+            Sets the parameters for the Echo Delay effect.
+            </summary>
+            <param name="id">Effect ID.</param>
+            <param name="delayAmp">Specifies the amplification of the echoes.</param>
+            <param name="delay">Specifies the delay in milliseconds of the echoes.</param>
+            <param name="highpass">Specifies whether the delays will be passed through a high pass filter.</param>
+            <param name="killMain">Specifies whether the main signal should be deleted.</param>
+            <param name="numDelays">Specifies the number of delays.</param>
+            <remarks>
+            DSP Echo/Delay Filter that supports multiple echoes.
+            </remarks>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Audio_Effects_Enable(System.Int32,System.Boolean)">
+            <summary>
+            Enables selected audio effect.
+            </summary>
+            <param name="id">Effect ID.</param>
+            <param name="enable"><see langword="true"/> if enabled, <see langword="false"/> if disabled.</param>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Audio_Effects_Equalizer(System.Int32,VisioForge.Types.VFFFTSize,System.Boolean)">
+            <summary>
+            Sets the parameters for the Equalizer effect.
+            </summary>
+            <param name="id">Effect ID.</param>
+            <param name="fftSize">
+            Sets the FFT size that will be used for the equalization. The number of bands the equalizer will 
+            have is always half of the FFT size.
+            </param>
+            <param name="separate">
+            Enables or Disables separate equalization. If Enabled every channel will be equalized by it's own 
+            amplification value. If Disabled every channel will be equalized with the amplification value of channel 0. 
+            </param>
+            <remarks>
+            Equalizer Filter that can equalize from 1 (2 point FFT) up to 4096 bands (8192 point FFT). 
+            Each channel can be equalized separately. 
+            </remarks>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Audio_Effects_Equalizer_Band_Get(System.Int32,System.Int32)">
+            <summary>
+            Gets the current level of audio volume for the selected equalizer band(slider).
+            </summary>
+            <param name="id">Effect ID.</param>
+            <param name="index">Band index.</param>
+            <returns>
+            Gets the current level of audio volume for the selected equalizer band(slider),
+            0 if error happen.
+            </returns>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Audio_Effects_Equalizer_Band_Set(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Sets the current level of audio volume for the selected equalizer band(slider).
+            </summary>
+            <param name="id">Effect ID.</param>
+            <param name="index">Band index.</param>
+            <param name="value">Value.</param>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Audio_Effects_Equalizer_Presets">
+            <summary>
+            Returns equalizer presets list. 
+            </summary>
+            <returns>Returns equalizer presets list, <see langword="null"/> if error happen.</returns>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Audio_Effects_Equalizer_Preset_Set(System.Int32,System.String)">
+            <summary>
+            Sets the equalizer preset value. 
+            </summary>
+            <param name="id">Effect ID.</param>
+            <param name="name">Preset name.</param>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Audio_Effects_Flanger(System.Int32,System.Single,System.Single,System.Boolean,System.Boolean)">
+            <summary>
+            Sets the parameters for the Flanger effect.
+            </summary>
+            <param name="id">Effect ID.</param>
+            <param name="delay">Specifies the delay time in seconds.</param>
+            <param name="frequency">Specifies the flanger frequency.</param>
+            <param name="phaseInvert">Specifies whether the added signal should be inverted.</param>
+            <param name="separate">
+            Enables or Disables separate amplification. If Enabled every channel will be amplified 
+            by it's own amplification value. If Disabled every channel will be amplified with the 
+            amplification value of channel 0.
+            </param>
+            <remarks>Filter to flange audio data. Every channel can be controlled separately.</remarks>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Audio_Effects_HighPass(System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            Sets the parameters for the High Pass effect.
+            </summary>
+            <param name="id">Effect ID.</param>
+            <param name="cutOff">Specifies the cutoff frequency for a specific channel at which the cutoff will start.</param>
+            <param name="separate">
+            Enables or Disables separate cutoff. If Enabled every channel will be processed by it's own 
+            cutoff value. If Disabled every channel will be processed with the cutoff value of channel 0.
+            </param>
+            <remarks>
+            Filter that cuts Frequencies from a specified frequency to half of the sampling 
+            rate. Each channel can be separate processed with different cutoff values.
+            </remarks>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Audio_Effects_LowPass(System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            Sets the parameters for the Low Pass effect.
+            </summary>
+            <param name="id">Effect ID.</param>
+            <param name="cutOff">
+            Specifies the cutoff frequency for a specific channel at which the cutoff will end. 
+            </param>
+            <param name="separate">
+            Enables or Disables separate cutoff. If Enabled every channel will be processed by it's own 
+            cutoff value. If Disabled every channel will be processed with the cutoff value of channel 0.
+            </param>
+            <remarks>
+            Filter that cuts frequencies from 0 to a specified frequency. 
+            Each channel can be separate processed with different cutoff values.
+            </remarks>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Audio_Effects_Notch(System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            Sets the parameters for the Notch effect.
+            </summary>
+            <param name="id">Effect ID.</param>
+            <param name="cutOff">
+            Specifies the cutoff frequency for a specific channel at which the cutoff will have 
+            it's maximum amplification.
+            </param>
+            <param name="separate">
+            Enables or Disables separate cutoff. If Enabled every channel will be processed by it's own 
+            cutoff value. If Disabled every channel will be processed with the cutoff value of channel 0.  
+            </param>
+            <remarks>
+            Filter that cuts frequency's in a wide range of specified frequency. 
+            Each channel can be separate processed with different cutoff values.
+            </remarks>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Audio_Effects_ParametricEQ(System.Int32,System.Single,System.Single,System.Single,System.Boolean)">
+            <summary>
+            Sets the parameters for the ParametricEQ effect.
+            </summary>
+            <param name="id">Effect ID.</param>
+            <param name="frequency">Specifies the center frequency of the filter.</param>
+            <param name="gain">Specifies the gain in DB of the filter.</param>
+            <param name="q">Specifies the Q (bandwidth) of the filter.</param>
+            <param name="separate">
+            Enables or Disables separate amplification. If Enabled every channel will be amplified by it's own
+            amplification value. If Disabled every channel will be amplified with the amplification value of channel 0.
+            </param>
+            <remarks>Parametric equalizer filter. Every channel can be controlled separately.</remarks>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Audio_Effects_PhaseInvert(System.Int32,System.Boolean,System.Boolean)">
+            <summary>
+            Sets the parameters for the Phase Invert effect.
+            </summary>
+            <param name="id">Effect ID.</param>
+            <param name="invert">Enables and Disables phase invert for a specific channel.</param>
+            <param name="separate">
+            Enables or Disables separate invert. If Enabled every channel will be inverted by it's own 
+            invert value. If Disabled every channel will be inverted by the value of channel 0.
+            </param>
+            <remarks>Phase invert component that inverts specific channels.</remarks>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Audio_Effects_Phaser(System.Int32,System.Byte,System.Byte,System.Byte,System.Single,System.Boolean,System.Byte,System.Single)">
+            <summary>
+            Sets the parameters for the Phaser effect.
+            </summary>
+            <param name="id">Effect ID.</param>
+            <param name="depth">Sets Phaser depth (0 - 255).</param>
+            <param name="dryWetRatio">Sets dry-wet mix ratio. 0 - dry, 255 - wet (0 - 255).</param>
+            <param name="feedback">Sets phaser feedback. 0 - no feedback, 100 = 100% feedback, -100 = -100% feedback (-100 - 100).</param>
+            <param name="frequency">Sets phaser's LFO frequency.</param>
+            <param name="separate">
+            Enables or Disables separate phasing. If Enabled every channel will be phased by it's own
+            phasing value. If Disabled every channel will be phased with the phasing value of channel 0. 
+            </param>
+            <param name="stages">Sets phaser stages. Recommended from 2 to 24.</param>
+            <param name="startPhase">Sets phaser's LFO start phase in radians. Needed for stereo phasers.</param>
+            <remarks>Class for phasing amplify audio data. Phasing can be done separate on each channel.</remarks>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Audio_Effects_PitchScale(System.Int32,VisioForge.Types.VFFFTSize,System.Int32,System.Byte,System.Boolean)">
+            <summary>
+            Sets the parameters for the Pitch Scale effect.
+            </summary>
+            <param name="id">Effect ID.</param>
+            <param name="fftSize">Specifies the FFTSize that will be used. The size must be at last 256. A value of 1024 is recommended.</param>
+            <param name="pitch">Specifies the pitch of a channel. Default value is 1000 which means that the pitch isn't changed.</param>
+            <param name="quality">
+            Specifies the quality of the filter. Large values require a lot of CPU time. A value of 8-32 is recommended.
+            </param>
+            <param name="separate">
+            Enables or Disables separate amplification. If Enabled every channel will be amplified by it's own 
+            amplification value. If Disabled every channel will be amplified with the amplification value of channel 0.
+            </param>
+            <remarks>Component to increase/decrease the pitch of an audio buffer without changing the tempo.</remarks>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Audio_Effects_PitchShift(System.Int32,System.Int32)">
+            <summary>
+            Sets the parameters for the Pitch Shift effect.
+            </summary>
+            <param name="id">Effect ID.</param>
+            <param name="pitch">
+            Specifies the pitch. Default value is 1000, which means that no pitch is done. A value of 2000 increases 
+            the playback by 200% and so on.
+            </param>
+            <remarks>Pitch shift filter to increase speed and pitch of audio data.</remarks>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Audio_Effects_SetCurrentChannel(System.Int32,System.Byte)">
+            <summary>
+            Sets the current audio channel for the audio effects.
+            </summary>
+            <param name="id">Effect ID.</param>
+            <param name="channel">Channel.</param>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Audio_Effects_Sound3D(System.Int32,System.Int32)">
+            <summary>
+            Sets the parameters for the Sound3D effect.
+            </summary>
+            <param name="id">Effect ID.</param>
+            <param name="volume">
+            Sets the 3D amplification value. A value of 1000 is the same as disabling the filter.
+            Values smaller then 1000 is the same as doing a downmix (mono) of the 2 channels. Values higher 
+            then 10000 will distort the sound. 
+            </param>
+            <remarks>
+            3D Sound amplification filter that works on 2 channels only. The difference between 
+            left and right channel is calculated and added to the main signal.
+            </remarks>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Audio_Effects_Tempo(System.Int32,System.Int32)">
+            <summary>
+            Sets the parameters for the Tempo effect.
+            </summary>
+            <param name="id">Effect ID.</param>
+            <param name="tempo">Specifies the Tempo (1000 by default). </param>
+            <remarks>Filter to inc/decrease the tempo without changing the pitch.</remarks>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Audio_Effects_TrebleEnhancer(System.Int32,System.Int32,System.Boolean,System.Int32)">
+            <summary>
+            Sets the parameters for the Treble Enhancer effect.
+            </summary>
+            <param name="id">Effect ID.</param>
+            <param name="frequency">
+            Specifies the frequency range that will be used to amplify. Range is frequency to (sample rate div 2).
+            </param>
+            <param name="separate">
+            Enables or Disables separate amplification. If Enabled every channel will be amplified by it's own 
+            amplification value. If Disabled every channel will be amplified with the amplification value of channel 0. 
+            </param>
+            <param name="volume">
+            Sets the amplification for a channel. Default value is 0, which means that no amplification occurs.
+            The value shouldn't go over 10000. If separate is True, then every channel will be amplified by its own 
+            channel amplification value. If separate is False, then every channel is amplified with the value of channel 0. 
+            </param>
+            <remarks>Filter to amplify high frequency's of audio data. The frequency range can be adjusted.</remarks>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Audio_Effects_TrueBass(System.Int32,System.Int32,System.Boolean,System.Int32)">
+            <summary>
+            Sets the parameters for the True Bass effect.
+            </summary>
+            <param name="id">Effect ID.</param>
+            <param name="frequency">Specifies the frequency range that will be used to amplify. Range is 0 to frequency.</param>
+            <param name="separate">Enables or Disables separate amplification. If Enabled every channel will be amplified by it's own 
+            amplification value. If Disabled every channel will be amplified with the amplification value of channel 0. 
+            </param>
+            <param name="volume">
+            Sets the amplification for a channel. Default value is 0, which means that no amplification occurs. 
+            The value shouldn't go over 10000. If separate is True, then every channel will be amplified by its own channel 
+            amplification value. If separate is False, then every channel is amplified with the value of channel 0. 
+            </param>
+            <remarks>Filter to amplify low frequency's of audio data. The frequency range can be adjusted.</remarks>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Audio_OutputDevice_GetBalance">
+            <summary>
+            Returns current balance value for selected audio output device.
+            </summary>
+            <returns>Returns current balance value for selected audio output device, 0 if error happen.</returns>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Audio_OutputDevice_GetVolume">
+            <summary>
+            Returns current volume value for selected audio output device.
+            </summary>
+            <returns>Returns current volume value for selected audio output device, 0 if error happen.</returns>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Audio_OutputDevice_SetBalance(System.Int32)">
+            <summary>
+            Sets current balance value for selected audio output device.
+            </summary>
+            <param name="balance">Balance value.</param>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Audio_OutputDevice_SetVolume(System.Int32)">
+            <summary>
+            Sets current volume value for selected audio output device.
+            </summary>
+            <param name="volume">Volume value.</param>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.DirectShow_Filter_Has_Dialog(System.String,VisioForge.Types.VFPropertyPage)">
+            <summary>
+            Returns <see langword="true"/> if the DirectShow filter has a settings dialog box.
+            </summary>
+            <param name="name">Filter name.</param>
+            <param name="pageType">Page type.</param>
+            <returns>Returns <see langword="true"/> if the DirectShow filter has a settings dialog box, otherwise method returns <see langword="false"/>.</returns>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.DirectShow_Filter_Merit_Get(System.String)">
+            <summary>
+            Returns the merit for the selected DirectShow filter.
+            </summary>
+            <param name="name">Filter name.</param>
+            <returns>Returns the merit for the selected DirectShow filter, 0 if error happen.</returns>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.DirectShow_Filter_Merit_Set(System.String,System.UInt32)">
+            <summary>
+            Sets the merit for the selected DirectShow filter.
+            </summary>
+            <param name="name">Filter name.</param>
+            <param name="merit">New merit.</param>
+            <returns>Returns <see langword="true"/> if error happen, otherwise method returns <see langword="false"/>.</returns>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.DirectShow_Filter_Show_Dialog(System.IntPtr,System.String,VisioForge.Types.VFPropertyPage)">
+            <summary>
+            Displays the dialog box with the settings of the selected DirectShow filter.
+            </summary>
+            <param name="parent">Parent handle.</param>
+            <param name="name">Filter name.</param>
+            <param name="pageType">Page type.</param>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.DirectShow_Filters_Blacklist_Add(System.String)">
+            <summary>
+            Adds the DirectShow filter to the black list.
+            </summary>
+            <param name="filter">Filter name.</param>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.DirectShow_Filters_Blacklist_Clear">
+            <summary>
+            Clears the filters black list. 
+            </summary>
+            <remarks>
+            All available filters will be available for use.
+            </remarks>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.DirectShow_Filters_ProblemFilters">
+            <summary>
+            Returns the list of the filters, which are not functional right with Video Capture SDK. 
+            </summary>
+            <returns>Returns incompatible filters list. </returns>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.DirectShow_Filters_ProblemFilters_Fill">
+            <summary>
+            Fills the list of the filters, which are not functional right with Video Capture SDK. 
+            </summary>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Duration_Frames">
+            <summary>
+            The Duration_Frames method retrieves a number of frames. 
+            </summary>
+            <returns>Returns the number of frames.</returns>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Duration_Time">
+            <summary>
+            The Duration_Time method retrieves a duration of the video (in milliseconds). 
+            </summary>
+            <returns>Returns the duration of the video (in milliseconds).</returns>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.DV_GetMode">
+            <summary>
+            Gets current DV mode.
+            </summary>
+            <returns>
+            Returns current DV mode.
+            </returns>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.DV_SendCommand(VisioForge.Types.VFDVCommand)">
+            <summary>
+            Sends different controlling commands for DV/HDV camcorder.
+            </summary>
+            <param name="command">DV command.</param>
+            <returns>Returns <see langword="true"/>, if the operation was successful.</returns>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Filter_Exists_Matroska_Muxer">
+            <summary>
+            Returns <see langword="true"/> if the Matroska muxer present.
+            </summary>
+            <returns>
+            Returns <see langword="true"/> if the Matroska muxer present, otherwise returns <see langword="false"/>.
+            </returns>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Filter_Supported_EVR">
+            <summary>
+            Returns <see langword="true"/> if the Enhanced Video Renderer present.
+            </summary>
+            <returns>
+            Returns <see langword="true"/> if the Enhanced Video Renderer present, otherwise returns <see langword="false"/>.
+            </returns>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Filter_Supported_VMR9">
+            <summary>
+            Returns <see langword="true"/> if the Video Mixing Renderer 9 present.
+            </summary>
+            <returns>
+            Returns <see langword="true"/> if the Video Mixing Renderer 9 present, otherwise returns <see langword="false"/>.
+            </returns>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Frame_GetCurrent">
+            <summary>
+            Gets the current video frame.
+            </summary>
+            <returns>
+            Returns the current video frame as BitmapSource.
+            </returns>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Frame_CopyToClipboard">
+            <summary>
+            Copies current video frame to clipboard.
+            </summary>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Frame_GetCurrentAsBuffer">
+            <summary>
+            Returns the current video frame.
+            </summary>
+            <returns>Returns the current video frame as byte array.
+            </returns>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Frame_Save(System.String,VisioForge.Types.VFImageFormat,System.Int32)">
+            <summary>
+            Saves the current frame in one of the available formats.
+            </summary>
+            <param name="filename">Output file name.</param>
+            <param name="format">Image format.</param>
+            <param name="quality">JPEG quality.</param>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.MotionDetection_Update">
+            <summary>
+            Updates Motion detection settings.
+            </summary>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.MultiScreen_AddScreen(System.IntPtr,System.Int32,System.Int32)">
+            <summary>
+            Adds additional screen.
+            </summary>
+            <param name="screenHandle">Screen handle.</param>
+            <param name="width">Screen width.</param>
+            <param name="height">Screen height.</param>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.MultiScreen_Clear">
+            <summary>
+            Clears the additional screens.
+            </summary>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.MultiScreen_SetParameters(System.Int32,System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Sets the additional parameters for the selected screen.
+            </summary>
+            <param name="id">Screen ID.</param>
+            <param name="stretch">True to stretch picture, False to use letterbox mode.</param>
+            <param name="flipHorizontal">True to flip screen horizontally.</param>
+            <param name="flipVertical">True to flip screen vertically.</param>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.MultiScreen_UpdateSize(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Sets the new size for the additional screen.
+            </summary>
+            <param name="id">Screen ID.</param>
+            <param name="width">Screen width.</param>
+            <param name="height">Screen height.</param>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Network_Streaming_Access_AddItem(System.String,System.String,System.Boolean)">
+            <summary>
+            Adds network address to the list of allowed/disallowed addresses for Network streaming.
+            </summary>
+            <param name="ip">IP address.</param>
+            <param name="mask">Mask.</param>
+            <param name="blocked"><see langword="true"/> to block IP.</param>
+            <returns>Returns <see langword="true"/>, if the operation was successful.</returns>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Network_Streaming_Access_DeleteItem(System.Int32,System.Boolean)">
+            <summary>
+            Deletes network address from the list of allowed/disallowed addresses for Network streaming.
+            </summary>
+            <param name="index">Item index.</param>
+            <param name="blocked">True to delete item from blocked IP list.</param>
+            <returns>Returns <see langword="true"/>, if the operation was successful.</returns>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Network_Streaming_Access_GetCount(System.Boolean)">
+            <summary>
+            Returns item count of allowed/disallowed addresses list.
+            </summary>
+            <param name="blocked">True to get count of items of blocked IP list.</param>
+            <returns>Returns item count of allowed/disallowed addresses list, 0 if error happen.</returns>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Network_Streaming_Clients_GetCount">
+            <summary>
+            Returns current connected clients count.
+            </summary>
+            <returns>Returns current connected clients count, 0 if error happen.</returns>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Network_Streaming_Clients_GetInfo(System.Int32,System.Int32@,System.String@,System.String@)">
+            <summary>
+            Returns information about selected client.
+            </summary>
+            <param name="index">Client index.</param>
+            <param name="port">Port.</param>
+            <param name="networkAddress">IP address.</param>
+            <param name="dnsName">DNS name.</param>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.OSD_Init">
+            <summary>
+            Initializes OSD.
+            </summary>
+            <returns>
+            Returns <see langword="true"/> if operation was successful, 
+            otherwise method returns <see langword="false"/>.
+            </returns>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.OSD_Destroy">
+            <summary>
+            Deinitializes OSD. 
+            </summary>
+            <returns>
+            Returns <see langword="true"/> if operation was successful, 
+            otherwise method returns <see langword="false"/>.
+            </returns>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.OSD_Layers_Apply(System.Int32)">
+            <summary>
+            Applies selected layer.
+            </summary>
+            <param name="id">ID.</param>
+            <returns>
+            Returns <see langword="true"/> if operation was successful, 
+            otherwise method returns <see langword="false"/>.
+            </returns>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.OSD_Layers_Clear">
+            <summary>
+            Clears all layers.
+            </summary>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.OSD_Layers_Create(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Creates new layer.
+            </summary>
+            <param name="left">Left.</param>
+            <param name="top">Top.</param>
+            <param name="width">Width.</param>
+            <param name="height">Height.</param>
+            <returns>
+            Returns <see langword="true"/> if operation was successful, 
+            otherwise method returns <see langword="false"/>.
+            </returns>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.OSD_Layers_Delete(System.Int32)">
+            <summary>
+            Deletes selected layer.
+            </summary>
+            <param name="id">ID.</param>
+            <returns>
+            Returns <see langword="true"/> if operation was successful, 
+            otherwise method returns <see langword="false"/>.
+            </returns>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.OSD_Layers_Draw_ImageFromFile(System.Int32,System.String,System.Int32,System.Int32,System.Boolean,System.Windows.Media.Color)">
+            <summary>
+            Draws an image on the selected layer.
+            </summary>
+            <param name="id">ID.</param>
+            <param name="filename">File name.</param>
+            <param name="left">Left.</param>
+            <param name="top">Top.</param>
+            <param name="useColorKey">Use color key.</param>
+            <param name="colorKey">Color key.</param>
+            <returns>
+            Returns <see langword="true"/> if operation was successful, 
+            otherwise method returns <see langword="false"/>.
+            </returns>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.OSD_Layers_Draw_ImageFromFileEx(System.Int32,System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Boolean,System.Windows.Media.Color)">
+            <summary>
+            Draws a picture on the selected layer.
+            </summary>
+            <param name="id">ID.</param>
+            <param name="filename">File name.</param>
+            <param name="srcLeft">Source left.</param>
+            <param name="srcTop">Source top.</param>
+            <param name="srcWidth">Source width.</param>
+            <param name="srcHeight">Source height.</param>
+            <param name="destLeft">Destination left.</param>
+            <param name="destTop">Destination top.</param>
+            <param name="destWidth">Destination width.</param>
+            <param name="destHeight">Destination height.</param>
+            <param name="useColorKey">Use color key.</param>
+            <param name="colorKey">Color key.</param>
+            <returns>
+            Returns <see langword="true"/> if operation was successful, 
+            otherwise method returns <see langword="false"/>.
+            </returns>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.OSD_Layers_Draw_Text(System.Int32,System.Int32,System.Int32,System.String,System.Drawing.Font,System.Windows.Media.Color)">
+            <summary>
+            Displays text on the selected layer.
+            </summary>
+            <param name="id">ID.</param>
+            <param name="left">Left.</param>
+            <param name="top">Top.</param>
+            <param name="text">Text.</param>
+            <param name="font">Font.</param>
+            <param name="color">Color.</param>
+            <returns>
+            Returns <see langword="true"/> if operation was successful, 
+            otherwise method returns <see langword="false"/>.
+            </returns>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.OSD_Layers_SetTransparency(System.Int32,System.Byte)">
+            <summary>
+            Sets transparency level.
+            </summary>
+            <param name="id">ID.</param>
+            <param name="value">Transparency level (0-255).</param>
+            <returns>
+            Returns <see langword="true"/> if operation was successful, 
+            otherwise method returns <see langword="false"/>.
+            </returns>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.OutputFilename_ChangeOnTheFly(System.String)">
+            <summary>
+            Changes the name of the output file without completely stopping the capturing process.
+            </summary>
+            <param name="filename">File name.</param>
+            <returns>Returns <see langword="true"/>, if the operation was successful.</returns>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Pause">
+            <summary>
+            Pause.
+            </summary>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.PIP_Devices_Add(System.String,System.String,System.Boolean,System.Double)">
+            <summary>
+            Adds Picture-In-Picture device.
+            </summary>
+            <param name="deviceName">Device name.</param>
+            <param name="format">Video format.</param>
+            <param name="useBestFormat">Use best video format.</param>
+            <param name="frameRate">Frame rate.</param>
+            <returns>Returns <see langword="true"/>, if the operation was successful.</returns>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.PIP_Devices_Add_Ex(System.String,System.String,System.Boolean,System.Double,System.String,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Adds Picture-In-Picture device.
+            </summary>
+            <param name="deviceName">Device name.</param>
+            <param name="format">Video format.</param>
+            <param name="useBestFormat">Use best video format.</param>
+            <param name="frameRate">Frame rate.</param>
+            <param name="input">Video input (crossbar).</param>
+            <param name="left">Left.</param>
+            <param name="top">Top.</param>
+            <param name="width">Width.</param>
+            <param name="height">Height.</param>
+            <returns>Returns <see langword="true"/>, if the operation was successful.</returns>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.PIP_Devices_Clear">
+            <summary>
+            Clears the list of PIP devices.
+            </summary>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.PIP_Devices_Delete(System.String)">
+            <summary>
+            Deletes Picture-In-Picture device.
+            </summary>
+            <param name="deviceName">Device name.</param>
+            <returns>Returns <see langword="true"/>, if the operation was successful.</returns>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.PIP_Devices_GetCrossbar(System.String)">
+            <summary>
+            Initializes crossbar from selected device. 
+            </summary>
+            <param name="deviceName">Device name.</param>
+            <returns>Returns <see langword="true"/>, if the operation was successful.</returns>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.PIP_Devices_GetCrossbarInputs">
+            <summary>
+            Returns crossbar input list.
+            </summary>
+            <returns>Returns crossbar input list, <see langword="null"/> if error happen.</returns>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.PIP_Devices_SetPosition(System.String,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Sets the position of the video screen for the selected Picture-In-Picture device.
+            </summary>
+            <param name="deviceName">Device name.</param>
+            <param name="left">Left.</param>
+            <param name="top">Top.</param>
+            <param name="width">Width.</param>
+            <param name="height">Height.</param>
+            <returns>Returns <see langword="true"/>, if the operation was successful.</returns>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.PIP_MainScreen_SetRect(System.Int32,System.Int32,System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            Sets the position of main screen when PIP is in use.
+            </summary>
+            <param name="left">Left.</param>
+            <param name="top">Top.</param>
+            <param name="width">Width.</param>
+            <param name="height">Height.</param>
+            <param name="enabled"><see langword="true"/> if enabled, <see langword="false"/> if disabled.</param>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.RefreshLists(System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Refreshes the lists of codecs, devices or DS filters.
+            </summary>
+            <param name="devices">Enumerate devices.</param>
+            <param name="codecs">Enumerate video and audio codecs.</param>
+            <param name="filters">Enumerate DirectShow filters.</param>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Resume">
+            <summary>
+            Resume.
+            </summary>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Screen_Capture_UpdateParameters(System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            Updates the screen capturing parameters.
+            </summary>
+            <param name="left">Left coordinate.</param>
+            <param name="top">Top coordinate.</param>
+            <param name="grabMouseCursor">True to grab mouse cursor.</param>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Screen_Update">
+            <summary>
+            Updates the screen settings.
+            </summary>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.SetLicenseKey(System.String)">
+            <summary>
+            After buying a license of Video Capture SDK, you will receive the serial number. To get rid of nag screen during the run time, 
+            you will need to activate control via this method.
+            </summary>
+            <example>
+            VideoCaptureX1.SetLicenseKey(“your_license_key”).
+            </example>
+            <param name="licenseKey">License key.</param>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Special_Filters(VisioForge.Types.VFSpecialFilterType)">
+            <summary>
+            The Special_Filters method retrieves an special filter list.
+            </summary>
+            <param name="filterType">Filter type.</param>
+            <returns>Returns special filter list.</returns>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Special_Filters_Fill">
+            <summary>
+            Fills special filter list.
+            </summary>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Start">
+            <summary>
+            Starts the capture or preview process.
+            </summary>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Stop">
+            <summary>
+            Stops the capture or preview process.
+            </summary>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Test">
+            <summary>
+            For Test purposes only, never call it!
+            </summary>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.TVTuner_Apply">
+            <summary>
+            Applies TV tuner parameters. 
+            </summary>
+            <seealso cref="M:VisioForge.VideoCapture.WPF.VideoCapture.TVTuner_Read"/>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.TVTuner_Countries_GetPreferredFormatForCountry(System.String)">
+            <summary>
+            Returns preferable video format for selected country.
+            </summary>
+            <param name="country">Country name.</param>
+            <returns>Returns preferable video format for selected country, empty string on error.</returns>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.TVTuner_Modes">
+            <summary>
+            Returns TV Tuner modes list.
+            </summary>
+            <returns>Returns TV Tuner modes list, <see langword="null"/> if error happen.</returns>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.TVTuner_Read">
+            <summary>
+            Reads TV tuner parameters.
+            </summary>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.TVTuner_TuneChannels_Start">
+            <summary>
+            Starts the channel tuning.
+            </summary>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.TVTuner_TuneChannels_Stop">
+            <summary>
+            Stops the channel tuning.
+            </summary>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.TVTuner_TVFormat_FromString(System.String)">
+            <summary>
+            Converts string to TV format.
+            </summary>
+            <param name="format">Format.</param>
+            <returns>Returns TV format.</returns>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.TVTuner_TVFormats">
+            <summary>
+            Returns TV Tuner format list.
+            </summary>
+            <returns>Returns TV Tuner format list, <see langword="null"/> if error happen.</returns>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Video_CaptureDevice_CrossBar_ClearConnections">
+            <summary>
+            Clears the list of crossbar connections.
+            </summary>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Video_CaptureDevice_CrossBar_Connect(System.String,System.String,System.Boolean)">
+            <summary>
+            Sets the connection in the crossbar.
+            </summary>
+            <param name="inputPin">Input pin name.</param>
+            <param name="outputPin">Output pin name.</param>
+            <param name="connectRelated">Connect related pins.</param>
+            <returns>Returns <see langword="true"/>, if the operation was successful.</returns>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Video_CaptureDevice_CrossBar_GetConnectedInputForOutput(System.String)">
+            <summary>
+            Returns connected input for selected output.
+            </summary>
+            <param name="outputPin">Output pin name.</param>
+            <returns>Returns connected input for selected output, empty string if error happen.</returns>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Video_CaptureDevice_CrossBar_GetInputsForOutput(System.String)">
+            <summary>
+            Returns selected input name list for selected output.
+            </summary>
+            <param name="outputPin">Output pin name.</param>
+            <returns>Returns selected input name list for selected output, <see langword="null"/> if error happen.</returns>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Video_CaptureDevice_CrossBar_GetRelated(System.String,System.String,System.String@,System.String@)">
+            <summary>
+            Returns related pins for selected input and output pins.
+            </summary>
+            <param name="inputPin">Input pin name.</param>
+            <param name="outputPin">Output pin name.</param>
+            <param name="relatedInputPin">Related input pin name.</param>
+            <param name="relatedOutputPin">Related output pin name.</param>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Video_CaptureDevice_CrossBar_Init">
+            <summary>
+            Initializes the crossbar.
+            </summary>
+            <returns>Returns <see langword="true"/>, if the operation was successful.</returns>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Video_CaptureDevice_CrossBar_Outputs">
+            <summary>
+            Returns crossbar output list.
+            </summary>
+            <returns>Returns crossbar output list, <see langword="null"/> if error happen.</returns>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Video_CaptureDevice_Detect_Type">
+            <summary>
+            Returns selected video capture device type.
+            </summary>
+            <returns>
+            Returns selected video capture device type, <see cref="T:VisioForge.Types.VFDeviceType"/>.Unknown if device is unknown
+             or error happen.
+            </returns>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Video_CaptureDevice_Formats">
+            <summary>
+            The Video_CaptureDevice_Formats method retrieves an video capture device format list.
+            </summary>
+            <returns>Returns video capture device format list.</returns>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Video_CaptureDevice_Formats_Fill">
+            <summary>
+            Fills video capture device format list.
+            </summary>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Video_CaptureDevice_FrameRates">
+            <summary>
+            The Video_CaptureDevice_FrameRates method retrieves an video capture device frame rate list.
+            </summary>
+            <returns>Returns video capture device frame rate list.</returns>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Video_CaptureDevice_FrameRates_Fill">
+            <summary>
+            Fill video capture device frame rate list.
+            </summary>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Video_CaptureDevice_Get_DroppedFramesCountFromDevice(System.Int32@,System.Int32@)">
+            <summary>
+            Retrieves the count of dropped frames.
+            </summary>
+            <param name="dropped">Dropped frames count.</param>
+            <param name="notDropped">Not dropped frames count.</param>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Video_CaptureDevice_GetDevicePath(System.Int32)">
+            <summary>
+            Gets DirectShow device path for selected video capture device.
+            </summary>
+            <param name="index">
+            Item index.
+            </param>
+            <returns>
+            Returns DirectShow device path for selected video capture device, empty string if error happen.
+            </returns>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Video_CaptureDevice_HasInternalAudioOutput">
+            <summary>
+            Returns <see langword="true"/>, if the video capture device has audio source.
+            </summary>
+            <returns>
+            Returns <see langword="true"/>, if the video capture device has audio source, otherwise
+             returns <see langword="false"/>.
+            </returns>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Video_CaptureDevice_InternalMPEGEncoder_ShowDialog">
+            <summary>
+            Displays the dialog box with the settings of the selected Internal MPEG encoder.
+            </summary>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Video_CaptureDevice_SettingsDialog_Exists">
+            <summary>
+            Returns <see langword="true"/>, if the video capture device has a settings dialog box.
+            </summary>
+            <returns>
+            Returns <see langword="true"/>, if the video capture device has a settings dialog box, 
+            otherwise returns <see langword="false"/>.
+            </returns>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Video_CaptureDevice_SettingsDialog_Show">
+            <summary>
+            Displays the dialog box with the settings of the selected video capture device filter.
+            </summary>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Video_CaptureDevice_SignalPresent">
+            <summary>
+            Returns <see langword="true"/>, if video capture device has a video signal.
+            </summary>
+            <returns>
+            Returns <see langword="true"/>, if video capture device has a video signal, 
+            otherwise returns <see langword="false"/>.
+            </returns>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Video_CaptureDevice_TV_Tuner_Name">
+            <summary>
+            Returns the name of the TV Tuner filter. 
+            </summary>
+            <returns>Returns the name of the TV Tuner filter, if the video capture device has one.</returns>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Video_CaptureDevice_VideoAdjust_GetRanges(VisioForge.Types.VFVideoHardwareAdjustment,System.Int32@,System.Int32@,System.Int32@,System.Int32@,System.Boolean@)">
+            <summary>
+            Gets the available ranges for the selected adjustment.
+            </summary>
+            <param name="adjustType">Adjustment type.</param>
+            <param name="min">Minimal value.</param>
+            <param name="max">Maximal value.</param>
+            <param name="steppingDelta">Stepping delta.</param>
+            <param name="default">Default value.</param>
+            <param name="auto">Auto.</param>
+            <returns>Returns <see langword="true"/>, if the operation was successful.</returns>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Video_CaptureDevice_VideoAdjust_GetValue(VisioForge.Types.VFVideoHardwareAdjustment,System.Int32@,System.Boolean@)">
+            <summary>
+            Gets the current value for the selected adjustment.
+            </summary>
+            <param name="adjustType">Adjustment type.</param>
+            <param name="value">Value.</param>
+            <param name="auto">Auto.</param>
+            <returns>Returns <see langword="true"/>, if the operation was successful.</returns>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Video_CaptureDevice_VideoAdjust_SetValue(VisioForge.Types.VFVideoHardwareAdjustment,System.Int32,System.Boolean)">
+            <summary>
+            Sets the new value for the selected adjustment.
+            </summary>
+            <param name="adjustType">Adjustment type.</param>
+            <param name="value">Value.</param>
+            <param name="auto">Auto.</param>
+            <returns>Returns <see langword="true"/>, if the operation was successful.</returns>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Video_Codec_Has_Dialog(System.String,VisioForge.Types.VFPropertyPage)">
+            <summary>
+            Returns <see langword="true"/>, if the video codec has a settings dialog box.
+            </summary>
+            <param name="name">Codec name.</param>
+            <param name="pageType">Page type.</param>
+            <returns>
+            Returns <see langword="true"/>, if the video codec has a settings dialog box,
+             otherwise returns <see langword="false"/>.
+            </returns>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Video_Codec_Show_Dialog(System.IntPtr,System.String,VisioForge.Types.VFPropertyPage)">
+            <summary>
+            Displays the dialog box with the settings of the selected video codec.
+            </summary>
+            <param name="parent">parent handle.</param>
+            <param name="name">Codec name.</param>
+            <param name="pageType">Page type.</param>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Video_Effect_Ex(System.Int32,System.Int32,System.Int32,System.Boolean,VisioForge.Types.VFVideoEffectType,System.Double)">
+            <summary>
+            Adds video effect.
+            </summary>
+            <param name="id">Effect ID.</param>
+            <param name="startTime">Start time.</param>
+            <param name="stopTime">Stop time.</param>
+            <param name="enabled"><see langword="true"/> if enabled, <see langword="false"/> if disabled.</param>
+            <param name="effect">Effect type.</param>
+            <param name="amount">Amount (main parameter).</param>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Video_Effects_Clear">
+            <summary>
+            Clears video effects.
+            </summary>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Video_Effects_Deinterlace_Blend(System.Int32,System.Int32,System.Int32,System.Boolean,System.Byte,System.Byte,System.Double,System.Double)">
+            <summary>
+            Calculates output pixels as alpha blends of the results of two filters applied to input pixels.
+            </summary>
+            <param name="id">Effect ID.</param>
+            <param name="startTime">Start time.</param>
+            <param name="stopTime">Stop time.</param>
+            <param name="enabled"><see langword="true"/> if enabled, <see langword="false"/> if disabled.</param>
+            <param name="threshold1">Alpha-coefficient (0 - 255, 5 by default).</param>
+            <param name="threshold2">Alpha-coefficient (0 - 255, 9 by default).</param>
+            <param name="constants1">Alpha-coefficient (0 - 1, 0.3 by default).</param>
+            <param name="constants2">Alpha-coefficient (0 - 1, 0.7 by default).</param>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Video_Effects_Deinterlace_CAVT(System.Int32,System.Int32,System.Int32,System.Boolean,System.Byte)">
+            <summary>
+            Content adaptive vertical temporal (CAVT) filtering.
+            </summary>
+            <param name="id">Effect ID.</param>
+            <param name="startTime">Start time.</param>
+            <param name="stopTime">Stop time.</param>
+            <param name="enabled"><see langword="true"/> if enabled, <see langword="false"/> if disabled.</param>
+            <param name="threshold">Threshold (0 - 255, 20 by default).</param>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Video_Effects_Deinterlace_Triangle(System.Int32,System.Int32,System.Int32,System.Boolean,System.Byte)">
+            <summary>
+            Triangle filtering.
+            </summary>
+            <param name="id">Effect ID.</param>
+            <param name="startTime">Start time.</param>
+            <param name="stopTime">Stop time.</param>
+            <param name="enabled"><see langword="true"/> if enabled, <see langword="false"/> if disabled.</param>
+            <param name="weight">Weight of filtered pixel (128 - 256, 192 by default).</param> 
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Video_Effects_Denoise_Adaptive(System.Int32,System.Int32,System.Int32,System.Boolean,System.Byte,System.Byte)">
+            <summary>
+            Performs spatio-temporal adaptive noise reduction filtering.
+            </summary>
+            <param name="id">Effect ID.</param>
+            <param name="startTime">Start time.</param>
+            <param name="stopTime">Stop time.</param>
+            <param name="enabled"><see langword="true"/> if enabled, <see langword="false"/> if disabled.</param>
+            <param name="threshold">Threshold (0 - 255, 20 by default).</param>
+            <param name="blurMode">Blur mode (0 - 3, 0 by default).</param>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Video_Effects_Denoise_CAST(System.Int32,System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            Performs content adaptive spatio-temporal noise reduction filtering.
+            </summary>
+            <param name="id">Effect ID.</param>
+            <param name="startTime">Start time.</param>
+            <param name="stopTime">Stop time.</param>
+            <param name="enabled"><see langword="true"/> if enabled, <see langword="false"/> if disabled.</param>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Video_Effects_Denoise_CAST_Parameters(System.Int32,System.Boolean,System.Byte,System.Byte,System.Byte,System.Byte,System.Byte,System.Byte,System.Byte,System.Byte,System.Byte,System.Byte)">
+            <summary>
+            Applies CAST filter parameters.
+            </summary>
+            <param name="id">Effect ID.</param>
+            <param name="enabled"><see langword="true"/> if enabled, <see langword="false"/> if disabled.</param>
+            <param name="temporalDifferenceThreshold">Temporal difference threshold (0 - 255, 16 by default).</param>
+            <param name="numberOfMotionPixelsThreshold">Number of motion pixels threshold (0 - 16, 0 by default).</param>
+            <param name="strongEdgeThreshold">Strong edge threshold (0 - 255, 8 by default).</param>
+            <param name="blockWidth">Block width (1 - 16, 4 by default).</param>
+            <param name="blockHeight">Block height (1 - 16, 4 by default).</param>
+            <param name="edgePixelWeight">Edge pixel weight (0 - 255, 128 by default).</param>
+            <param name="nonEdgePixelWeight">Non edge pixel weight (0 - 255, 16 by default).</param>
+            <param name="gaussianThresholdY">Gaussian threshold - Y (0 - 255, 12 by default).</param>
+            <param name="gaussianThresholdUv">Gaussian threshold - UV (0 - 255, 6 by default).</param>
+            <param name="historyWeight">History weight (0 - 255, 192 by default).</param>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Video_Effects_Denoise_Mosquito(System.Int32,System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            Performs spatio-temporal motion adaptive mosquito noise reduction filtering.
+            </summary>
+            <param name="id">Effect ID.</param>
+            <param name="startTime">Start time.</param>
+            <param name="stopTime">Stop time.</param>
+            <param name="enabled"><see langword="true"/> if enabled, <see langword="false"/> if disabled.</param>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Video_Effects_Filter_Blue(System.Int32,System.Int32,System.Int32,System.Boolean,System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            Blue filter.
+            </summary>
+            <param name="id">Effect ID.</param>
+            <param name="startTime">Start time.</param>
+            <param name="stopTime">Stop time.</param>
+            <param name="enabled"><see langword="true"/> if enabled, <see langword="false"/> if disabled.</param>
+            <param name="min">Minimum.</param>
+            <param name="max">Maximum.</param>
+            <param name="secondMode">Use "second mode".</param>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Video_Effects_Filter_Green(System.Int32,System.Int32,System.Int32,System.Boolean,System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            Green filter.
+            </summary>
+            <param name="id">Effect ID.</param>
+            <param name="startTime">Start time.</param>
+            <param name="stopTime">Stop time.</param>
+            <param name="enabled"><see langword="true"/> if enabled, <see langword="false"/> if disabled.</param>
+            <param name="min">Minimum.</param>
+            <param name="max">Maximum.</param>
+            <param name="secondMode">Use "second mode".</param>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Video_Effects_Filter_Red(System.Int32,System.Int32,System.Int32,System.Boolean,System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            Red filter.
+            </summary>
+            <param name="id">Effect ID.</param>
+            <param name="startTime">Start time.</param>
+            <param name="stopTime">Stop time.</param>
+            <param name="enabled"><see langword="true"/> if enabled, <see langword="false"/> if disabled.</param>
+            <param name="min">Minimum.</param>
+            <param name="max">Maximum.</param>
+            <param name="secondMode">Use "second mode".</param>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Video_Effects_Marble(System.Int32,System.Int32,System.Int32,System.Boolean,System.Double,System.Int32)">
+            <summary>
+            Marble effect.
+            </summary>
+            <param name="id">Effect ID.</param>
+            <param name="startTime">Start time.</param>
+            <param name="stopTime">Stop time.</param>
+            <param name="enabled"><see langword="true"/> if enabled, <see langword="false"/> if disabled.</param>
+            <param name="scale">Scale.</param>
+            <param name="turbulence">Turbulence.</param>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Video_Effects_Picture_Logo(System.Int32,System.Int32,System.Int32,System.Boolean,System.String,System.UInt32,System.UInt32)">
+            <summary>
+            Adds a graphical logo.
+            </summary>
+            <param name="id">Effect ID.</param>
+            <param name="startTime">Start time.</param>
+            <param name="stopTime">Stop time.</param>
+            <param name="enabled"><see langword="true"/> if enabled, <see langword="false"/> if disabled.</param>
+            <param name="filename">File name.</param>
+            <param name="x">X,</param>
+            <param name="y">Y.</param>
+            <remarks>BMP, GIF, JPEG, PNG (32 bit too) are supported.</remarks>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Video_Effects_Picture_Logo_Ex(System.String,System.Int32,System.Int32,System.Int32,System.Boolean,System.UInt32,System.UInt32,System.Windows.Media.Imaging.BitmapSource,System.Int32,System.Windows.Media.Color,System.Boolean)">
+            <summary>
+            Adds a graphical logo.
+            </summary>
+            <param name="filename">File name.</param>
+            <param name="id">Effect ID.</param>
+            <param name="startTime">Start time.</param>
+            <param name="stopTime">Stop time.</param>
+            <param name="enabled"><see langword="true"/> if enabled, <see langword="false"/> if disabled.</param>
+            <param name="x">X.</param>
+            <param name="y">Y.</param>
+            <param name="bitmap">Bitmap object. Use <see langword="null"/> if you want to set logo from file.</param>
+            <param name="transparencyLevel">Transparency level.</param>
+            <param name="colorKey">Color key.</param>
+            <param name="useColorKey"><see langword="true"/> to use color key.</param>
+            <remarks>BMP, GIF, JPEG, PNG (32 bit too) are supported.</remarks>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Video_Effects_Remove(System.Int32)">
+            <summary>
+            Removes an effect.
+            </summary>
+            <param name="id">Effect ID.</param>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Video_Effects_ShakeDown(System.Int32,System.Int32,System.Int32,System.Boolean,System.Int32)">
+            <summary>
+            Shake down effect.
+            </summary>
+            <param name="id">Effect ID.</param>
+            <param name="startTime">Start time.</param>
+            <param name="stopTime">Stop time.</param>
+            <param name="enabled"><see langword="true"/> if enabled, <see langword="false"/> if disabled.</param>
+            <param name="factor">Factor.</param>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Video_Effects_Text_Logo(System.Int32,System.Int32,System.Int32,System.Boolean,System.String,System.Int32,System.Int32,System.String,System.Int32,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Windows.Media.Color,System.Boolean,System.Windows.Media.Color)">
+            <summary>
+            Adds a text logo.
+            </summary>
+            <param name="id">Effect ID.</param>
+            <param name="startTime">Start time.</param>
+            <param name="stopTime">Stop time.</param>
+            <param name="enabled"><see langword="true"/> if enabled, <see langword="false"/> if disabled.</param>
+            <param name="text">Text.</param>
+            <param name="x">X.</param>
+            <param name="y">Y.</param>
+            <param name="fontName">Font name.</param>
+            <param name="fontSize">Font size.</param>
+            <param name="fontBold">Bold.</param>
+            <param name="fontItalic">Italic.</param>
+            <param name="fontUnderline">Underline.</param>
+            <param name="fontStrikeout">Strike-out.</param>
+            <param name="fontColor">Font color.</param>
+            <param name="transparentBg">Transparent background.</param>
+            <param name="backgroundColor">Background color.</param>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Video_Effects_Text_Logo(System.Int32,System.Int32,System.Int32,System.Boolean,System.String,System.Int32,System.Int32,System.Drawing.Font,System.Windows.Media.Color,System.Boolean,System.Windows.Media.Color)">
+            <summary>
+            Adds a text logo.
+            </summary>
+            <param name="id">Effect ID.</param>
+            <param name="startTime">Start time.</param>
+            <param name="stopTime">Stop time.</param>
+            <param name="enabled"><see langword="true"/> if enabled, <see langword="false"/> if disabled.</param>
+            <param name="text">Text.</param>
+            <param name="x">X.</param>
+            <param name="y">Y.</param>
+            <param name="font">Font (Windows Forms).</param>
+            <param name="fontColor">Font color.</param>
+            <param name="transparentBg">Transparent background.</param>
+            <param name="backgroundColor">Background color.</param>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Video_Effects_Text_Logo(System.Int32,System.Int32,System.Int32,System.Boolean,System.String,System.Int32,System.Int32,System.String,System.Int32,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Windows.Media.Color)">
+            <summary>
+            Adds a text logo with additional parameters. 
+            </summary>
+            <param name="id">Effect ID.</param>
+            <param name="startTime">Start time.</param>
+            <param name="stopTime">Stop time.</param>
+            <param name="enabled"><see langword="true"/> if enabled, <see langword="false"/> if disabled.</param>
+            <param name="text">Text.</param>
+            <param name="x">X.</param>
+            <param name="y">Y.</param>
+            <param name="fontName">Font name.</param>
+            <param name="fontSize">Font size.</param>
+            <param name="bold">Bold.</param>
+            <param name="italic">Italic.</param>
+            <param name="underline">Underline.</param>
+            <param name="strikeOut">Strike-out.</param>
+            <param name="fontColor">Font color.</param>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Video_Effects_Text_Logo(System.Int32,System.Int32,System.Int32,System.Boolean,System.String,System.Int32,System.Int32,System.String,System.Int32,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Drawing.Color)">
+            <summary>
+            Adds a text logo with additional parameters. 
+            </summary>
+            <param name="id">Effect ID.</param>
+            <param name="startTime">Start time.</param>
+            <param name="stopTime">Stop time.</param>
+            <param name="enabled"><see langword="true"/> if enabled, <see langword="false"/> if disabled.</param>
+            <param name="text">Text.</param>
+            <param name="x">X.</param>
+            <param name="y">Y.</param>
+            <param name="fontName">Font name.</param>
+            <param name="fontSize">Font size.</param>
+            <param name="bold">Bold.</param>
+            <param name="italic">Italic.</param>
+            <param name="underline">Underline.</param>
+            <param name="strikeOut">Strike-out.</param>
+            <param name="fontColor">Font color.</param>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Video_Effects_Text_Logo(System.Int32,System.Int32,System.Int32,System.Boolean,System.String,System.Int32,System.Int32,System.Drawing.Font,System.Drawing.Color)">
+            <summary>
+            Adds a text logo with additional parameters. 
+            </summary>
+            <param name="id">Effect ID.</param>
+            <param name="startTime">Start time.</param>
+            <param name="stopTime">Stop time.</param>
+            <param name="enabled"><see langword="true"/> if enabled, <see langword="false"/> if disabled.</param>
+            <param name="text">Text.</param>
+            <param name="x">X.</param>
+            <param name="y">Y.</param>
+            <param name="font">Font (Windows Forms).</param>
+            <param name="fontColor">Font color.</param>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Video_Effects_Text_Logo_Parameters_Effect(System.Int32,VisioForge.Types.VFTextEffectMode,System.Windows.Media.Color,System.Windows.Media.Color,System.Int32,System.Int32)">
+            <summary>
+            Sets an effect for the text. 
+            </summary>
+            <param name="id">Effect ID.</param>
+            <param name="mode">Mode.</param>
+            <param name="innerColor">Inner color.</param>
+            <param name="outerColor">Outer color.</param>
+            <param name="innerSize">Inner size.</param>
+            <param name="outerSize">Outer size.</param>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Video_Effects_Text_Logo_Parameters_Gradient(System.Int32,System.Boolean,VisioForge.Types.VFTextGradientMode,System.Windows.Media.Color,System.Windows.Media.Color)">
+            <summary>
+            Sets a gradient colors for a text. 
+            </summary>
+            <param name="id">Effect ID.</param>
+            <param name="gradientEnabled"><see langword="true"/> if enabled, <see langword="false"/> if disabled.</param>
+            <param name="mode">Gradient mode.</param>
+            <param name="color1">Color 1.</param>
+            <param name="color2">Color 2.</param>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Video_Effects_Text_Logo_Parameters_Rect(System.Int32,System.Boolean,System.Int32,System.Int32)">
+            <summary>
+            Sets rectangular around the text. 
+            </summary>
+            <param name="id">Effect ID.</param>
+            <param name="rectEnabled"><see langword="true"/> if enabled, <see langword="false"/> if disabled.</param>
+            <param name="rectWidth">Width.</param>
+            <param name="rectHeight">height.</param>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Video_Effects_Text_Logo_Parameters_Rotate(System.Int32,VisioForge.Types.VFTextRotationMode,VisioForge.Types.VFTextFlipMode)">
+            <summary>
+            Rotates text logo for custom angle value, or displays text with vertical or horizontal flip. 
+            </summary>
+            <param name="id">Effect ID.</param>
+            <param name="rotationMode">Rotation mode.</param>
+            <param name="flipMode">Flip mode.</param>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Video_Effects_Text_Logo_Parameters_Shape(System.Int32,System.Boolean,VisioForge.Types.VFTextShapeType,System.Int32,System.Int32,System.Int32,System.Int32,System.Windows.Media.Color)">
+            <summary>
+            Sets shape parameters. 
+            </summary>
+            <param name="id">Effect ID.</param>
+            <param name="shapeEnabled"><see langword="true"/> if enabled, <see langword="false"/> if disabled.</param>
+            <param name="type">Shape type.</param>
+            <param name="x">X.</param>
+            <param name="y">Y.</param>
+            <param name="width">Width.</param>
+            <param name="height">Height.</param>
+            <param name="color">Color.</param>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Video_Effects_Text_Logo_Parameters_Text(System.Int32,System.Boolean,System.Windows.Media.Color,System.Boolean,System.Boolean,VisioForge.Types.VFTextAlign,VisioForge.Types.VFTextAntialiasingMode,VisioForge.Types.VFTextDrawMode)">
+            <summary>
+            Sets additional parameters for the text.
+            </summary>
+            <param name="id">Effect ID.</param>
+            <param name="backgroundTransparent">Transparent background.</param>
+            <param name="backgroundColor">Background color.</param>
+            <param name="vertical">Vertical.</param>
+            <param name="rightToLeft">Right-To-Left.</param>
+            <param name="align">Align.</param>
+            <param name="antialiasing">Antialiasing.</param>
+            <param name="drawMode">Drawing mode.</param>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Video_Effects_Text_Logo_Parameters_Transparency(System.Int32,System.Int32)">
+            <summary>
+            Sets the values for logo transparency.
+            </summary>
+            <param name="id">Effect ID.</param>
+            <param name="transparency">Transparency level (0-255).</param>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Video_Effects_Text_Logo_Parameters_Update(System.Int32,System.Boolean)">
+            <summary>
+            Applies new text parameters. 
+            </summary>
+            <param name="id">Effect ID.</param>
+            <param name="enabled"><see langword="true"/> if enabled, <see langword="false"/> if disabled.</param>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Video_Filters_Add(System.String)">
+            <summary>
+            Adds DirectShow filter to the list. You can use filters to process video.
+            </summary>
+            <param name="name">Filter name.</param>
+            <remarks>
+            You can specify filters parameters using either the settings dialog box 
+            or direct access to the filter interface with the help of the plug-in system.
+            </remarks>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Video_Filters_Clear">
+            <summary>
+            Clears filter list.
+            </summary>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Video_Filters_Delete(System.String)">
+            <summary>
+            Deletes filter from the list.
+            </summary>
+            <param name="name">Filter name.</param>
+            <returns>Returns <see langword="true"/>, if the operation was successful.</returns>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.WMV_Custom_Audio_Codecs">
+            <summary>
+            Returns WMV audio codec list.
+            </summary>
+            <returns>Returns WMV audio codec list, <see langword="null"/> if error happen.</returns>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.WMV_Custom_Audio_Formats(System.String)">
+            <summary>
+            Returns WMV audio format list.
+            </summary>
+            <param name="codecName">Audio codec name.</param>
+            <returns>Returns WMV audio format list, <see langword="null"/> if error happen.</returns>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.WMV_Custom_Profile_Save_To_File(System.String)">
+            <summary>
+            Saves custom profile to the file.
+            </summary>
+            <param name="filename">File name.</param>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.WMV_Custom_Video_Codecs">
+            <summary>
+            Returns WMV video codec list.
+            </summary>
+            <returns>Returns WMV video codec list, <see langword="null"/> if error happen.</returns>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.WMV_Internal_Profiles">
+            <summary>
+            Returns WMV internal profiles list.
+            </summary>
+            <returns>Returns WMV internal profiles list, <see langword="null"/> if error happen.</returns>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.WMV_V8_Profiles(System.Collections.Generic.List{System.String}@,System.Collections.Generic.List{System.String}@)">
+            <summary>
+            Returns WMV V8 profiles list.
+            </summary>
+            <param name="names">Names list.</param>
+            <param name="descriptions">Descriptions list.</param>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.AForge_Motion_Detection_UpdateSettings">
+            <summary>
+            Updates AForge motion detection settings.
+            </summary>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.BDA_SetParameters">
+            <summary>
+            Sets frequency and other parameters for BDA device.
+            </summary>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.BDA_GetParameters">
+            <summary>
+            Gets frequency and other parameters for BDA device.
+            </summary>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.BDA_Sources">
+            <summary>
+            Gets BDA source list.
+            </summary>
+            <returns>
+            Returns BDA source list.
+            </returns>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.BDA_Receivers">
+            <summary>
+            Gets BDA receiver list.
+            </summary>
+            <returns>
+            Returns BDA receiver list.
+            </returns>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.SeparateCapture_Start">
+            <summary>
+            Starts capture. Separate capture must be enabled.
+            </summary>
+            <returns>
+            Returns true if the operation was successful.
+            </returns>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.SeparateCapture_Stop">
+            <summary>
+            Stops capture. Separate capture must be enabled.
+            </summary>
+            <returns>
+            Returns true if the operation was successful.
+            </returns>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.SeparateCapture_Pause">
+            <summary>
+            Pauses capture. Separate capture must be enabled.
+            </summary>
+            <returns>
+            Returns true if the operation was successful.
+            </returns>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.SeparateCapture_Resume">
+            <summary>
+            Resumes capture. Separate capture must be enabled.
+            </summary>
+            <returns>
+            Returns true if the operation was successful.
+            </returns>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.SeparateCapture_ChangeFilenameOnTheFly(System.String)">
+            <summary>
+            Changes file name on the fly. Separate capture must be enabled.
+            </summary>
+            <param name="filename">
+            New file name.
+            </param>
+            <returns>
+            Returns true if the operation was successful.
+            </returns>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.OpenCL_Init">
+            <summary>
+            Initializes OpenCL. You must call if before starting preview or capture. Only one time.
+            </summary>
+            <returns>
+            Returns true if the operation was successful.
+            </returns>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.OpenCL_ClearEffects">
+            <summary>
+            Clears effects.
+            </summary>
+            <returns>
+            Returns true if the operation was successful.
+            </returns>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.OpenCL_AddEffect(System.String,VisioForge.Types.VFOpenCLEffectType,System.Boolean,System.Object[])">
+            <summary>
+            Adds OpenCL effect.
+            </summary>
+            <param name="name">
+            Effect name.
+            </param>
+            <param name="type">
+            Effect type.
+            </param>
+            <param name="enabled">
+            True if effect enabled.
+            </param>
+            <param name="parameters">
+            Effect parameters.
+            </param>
+            <returns>
+            Returns true if the operation was successful.
+            </returns>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.OpenCL_UpdateEffect(System.String,System.Boolean,System.Object[])">
+            <summary>
+            Updates OpenCL effect.
+            </summary>
+            <param name="name">
+            Effect name.
+            </param>
+            <param name="enabled">
+            True if effect enabled.
+            </param>
+            <param name="parameters">
+            Effect parameters.
+            </param>
+            <returns>
+            Returns true if the operation was successful.
+            </returns>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.OpenCL_AddEffect(System.String,VisioForge.Types.VFOpenCLEffectType,System.Boolean,System.Int32)">
+            <summary>
+            Adds OpenCL effect.
+            </summary>
+            <param name="name">
+            Effect name.
+            </param>
+            <param name="type">
+            Effect type.
+            </param>
+            <param name="enabled">
+            True if effect enabled.
+            </param>
+            <param name="parameter">
+            Effect parameter.
+            </param>
+            <returns>
+            Returns true if the operation was successful.
+            </returns>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.OpenCL_UpdateEffect(System.String,System.Boolean,System.Int32)">
+            <summary>
+            Updates OpenCL effect.
+            </summary>
+            <param name="name">
+            Effect name.
+            </param>
+            <param name="enabled">
+            True if effect enabled.
+            </param>
+            <param name="parameter">
+            Effect parameter.
+            </param>
+            <returns>
+            Returns true if the operation was successful.
+            </returns>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.OpenCL_AddEffect(System.String,VisioForge.Types.VFOpenCLEffectType,System.Boolean,System.Single)">
+            <summary>
+            Adds OpenCL effect.
+            </summary>
+            <param name="name">
+            Effect name.
+            </param>
+            <param name="type">
+            Effect type.
+            </param>
+            <param name="enabled">
+            True if effect enabled.
+            </param>
+            <param name="parameter">
+            Effect parameter.
+            </param>
+            <returns>
+            Returns true if the operation was successful.
+            </returns>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.OpenCL_UpdateEffect(System.String,System.Boolean,System.Single)">
+            <summary>
+            Updates OpenCL effect.
+            </summary>
+            <param name="name">
+            Effect name.
+            </param>
+            <param name="enabled">
+            True if effect enabled.
+            </param>
+            <param name="parameter">
+            Effect parameter.
+            </param>
+            <returns>
+            Returns true if the operation was successful.
+            </returns>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.OpenCL_AddEffect(System.String,VisioForge.Types.VFOpenCLEffectType,System.Boolean)">
+            <summary>
+            Adds OpenCL effect.
+            </summary>
+            <param name="name">
+            Effect name.
+            </param>
+            <param name="type">
+            Effect type.
+            </param>
+            <param name="enabled">
+            True if effect enabled.
+            </param>
+            <returns>
+            Returns true if the operation was successful.
+            </returns>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.OpenCL_UpdateEffect(System.String,System.Boolean)">
+            <summary>
+            Updates OpenCL effect.
+            </summary>
+            <param name="name">
+            Effect name.
+            </param>
+            <param name="enabled">
+            True if effect enabled.
+            </param>
+            <returns>
+            Returns true if the operation was successful.
+            </returns>
+        </member>
+        <member name="F:VisioForge.VideoCapture.WPF.VideoCapture.FDevice">
+            <summary>
+            Media Player main class.
+            </summary>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:VisioForge.VideoCapture.WPF.VideoCapture"/> class. 
+            </summary>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.DeviceOnNewBitmapReady(System.Object,System.EventArgs)">
+            <summary>
+            New frame event.
+            </summary>
+            <param name="sender">
+            Sender.
+            </param>
+            <param name="e">
+            Event args.
+            </param>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.ColorConv(System.Windows.Media.Color)">
+            <summary>
+            Converts color from WPF to WinForms.
+            </summary>
+            <param name="color">
+            Source color.
+            </param>
+            <returns>
+            Returns WinForms color.
+            </returns>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.ColorConv(System.Drawing.Color)">
+            <summary>
+            Converts color from WinForms to WPF.
+            </summary>
+            <param name="color">
+            Source color.
+            </param>
+            <returns>
+            Returns WPF color.
+            </returns>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.BitmapConv(System.Windows.Media.Imaging.BitmapSource)">
+            <summary>
+            Converts WPF BitmapSource to WinForms Bitmap.
+            </summary>
+            <param name="bitmapSource">
+            Source bitmap.
+            </param>
+            <returns>
+            Returns WinForms Bitmap.
+            </returns>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.BitmapConv(System.Drawing.Bitmap)">
+            <summary>
+            Converts WinForms Bitmap to WPF BitmapSource.
+            </summary>
+            <param name="bitmap">
+            Source bitmap.
+            </param>
+            <returns>
+            Returns WPF BitmapSource.
+            </returns>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.FillColor(System.Windows.Media.Color)">
+            <summary>
+            Fills source using color.
+            </summary>
+            <param name="color">
+            Color.
+            </param>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Finalize">
+            <summary>
+            Finalizes an instance of the <see cref="T:VisioForge.VideoCapture.WPF.VideoCapture"/> class. 
+            </summary>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Dispose">
+            <summary>
+            Dispose.
+            </summary>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCapture.Dispose(System.Boolean)">
+            <summary>
+            Dispose.
+            </summary>
+            <param name="disposing">
+            Disposing parameter.
+            </param>
+        </member>
+        <member name="E:VisioForge.VideoCapture.WPF.VideoCapture.OnError">
+            <summary>
+            This event occurs in a case of an error.
+            </summary>
+        </member>
+        <member name="E:VisioForge.VideoCapture.WPF.VideoCapture.OnAudioFrameBuffer">
+            <summary>
+            This event occurs whenever each new audio frame is received.
+            </summary>
+        </member>
+        <member name="E:VisioForge.VideoCapture.WPF.VideoCapture.OnVideoFrameBuffer">
+            <summary>
+            This event occurs whenever each new video frame is received.
+            </summary>
+        </member>
+        <member name="E:VisioForge.VideoCapture.WPF.VideoCapture.OnVideoFrameBitmap">
+            <summary>
+            This event occurs whenever each new video frame is received.
+            </summary>
+        </member>
+        <member name="E:VisioForge.VideoCapture.WPF.VideoCapture.OnMotion">
+            <summary>
+            This event occurs whenever a new frame is received and motion is detected.
+            </summary>
+        </member>
+        <member name="E:VisioForge.VideoCapture.WPF.VideoCapture.OnTVTunerTuneChannels">
+            <summary>
+            This event occurs whenever a channel search (tuning) and contains the presence 
+            of the signal, the number of the channel and its frequency. 
+            </summary>
+        </member>
+        <member name="E:VisioForge.VideoCapture.WPF.VideoCapture.OnAudioVUMeter">
+            <summary>
+            This event occurs whenever each new video VU meter data is received.
+            </summary>
+        </member>
+        <member name="E:VisioForge.VideoCapture.WPF.VideoCapture.OnStart">
+            <summary>
+            This event occurs whenever the capture / preview starts.
+            </summary>
+        </member>
+        <member name="E:VisioForge.VideoCapture.WPF.VideoCapture.OnStop">
+            <summary>
+            This event occurs whenever the capture / preview stop.
+            </summary>
+        </member>
+        <member name="E:VisioForge.VideoCapture.WPF.VideoCapture.OnAForgeMotionDetection">
+            <summary>
+            This event occurs whenever each new video frame is received. Event args contain motion data.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.Audio_Codec_BPS">
+            <summary>
+            Gets or sets BPS for the current audio codec.
+            </summary>
+            <remarks> 
+            Usually 8 or 16. Some codecs ignore this parameter or set it to zero
+             because they have only one option.
+            </remarks>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.Audio_CaptureDevice">
+            <summary>
+            Gets or sets audio capture device. Set this property before you configure audio capture.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.Audio_CaptureDevices">
+            <summary>
+            Gets an audio capture device list.
+            </summary>
+            <returns>
+            Returns audio capture devices list.
+            </returns>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.Audio_CaptureFormat">
+            <summary>
+            Gets or sets the audio format for recording and preview. The audio capture device must be selected!
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.Audio_CaptureFormat_UseBest">
+            <summary>
+            Gets or sets a value indicating whether best audio capture format will be used.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.Audio_CaptureLine">
+            <summary>
+            Gets or sets the audio input for recording and preview. The audio capture device must be selected!
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.Audio_Codec_Channels">
+            <summary>
+            Gets or sets the number of channels for the current audio codec.
+            </summary>
+            <remarks>
+            Usually 1 (mono) or 2 (stereo).
+            </remarks>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.Audio_Codec_Name">
+            <summary>
+            Gets or sets the current audio codec.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.Audio_Codecs">
+            <summary>
+            Gets an audio codecs list.
+            </summary>
+            <returns>
+            Returns audio codecs list.
+            </returns>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.Audio_Effects_Enabled">
+            <summary>
+            Gets or sets a value indicating whether audio effects enabled.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.Audio_LAME_CBR_Bitrate">
+            <summary>
+            Gets or sets LAME bitrate.</summary>
+            <remarks>
+            For MPEG-1 (sampling frequencies of 32, 44.1 and 48 kHz) bit rate = 32, 40, 48, 56, 64, 80, 96, 112, 128, 160, 192, 224, 256, 320 
+            For MPEG-2 (sampling frequencies of 16, 22.05 and 24 kHz) bit rate = 8, 16, 24, 32, 40, 48, 56, 64, 80, 96, 112, 128, 144, 160 
+            Default is 128 kbps for MPEG1 and 64 kbps for MPEG-2. 
+            </remarks>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.Audio_LAME_Channels_Mode">
+            <summary>
+            Gets or sets channels mode.
+            </summary>
+            <remarks>
+            Joint-stereo is the default mode for stereo files with VBR when -V is more than 4 or fixed bit rates of 160kbs or less.
+            At higher fixed bit rates or higher VBR settings, the default is stereo. 
+            Stereo:
+            In this mode, the encoder makes no use of potentially existing correlations between the two input channels. 
+            It can, however, negotiate the bit demand between both channel, i.e. give one channel more bits if the other contains 
+            silence or needs less bits because of a lower complexity. 
+            Joint stereo:
+             In this mode, the encoder will make use of a correlation between both channels. The signal will be matrixed into a sum 
+            (“mid”), computed by L+R, and difference (“side”) signal, computed by L-R, and more bits are allocated to the mid channel.
+            This will effectively increase the bandwidth if the signal does not have too much stereo separation, thus giving a 
+            significant gain in encoding quality. Using mid/side stereo inappropriately can result in audible compression artifacts.
+            To much switching between mid/side and regular stereo can also sound bad. To determine when to switch to mid/side stereo, 
+            LAME uses a much more sophisticated algorithm than that described in the ISO documentation, and thus is safe to use in 
+            joint stereo mode. 
+            Dual channels:
+            In this mode, the 2 channels will be totally independently encoded. Each channel will have exactly half of the bit rate. 
+            This mode is designed for applications like dual languages encoding (ex: English in one channel and French in the other). Using this encoding mode for regular stereo files will result in a lower quality encoding. 
+            Mono:
+             The input will be encoded as a mono signal. If it was a stereo signal, it will be downsampled to mono. The downmix is 
+            calculated as the sum of the left and right channel, attenuated by 6 dB.
+            </remarks>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.Audio_LAME_Copyright">
+            <summary>
+            Gets or sets a value indicating whether copyright tag enabled.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.Audio_LAME_CRC_Protected">
+            <summary>
+            Gets or sets a value indicating whether CRC error protection enabled.
+            </summary>
+            <remarks>
+            Adds the cyclic redundancy check (CRC) code in each frame, allowing to detect transmission errors that 
+            could occur on the MP3 stream. However, it takes 16 bits per frame that would otherwise be used for encoding,
+             and then will be slightly reduced the sound quality.
+            </remarks>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.Audio_LAME_Disable_Short_Blocks">
+            <summary>
+            Gets or sets a value indicating whether audio will be encoded using long blocks only.
+            </summary>
+            <remarks>
+            Encodes all frames using long blocks only. This could
+            increases quality when encoding at very low bitrates, but can
+            produces serious pre-echo artifacts.
+            </remarks>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.Audio_LAME_Enable_Xing_VBR_Tag">
+            <summary>
+            Gets or sets a value indicating whether Xing VBR tag enabled.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.Audio_LAME_Encoding_Quality">
+            <summary>
+            Gets or sets encoding quality.
+            </summary>
+            <remarks>
+            Bit rate is of course the main influence on quality. The higher the bit rate, the higher the quality. However, 
+            for a given bit rate, we have a choice of algorithms to determine the best scale factors and Huffman 
+            encoding (noise shaping). 
+            0: Use slowest and best possible version of all algorithms. 0 and 1 are slow and may not produce significantly higher quality.
+            2: Recommended. 5: Default value. Good speed, reasonable quality. 7: Very fast, ok quality. (psycho acoustics
+             are used for pre-echo and M/S, but no noise shaping is done. 9: Disables almost all algorithms including psy-model.
+             Results as poor quality.
+            </remarks>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.Audio_LAME_Force_Mono">
+            <summary>
+            Gets or sets a value indicating whether multi-channel audio will be downmuxed to mono.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.Audio_LAME_Keep_All_Frequencies">
+            <summary>
+            Gets or sets a value indicating whether audio processing in LAME will be disabled.
+            </summary>
+            <remarks>
+            Keeps all frequencies. (Disables all filters). LAME will automatically apply various types of 
+            lowpass filters. This is because the high frequency coefficients can take up a lot of bits that would 
+            be better used for lower, more important frequencies. This property will disable all lowpass filtering. 
+            Not recommended.
+            </remarks>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.Audio_LAME_Mode_Fixed">
+            <summary>
+            Gets or sets a value indicating whether "Mode fixed" tag enabled.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.Audio_LAME_Original">
+            <summary>
+            Gets or sets a value indicating whether original tag enabled.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.Audio_LAME_Sample_Rate">
+            <summary>
+            Gets or sets sample rate for the LAME.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.Audio_LAME_Strictly_Enforce_VBR_Min_Bitrate">
+            <summary>
+            Gets or sets a value indicating whether minimal VBR bitrate will be enforced.
+            </summary>
+            <remarks>
+            This is mainly for use with hardware players that do not support low bit rate mp3. Without this option,
+            the minimum bit rate will be ignored for passages of analog silence, ie when the music level is below
+            the absolute threshold of human hearing (ATH).
+            </remarks>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.Audio_LAME_Strict_ISO_Compliance">
+            <summary>
+            Gets or sets a value indicating whether ISO compliance flag enabled.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.Audio_LAME_UseInAVI">
+            <summary>
+            Gets or sets a value indicating whether LAME encoder will be used during video capture to AVI.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.Audio_LAME_VBR_Max_Bitrate">
+            <summary>
+            Gets or sets maximum allowed bit rate.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.Audio_LAME_VBR_Min_Bitrate">
+            <summary>
+            Gets or sets minimum allowed bit rate.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.Audio_LAME_VBR_Mode">
+            <summary>
+            Gets or sets a value indicating whether LAME Gets or sets a value indicating whether LAME VBR mode enabled.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.Audio_LAME_VBR_Quality">
+            <summary>
+            Gets or sets LAME VBR quality.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.Audio_LAME_Voice_Encoding_Mode">
+            <summary>
+            Gets or sets a value indicating whether voice encoding mode enabled.
+            </summary>
+            <remarks>
+            Experimental voice encoding mode.
+            </remarks>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.Audio_OutputDevice">
+            <summary>
+            Gets or sets the device name for playing audio. Set this property before you configure audio output.
+            Make sure that <see cref="P:VisioForge.VideoCapture.WPF.VideoCapture.Audio_PlayAudio"/> = <see langword="true"/> for it to work.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.Audio_OutputDevices">
+            <summary>
+            Gets audio output device list.
+            </summary>
+            <returns>
+            Returns audio output device list.
+            </returns>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.Audio_PlayAudio">
+            <summary>
+            Gets or sets a value indicating whether audio playback enabled.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.Audio_RecordAudio">
+            <summary>
+            Gets or sets a value indicating whether audio recording enabled. The audio capture device must be selected first!
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.Audio_Sample_Grabber_Enabled">
+            <summary>
+            Gets or sets a value indicating whether audio sample grabber enabled.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.Audio_Codec_SampleRate">
+            <summary>
+            Gets or sets sample rate for the current audio codec.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.Audio_Use_Compression">
+            <summary>
+            Gets or sets a value indicating whether audio compression enabled.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.Audio_VUMeter_Enabled">
+            <summary>
+            Gets or sets a value indicating whether audio VU meter enabled.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.ChromaKey_Color">
+            <summary>
+            Gets or sets chroma key color.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.ChromaKey_ContrastHigh">
+            <summary>
+            Gets or sets Gets or sets highest level of contrast.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.ChromaKey_ContrastLow">
+            <summary>
+            Gets or sets lowelest level of contrast.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.ChromaKey_Enabled">
+            <summary>
+            Gets or sets a value indicating whether chroma key enabled.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.ChromaKey_ImageFilename">
+            <summary>
+            Gets or sets Gets or sets chroma key image file name.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.Custom_Output_Audio_Codec">
+            <summary>
+            Gets or sets current audio codec.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.Custom_Output_Audio_Codec_Use_Filters_Category">
+            <summary>
+            Gets or sets a value indicating whether "DirectShow Filters" category will be used.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.Custom_Output_Mux_Filter_Is_Encoder">
+            <summary>
+            Gets or sets a value indicating whether custom output mux filter is encoder.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.Custom_Output_Mux_Filter_Name">
+            <summary>
+            Gets or sets current mux filter.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.Custom_Output_Special_FileWriter_Filter_Name">
+            <summary>
+            Gets or sets <c>FileWriter</c> filter name.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.Custom_Output_Special_FileWriter_Needed">
+            <summary>
+            Gets or sets a value indicating whether special <c>FileWriter</c> filter will be used instead default filter.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.Custom_Output_Video_Codec">
+            <summary>
+            Gets or sets current video codec.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.Custom_Output_Video_Codec_Use_Filters_Category">
+            <summary>
+            Gets or sets a value indicating whether "DirectShow Filters" category will be used.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.Debug_Dir">
+            <summary>
+            Gets or sets debug directory.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.Debug_Mode">
+            <summary>
+            Gets or sets a value indicating whether debug mode enabled.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.DirectShow_Filters">
+            <summary>
+            Gets DirectShow filter list.
+            </summary>
+            <returns>
+            Returns DirectShow filter list.
+            </returns>
+            <remarks>
+            Sets the name(s) of filters that will be unavailable in use with Video Capture SDK. For instance, you can use this method 
+            from preventing user to use some filters that is not functional correctly with Video Capture SDK. 
+            </remarks>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.DV_Capture_Audio_Channels">
+            <summary>
+            Gets or sets audio channel number for DV capture.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.DV_Capture_Audio_SampleRate">
+            <summary>
+            Gets or sets sample rate for DV capture.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.DV_Capture_Type2">
+            <summary>
+            Gets or sets a value indicating whether Type2 output enabled. Type1 used by default.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.DV_Capture_Video_Format">
+            <summary>
+            Gets or sets video format for DV capture.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.DV_Decoder_Video_Resolution">
+            <summary>
+            Gets or sets DV decoder video resolution.
+            </summary>
+            <remarks>
+            Several different video resolutions are possible. See the description of the 
+            <c>VFDVVideoResolution</c> type to learn more.
+            </remarks>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.Frame_Save_Resize">
+            <summary>
+            Gets or sets a value indicating whether frame resize enabled.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.Frame_Save_Resize_Height">
+            <summary>
+            Gets or sets height of the saved image.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.Frame_Save_Resize_Width">
+            <summary>
+            Gets or sets width of the saved image.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.Frame_Save_ZoomRatio">
+            <summary>
+            Gets or sets Gets or sets zoom ratio for frame capture.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.IP_Camera_Audio_Capture">
+            <summary>
+            Gets or sets a value indicating whether audio capture from IP camera enabled.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.IP_Camera_FFMPEG_Capture">
+            <summary>
+            Gets or sets a value indicating whether FFMPEG decoding enabled. 
+            You must have correct FFMPEG dll's provided with SDK in your Windows path.
+            Also you can use original FFMPEG dlls compiled used MinGW but we don't guarantee 
+            stable work with untested FFMPEG version.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.IP_Camera_Type">
+            <summary>
+            Gets or sets the type of IP camera.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.IP_Camera_URL">
+            <summary>
+            Gets or sets the URL for IP camera.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.IP_Camera_Login">
+            <summary>
+            Gets or sets IP camera login, if required.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.IP_Camera_Password">
+            <summary>
+            Gets or sets IP camera password, if required.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.IP_Camera_Width">
+            <summary>
+            Gets or sets IP camera width. Default value is 0. You may need to override
+            this value to decode video correctly. Only for MPEG-4 and H264 cameras.
+            Not required if FFMPEG decoding enabled.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.IP_Camera_Height">
+            <summary>
+            Gets or sets IP camera height. Default value is 0. You may need to override
+            this value to decode video correctly. Only for MPEG-4 and H264 cameras.
+            Not required if FFMPEG decoding enabled.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.IP_Camera_Debug_Enabled">
+            <summary>
+            Gets or sets a value indicating whether IP camera debugging enabled.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.IP_Camera_Debug_Filename">
+            <summary>
+            Gets or sets IP camera debug file name.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.Mode">
+            <summary>
+            Gets or sets video capture mode.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.MotionDetection_Compare_Blue">
+            <summary>
+            Gets or sets a value indicating whether blue channel comparison enabled.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.MotionDetection_Compare_Green">
+            <summary>
+            Gets or sets a value indicating whether green channel comparison enabled.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.MotionDetection_Compare_Greyscale">
+            <summary>
+            Gets or sets a value indicating whether grayscale basis will be used instead RGB.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.MotionDetection_Compare_Red">
+            <summary>
+            Gets or sets a value indicating whether red channel comparison enabled.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.MotionDetection_DropFrames_Enabled">
+            <summary>
+            Gets or sets a value indicating whether frames will be dropped if the motion level is smaller than threshold.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.MotionDetection_DropFrames_Threshold">
+            <summary>
+            Gets or sets Motion detection threshold.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.MotionDetection_Enabled">
+            <summary>
+            Gets or sets a value indicating whether Motion detection enabled.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.MotionDetection_FrameInterval">
+            <summary>
+            Gets or sets interval between key-frames.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.MotionDetection_Highlight_Color">
+            <summary>
+            Gets or sets Motion detection highlight color.
+            </summary>
+            <remarks>
+            0 - Red, 1 - Green, 2 - Blue.
+            </remarks>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.MotionDetection_Highlight_Enabled">
+            <summary>
+            Gets or sets a value indicating whether motion color highlight enabled.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.MotionDetection_Highlight_Threshold">
+            <summary>
+            Gets or sets highlight threshold (0 - 255).
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.MotionDetection_Matrix_Height">
+            <summary>
+            Gets or sets motion matrix height.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.MotionDetection_Matrix_Width">
+            <summary>
+            Gets or sets motion matrix width.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.MPEG_Audio_Decoder">
+            <summary>
+            Gets or sets MPEG audio decoder. This parameter allows you to set the decoder used for MPEG-2 audio.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.MPEG_Video_Decoder">
+            <summary>
+            Gets or sets MPEG video decoder. This parameter allows you to set the decoder used for MPEG-2 video.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.MultiScreen_Enabled">
+            <summary>
+            Gets or sets a value indicating whether multiscreen enabled.
+            </summary>
+            <remarks>
+            This parameter is used to display video on multiple screens.
+            </remarks>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.Network_Streaming_Audio_Enabled">
+            <summary>
+            Gets or sets a value indicating whether audio stream for network streaming enabled.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.Network_Streaming_Enabled">
+            <summary>
+            Gets or sets a value indicating whether network streaming enabled.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.Network_Streaming_Maximum_Clients">
+            <summary>
+            Gets or sets maximum number of allowed clients.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.Network_Streaming_Network_Port">
+            <summary>
+            Gets or sets port number for Network streaming.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.Network_Streaming_URL">
+            <summary>
+            Gets or sets client connection address. Contains computer name (or IP) and port number.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.Network_Streaming_UseMain_WMV_Settings">
+            <summary>
+            Gets or sets a value indicating whether main WMV settings will be used (instead external profile file).
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.Network_Streaming_WMV_Profile_FileName">
+            <summary>
+            Gets or sets file name of the profile used for Network streaming.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.Output_Filename">
+            <summary>
+            Gets or sets the format of the output file for recording.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.Output_Format">
+            <summary>
+            Gets or sets name of the output file for recording.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.PIP_Mode">
+            <summary>
+            Gets or sets Picture-In-Picture Mode.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.PIP_Type">
+            <summary>
+            Gets or sets Picture-In-Picture type.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.Screen_Capture_Bottom">
+            <summary>
+            Gets or sets bottom coordinate of screen used for screen capture.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.Screen_Capture_FrameRate">
+            <summary>
+            Gets or sets frame rate for screen capture.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.Screen_Capture_FullScreen">
+            <summary>
+            Gets or sets a value indicating whether full screen capture enabled.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.Screen_Capture_Grab_Mouse_Cursor">
+            <summary>
+            Gets or sets a value indicating whether mourse cursor will be grabbed during video capture.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.Screen_Capture_Left">
+            <summary>
+            Gets or sets left coordinate of screen used for screen capture.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.Screen_Capture_Right">
+            <summary>
+            Gets or sets right coordinate of screen used for screen capture.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.Screen_Capture_Top">
+            <summary>
+            Gets or sets top coordinate of screen used for screen capture.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.Screen_Zoom_Ratio">
+            <summary>
+            Gets or sets zoom ratio value, while it captures the screen.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.Screen_Zoom_ShiftX">
+            <summary>
+            Gets or sets shift X value. Gets or sets shift X coordinate. Shifts screen capture to the left or to the right (horizontally) by certain value.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.Screen_Zoom_ShiftY">
+            <summary>
+            Gets or sets shift Y value. Gets or sets shift Y coordinate. Shifts screen capture to the bottom or to the top (vertically) by certain value.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.Status">
+            <summary>
+            Gets current status of the component. Returns "Work" during capture or
+            preview and "Free" when idle.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.TVTuner_AudioFrequency">
+            <summary>
+            Gets value of current frequency of the TV tuner audio channel.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.TVTuner_AudioSubChannel">
+            <summary>
+            Gets audio sub channel.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.TVTuner_Channel">
+            <summary>
+            Gets or sets the current TV tuner channel.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.TVTuner_ChannelMax">
+            <summary>
+            Gets maximal available channel number.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.TVTuner_ChannelMin">
+            <summary>
+            Gets minimal available channel number.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.TVTuner_Country">
+            <summary>
+            Gets or sets country name.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.TVTuner_Countries">
+            <summary>
+            Gets TV Tuner country list.
+            </summary>
+            <returns>
+            Returns TV Tuner country list, <see langword="null"/> if error happen.
+            </returns>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.TVTuner_Devices">
+            <summary>
+            Gets TV Tuner list.
+            </summary>
+            <returns>
+            Returns TV Tuner list, <see langword="null"/> if error happen.
+            </returns>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.TVTuner_FM_Tuning_StartFrequency">
+            <summary>
+            Gets or sets start frequency for FM Tuning.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.TVTuner_FM_Tuning_Step">
+            <summary>
+            Gets or sets step used for FM Tuning.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.TVTuner_FM_Tuning_StopFrequency">
+            <summary>
+            Gets or sets stop frequency for FM Tuning.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.TVTuner_Frequency">
+            <summary>
+            Gets or sets value of TV Tuner current frequency.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.TVTuner_InputType">
+            <summary>
+            Gets or sets TV input type - Antenna or Cable.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.TVTuner_Mode">
+            <summary>
+            Gets or sets current TV tuner mode.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.TVTuner_Name">
+            <summary>
+            Gets or sets current TV tuner. Set this property before you configure TV tuner.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.TVTuner_Signal">
+            <summary>
+            Gets a value indicating whether TV tuner has a signal.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.TVTuner_TVFormat">
+            <summary>
+            Gets or sets TV format.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.TVTuner_VideoFrequency">
+            <summary>
+            Gets value of current frequency of the TV tuner video channel.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.TVTuner_VideoSubChannel">
+            <summary>
+            Gets video subchannel.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.Video_AVI_10_Compatibility">
+            <summary>
+            Gets or sets a value indicating whether AVI 1.0 compatibility will be enabled.
+            </summary>
+            <remarks>
+            Nowadays, most AVI files use the AVI 2.0 format and it is used by default.
+            </remarks>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.Video_AVI_Interleaving">
+            <summary>
+            Gets or sets the Interleaving type being in used.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.Video_CaptureDevice">
+            <summary>
+            Gets or sets the video capture device. Set this property before you configure video capture.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.Video_CaptureDevice_Path">
+            <summary>
+            Gets or sets the video capture device DirectShow path. Optional. 
+            Set this property if you have multiply devices with the same name.
+            Use Video_CaptureDevice_GetDevicePath method to get device path for device.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.Video_CaptureDevices">
+            <summary>
+            Gets video capture device list.
+            </summary>
+            <returns>
+            Returns video capture device list.
+            </returns>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.Video_CaptureDevice_InternalMPEGEncoder_Name">
+            <summary>
+            Gets or sets the name of the internal MPEG encoder of the video capturing device.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.Video_CaptureDevice_IsAudioSource">
+            <summary>
+            Gets or sets a value indicating whether video capture device will be used as audio source.
+            </summary>
+            <remarks>
+            Capture audio from video capture device. Some old TV tuners do not support this
+            feature and uses audio card for audio input.
+            </remarks>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.Video_CaptureFormat">
+            <summary>
+            Gets or sets video format for recording and preview. The video capture 
+            device must be selected!
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.Video_CaptureFormat_UseBest">
+            <summary>
+            Gets or sets a value indicating whether best video capture format will be used.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.Video_Codec">
+            <summary>
+            Gets or sets name of the video codec.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.Video_Codecs">
+            <summary>
+            Gets video codec list.
+            </summary>
+            <returns>
+            Returns video codec list.
+            </returns>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.Video_Crop_Bottom">
+            <summary>
+            Gets or sets value of the bottom coordinate of crop region of the video preview or capture.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.Video_Crop_Left">
+            <summary>
+            Gets or sets value of the left coordinate of crop region of the video preview or capture.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.Video_Crop_Right">
+            <summary>
+            Gets or sets value of the right coordinate of crop region of the video preview or capture.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.Video_Crop_Top">
+            <summary>
+            Gets or sets value of the top coordinate of crop region of the video preview or capture.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.Video_FrameRate">
+            <summary>
+            Gets or sets frame rate for the video capture device. The video capture device must be selected!
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.Video_Renderer">
+            <summary>
+            Gets or sets video renderer used for displaying video (VMR-9 recommended). EVR available in Windows Vista / 7 or 
+            Windows XP with .Net Framework 3.5 installed and can improve speed for HD video playback.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.Video_ResizeOrCrop_Enabled">
+            <summary>
+            Gets or sets a value indicating whether resize or crop enabled.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.Video_Resize_LetterBox">
+            <summary>
+            Gets or sets a value indicating whether letterbox mode will be used.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.Video_Resize_Mode">
+            <summary>
+            Gets or sets video resize mode.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.Video_Resize_NewHeight">
+            <summary>
+            Gets or sets new video height.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.Video_Resize_NewWidth">
+            <summary>
+            Gets or sets new video width.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.Video_Effects_Enabled">
+            <summary>
+            Gets or sets a value indicating whether video effects enabled.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.Video_Use_Compression">
+            <summary>
+            Gets or sets a value indicating whether video compression.enabled.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.Video_Use_Compression_DecodeUncompressedToRGB">
+            <summary>
+            Gets or sets a value indicating whether RAW video from camera will be decoded to uncompressed RGB format.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.WMV_Custom_Audio_Codec">
+            <summary>
+            Gets or sets current audio codec.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.WMV_Custom_Audio_Format">
+            <summary>
+            Gets or sets the current audio format.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.WMV_Custom_Audio_Mode">
+            <summary>
+            Gets or sets current audio mode.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.WMV_Custom_Audio_PeakBitrate">
+            <summary>
+            Gets or sets current peak bitrate.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.WMV_Custom_Audio_PeakBufferSize">
+            <summary>
+            Gets or sets peak buffer size.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.WMV_Custom_Audio_LanguageID">
+            <summary>
+            Gets or sets language ID.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.WMV_Custom_Audio_StreamPresent">
+            <summary>
+            Gets or sets a value indicating whether custom audio stream present.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.WMV_Custom_Profile_Description">
+            <summary>
+            Gets or sets WMV profile description.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.WMV_Custom_Profile_Language">
+            <summary>
+            Gets or sets WMV profile language.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.WMV_Custom_Profile_Name">
+            <summary>
+            Gets or sets WMV profile name.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.WMV_Custom_Video_Bitrate">
+            <summary>
+            Gets or sets custom value for video bit rate.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.WMV_Custom_Video_Buffer_Size">
+            <summary>
+            Gets or sets WMV video buffer size.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.WMV_Custom_Video_Buffer_UseDefault">
+            <summary>
+            Gets or sets a value indicating whether default video buffer will be used.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.WMV_Custom_Video_Codec">
+            <summary>
+            Gets or sets current video codec.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.WMV_Custom_Video_FrameRate">
+            <summary>
+            Gets or sets frame rate.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.WMV_Custom_Video_Height">
+            <summary>
+            Gets or sets WMV video height.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.WMV_Custom_Video_KeyFrameInterval">
+            <summary>
+            Gets or sets WMV key frame interval.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.WMV_Custom_Video_Mode">
+            <summary>
+            Gets or sets WMV Video mode.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.WMV_Custom_Video_PeakBitRate">
+            <summary>
+            Gets or sets WMV peak bitrate.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.WMV_Custom_Video_PeakBufferSizeSeconds">
+            <summary>
+            Gets or sets WMV peak buffer size.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.WMV_Custom_Video_Quality">
+            <summary>
+            Gets or sets WMV Video quality.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.WMV_Custom_Video_SizeSameAsInput">
+            <summary>
+            Gets or sets a value indicating whether video size is same as input.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.WMV_Custom_Video_Smoothness">
+            <summary>
+            Gets or sets WMV video smoothness.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.WMV_Custom_Video_StreamPresent">
+            <summary>
+            Gets or sets a value indicating whether video stream present.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.WMV_Custom_Video_TVSystem">
+            <summary>
+            Gets or sets TV system.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.WMV_Custom_Video_Width">
+            <summary>
+            Gets or sets WMV video width.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.WMV_External_Profile_File_Name">
+            <summary>
+            Gets or sets the name of the file with the Windows Media Video profile.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.WMV_Internal_Profile_Name">
+            <summary>
+            Gets or sets name of the WMV internal profile.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.WMV_Mode">
+            <summary>
+            Gets or sets WMV mode.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.WMV_V8_Profile_Name">
+            <summary>
+            Gets or sets name for the internal profile to be used for the WMV 8.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.AForge_Motion_Detection_Enabled">
+            <summary>
+            Gets or sets a value indicating whether AForge motion detection enabled.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.AForge_Motion_Detection_ProcessorType">
+            <summary>
+            Gets or sets AForge motion detection processor type.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.AForge_Motion_Detection_DetectorType">
+            <summary>
+            Gets or sets AForge motion detection detector type.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.AForge_Motion_Detection_DifferenceThreshold">
+            <summary>
+            Gets or sets difference threshold value, [1 - 255]. 
+            </summary>
+            <remarks>
+            The value Gets or sets the amount off difference between pixels, which is treated as motion pixel. 
+            Default value is set to 15. Applicable for all detectors.
+            </remarks>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.AForge_Motion_Detection_SuppressNoise">
+            <summary>
+            Gets or sets a value indicating whether noise will be suppresed.
+            </summary>
+            <remarks>
+            The value Gets or sets if additional filtering should be done to suppress standalone noisy 
+            pixels by applying 3x3 erosion image processing filter. See KeepObjectsEdges property, 
+            if it is required to restore edges of objects, which are not noise. 
+            Default value is set to true. Applicable for all detectors.
+            </remarks>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.AForge_Motion_Detection_KeepObjectsEdges">
+            <summary>
+            Gets or sets a value indicating whether objects edges will be restored after noise suppression. 
+            </summary>
+            <remarks>
+            The value Gets or sets if additional filtering should be done to restore objects edges after noise
+            suppression by applying 3x3 dilatation image processing filter. Default value is set to false. 
+            Turning the value on leads to more processing time of video frame.
+            Applicable for Simple Background Modeling Detector and Custom Frame Difference Detector.
+            </remarks>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.AForge_Motion_Detection_HighlightColor">
+            <summary>
+            Gets or sets AForge motion detection highlight color, used to highlight motion regions. 
+            </summary>
+            <remarks>
+            Default value is set to red color.
+            Applicable for all processors.
+            </remarks>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.AForge_Motion_Detection_HighlightMotionRegions">
+            <summary>
+            Gets or sets a value indicating whether motion regions will be highlighted.
+            </summary>
+            <remarks>
+            The property Gets or sets if detected moving objects should be highlighted with rectangle or not.
+            Default value is set to true.
+            Turning the value on leads to additional processing time of video frame.
+            Applicable for Blob Counting Objects processor.
+            </remarks>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.AForge_Motion_Detection_MinObjectsHeight">
+            <summary>
+            Gets or sets minimum height of acceptable object.
+            </summary>
+            <remarks>
+            The property sets minimum height of an object to count and highlight. If objects have
+            smaller height, they are not counted and are not highlighted. Default value is set to 10.
+            Applicable for Blob Counting Objects processor.
+            </remarks>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.AForge_Motion_Detection_MinObjectsWidth">
+            <summary>
+            Gets or sets minimum width of acceptable object. 
+            </summary>
+            <remarks>
+            The property sets minimum width of an object to count and highlight. If objects have 
+            smaller width, they are not counted and are not highlighted. Default value is set to 10.
+            Applicable for Blob Counting Objects processor.
+            </remarks>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.AForge_Motion_Detection_GridHeight">
+            <summary>
+            Gets or sets height of motion grid, [2, 64].
+            </summary>
+            <remarks>
+            The property Gets or sets motion grid's height - number of grid rows. Default value is set to 16.
+            Applicable for Grid Motion Area processor.
+            </remarks>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.AForge_Motion_Detection_GridWidth">
+            <summary>
+            Gets or sets width of motion grid, [2, 64]. 
+            </summary>
+            <remarks>
+            The property Gets or sets motion grid's width - number of grid columns. Default value is set to 16.
+            Applicable for Grid Motion Area processor.
+            </remarks>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.AForge_Motion_Detection_HighlightMotionGrid">
+            <summary>
+            Gets or sets a value indicating whether motion grid will be highlighted.
+            </summary>
+            <remarks>
+            The property Gets or sets if motion grid should be highlighted - if cell, which have motion level 
+            above the specified value, should be highlighted. Default value is set to true. 
+            Turning the value on leads to additional processing time of video frame.
+            Applicable for Grid Motion Area processor.
+            </remarks>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.AForge_Motion_Detection_MotionAmountToHighlight">
+            <summary>
+            Gets or sets motion amount to highlight cell. 
+            </summary>
+            <remarks>
+            The property Gets or sets motion level threshold for highlighting grid's cells. 
+            If motion level of a certain cell is higher than this value, then the cell is highlighted.
+            Default value is set to 0.15.
+            Applicable for Grid Motion Area processor.
+            </remarks>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.WebM_Audio_Mode">
+            <summary>
+            Gets or sets audio mode.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.WebM_Audio_AvgBitRate">
+            <summary>
+            Gets or sets audio average bitrate.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.WebM_Audio_MaxBitRate">
+            <summary>
+            Gets or sets audio maximal bitrate.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.WebM_Audio_MinBitRate">
+            <summary>
+            Gets or sets audio minimal bitrate.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.WebM_Audio_Quality">
+            <summary>
+            Gets or sets audio quality.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.WebM_Video_ThreadCount">
+            <summary>
+            Gets or sets video thread count.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.WebM_Video_Bitrate">
+            <summary>
+            Gets or sets video bitrate.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.WebM_Video_Mode">
+            <summary>
+            Gets or sets video mode.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.WebM_Video_EndUsage">
+            <summary>
+            Gets or sets video end usage mode.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.FFMPEG_AudioBitrate">
+            <summary>
+            Gets or sets FFMPEG audio bitrate.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.FFMPEG_AudioSampleRate">
+            <summary>
+            Gets or sets FFMPEG audio sample rate.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.FFMPEG_AudioChannels">
+            <summary>
+            Gets or sets FFMPEG audio channels.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.FFMPEG_VideoWidth">
+            <summary>
+            Gets or sets FFMPEG video width.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.FFMPEG_VideoHeight">
+            <summary>
+            Gets or sets FFMPEG video height.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.FFMPEG_AspectRatioW">
+            <summary>
+            Gets or sets FFMPEG aspect ratio W. 0 to use default value.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.FFMPEG_AspectRatioH">
+            <summary>
+            Gets or sets FFMPEG aspect ratio H. 0 to use default value.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.FFMPEG_VideoBitrate">
+            <summary>
+            Gets or sets FFMPEG video bitrate.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.FFMPEG_VideoMaxBitrate">
+            <summary>
+            Gets or sets FFMPEG video maximal bitrate.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.FFMPEG_VideoMinBitrate">
+            <summary>
+            Gets or sets FFMPEG video minimal bitrate.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.FFMPEG_VideoBufferSize">
+            <summary>
+            Gets or sets FFMPEG video buffer size. 0 to use default value.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.FFMPEG_Interlace">
+            <summary>
+            Gets or sets a value indicating whether FFMPEG  video will be interlaced.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.FFMPEG_TVSystem">
+            <summary>
+            Gets or sets FFMPEG TV system.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.FFMPEG_OutputFormat">
+            <summary>
+            Gets or sets FFMPEG output format.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.BDA_Source_Name">
+            <summary>
+            Gets or sets BDA source name.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.BDA_Receiver_Name">
+            <summary>
+            Gets or sets BDA receiver name. Can be empty if device do not require receiver filter to work.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.BDA_TuningParameters">
+            <summary>
+            Gets or sets BDA tuning parameters.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.BDA_SourceType">
+            <summary>
+            Gets or sets BDA source type.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.SeparateCapture_Enabled">
+            <summary>
+            Gets or sets a value indicating whether separate capture enabled. 
+            Please read article in help file for more information about "separate capture"
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.SeparateCapture_AutostartCapture">
+            <summary>
+            Gets or sets a value indicating whether separate capture autostart enabled.
+            </summary>
+        </member>
+        <member name="P:VisioForge.VideoCapture.WPF.VideoCapture.OpenCL_Enabled">
+            <summary>
+            Gets or sets a value indicating whether OpenCL processing Enabled.
+            </summary>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCaptureWPFDep.Finalize">
+            <summary>
+            Finalizes an instance of the <see cref="T:VisioForge.VideoCapture.WPF.VideoCaptureWPFDep"/> class. 
+            </summary>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCaptureWPFDep.Dispose">
+            <summary>
+            Dispose.
+            </summary>
+        </member>
+        <member name="M:VisioForge.VideoCapture.WPF.VideoCaptureWPFDep.Dispose(System.Boolean)">
+            <summary>
+            Dispose.
+            </summary>
+            <param name="disposing">
+            Disposing parameter.
+            </param>
+        </member>
+    </members>
+</doc>

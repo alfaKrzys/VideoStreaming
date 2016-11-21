@@ -1,0 +1,3273 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>VisioForge.Types</name>
+    </assembly>
+    <members>
+        <member name="T:VisioForge.Types.AFMotionProcessorType">
+            <summary>
+            AForge.Net motion processor type.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.AFMotionProcessorType.None">
+            <summary>
+            Do not highlight motion on image.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.AFMotionProcessorType.BlobCountingObjects">
+            <summary>
+            Motion processing algorithm, which counts separate moving objects and highlights them.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.AFMotionProcessorType.GridMotionAreaProcessing">
+            <summary>
+            Motion processing algorithm, which performs grid processing of motion frame.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.AFMotionProcessorType.MotionAreaHighlighting">
+            <summary>
+            Motion processing algorithm, which highlights motion areas. 
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.AFMotionProcessorType.MotionBorderHighlighting">
+            <summary>
+            Motion processing algorithm, which highlights border of motion areas. 
+            </summary>
+        </member>
+        <member name="T:VisioForge.Types.AFMotionDetectorType">
+            <summary>
+            AForge.Net motion detector type.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.AFMotionDetectorType.CustomFrameDifference">
+            <summary>
+            Motion detector based on difference with predefined background frame. 
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.AFMotionDetectorType.SimpleBackgroundModeling">
+            <summary>
+            Motion detector based on simple background modeling. 
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.AFMotionDetectorType.TwoFramesDifference">
+            <summary>
+            Motion detector based on two continues frames difference.
+            </summary>
+        </member>
+        <member name="T:VisioForge.Types.VFBDAPolarisation">
+            <summary>
+            BDA polarisation.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFBDAPolarisation.NotSet">
+            <summary>
+            Not set.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFBDAPolarisation.NotDefined">
+            <summary>
+            Not defined.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFBDAPolarisation.LinearH">
+            <summary>
+            Linear Horizontal.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFBDAPolarisation.LinearV">
+            <summary>
+            Linear Vertical.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFBDAPolarisation.CircularL">
+            <summary>
+            Circular Left.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFBDAPolarisation.CircularR">
+            <summary>
+            Circular Right.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFBDAPolarisation.Max">
+            <summary>
+            Max.
+            </summary>
+        </member>
+        <member name="T:VisioForge.Types.VFBDAType">
+            <summary>
+            BDA type. 
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFBDAType.DVBT">
+            <summary>
+            DVB-T.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFBDAType.DVBS">
+            <summary>
+            DVB-S.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFBDAType.DVBC">
+            <summary>
+            DVB-C.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFBDAType.ATSC">
+            <summary>
+            ATSC. Not implemented yet.
+            </summary>
+        </member>
+        <member name="T:VisioForge.Types.VFBDAModulationType">
+            <summary>
+            BDA motulation type.
+            </summary>
+        </member>
+        <member name="T:VisioForge.Types.ErrorsEventArgs">
+            <summary>
+            Error event.
+            </summary>
+        </member>
+        <member name="M:VisioForge.Types.ErrorsEventArgs.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:VisioForge.Types.ErrorsEventArgs"/> class. 
+            </summary>
+            <param name="message">
+            Message text.
+            </param>
+        </member>
+        <member name="P:VisioForge.Types.ErrorsEventArgs.Message">
+            <summary>
+            Gets a message.
+            </summary>
+        </member>
+        <member name="T:VisioForge.Types.VUMeterEventArgs">
+            <summary>
+            VU meter event.
+            </summary>
+        </member>
+        <member name="M:VisioForge.Types.VUMeterEventArgs.#ctor(System.Int32[])">
+            <summary>
+            Initializes a new instance of the <see cref="T:VisioForge.Types.VUMeterEventArgs"/> class. 
+            </summary>
+            <param name="meterData">
+            Meter data.
+            </param>
+        </member>
+        <member name="P:VisioForge.Types.VUMeterEventArgs.MeterData">
+            <summary>
+            Gets values array.
+            </summary>
+        </member>
+        <member name="T:VisioForge.Types.ProgressEventArgs">
+            <summary>
+            VU meter event.
+            </summary>
+        </member>
+        <member name="M:VisioForge.Types.ProgressEventArgs.#ctor(System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:VisioForge.Types.ProgressEventArgs"/> class. 
+            </summary>
+            <param name="progress">
+            Progress (in percents).
+            </param>
+        </member>
+        <member name="P:VisioForge.Types.ProgressEventArgs.Progress">
+            <summary>
+            Gets progress (in percents).
+            </summary>
+        </member>
+        <member name="T:VisioForge.Types.MotionDetectionEventArgs">
+            <summary>
+            Motion detection event.
+            </summary>
+        </member>
+        <member name="M:VisioForge.Types.MotionDetectionEventArgs.#ctor(System.Int32,System.Byte[]@)">
+            <summary>
+            Initializes a new instance of the <see cref="T:VisioForge.Types.MotionDetectionEventArgs"/> class. 
+            </summary>
+            <param name="level">
+            Motion level.
+            </param>
+            <param name="matrix">
+            Motion matrix.
+            </param>
+        </member>
+        <member name="P:VisioForge.Types.MotionDetectionEventArgs.Level">
+            <summary>
+            Gets level.
+            </summary>
+        </member>
+        <member name="P:VisioForge.Types.MotionDetectionEventArgs.Matrix">
+            <summary>
+            Gets matrix.
+            </summary>
+        </member>
+        <member name="T:VisioForge.Types.AFMotionDetectionEventArgs">
+            <summary>
+            Motion detection event.
+            </summary>
+        </member>
+        <member name="M:VisioForge.Types.AFMotionDetectionEventArgs.#ctor(System.Single,System.Int32,System.Drawing.Rectangle[]@,System.Single[0:,0:]@)">
+            <summary>
+            Initializes a new instance of the <see cref="T:VisioForge.Types.AFMotionDetectionEventArgs"/> class. 
+            </summary>
+            <param name="level">
+            Motion level.
+            </param>
+            <param name="objectsCount">
+            Number of detected objects for Blob Counting Objects processor. 
+            </param>
+            <param name="objectRectangles">
+            Rectangles of moving objects for Blob Counting Objects processor. 
+            </param>
+            <param name="motionGrid">
+            Motion levels of each grid's cell. Value represents an array of size GridHeight x GridWidth, which keeps motion level
+            of each grid's cell. If certain cell has motion level equal to 0.2, then it means that
+            this cell has 20% of changes.
+            </param>
+        </member>
+        <member name="P:VisioForge.Types.AFMotionDetectionEventArgs.Level">
+            <summary>
+            Gets level.
+            </summary>
+        </member>
+        <member name="P:VisioForge.Types.AFMotionDetectionEventArgs.ObjectRectangles">
+            <summary>
+            Gets rectangles of moving objects for Blob Counting Objects processor. 
+            </summary>
+        </member>
+        <member name="P:VisioForge.Types.AFMotionDetectionEventArgs.ObjectsCount">
+            <summary>
+            Gets number of detected objects for Blob Counting Objects processor. 
+            </summary>
+        </member>
+        <member name="P:VisioForge.Types.AFMotionDetectionEventArgs.MotionGrid">
+            <summary>
+            Gets motion levels of each grid's cell. 
+            </summary>
+            <remarks>
+            The property represents an array of size GridHeight x GridWidth, which keeps motion level
+            of each grid's cell. If certain cell has motion level equal to 0.2, then it means that
+            this cell has 20% of changes.
+            </remarks>
+        </member>
+        <member name="T:VisioForge.Types.TVTunerTuneChannelsEventArgs">
+            <summary>
+            TV Tuner tune channels event.
+            </summary>
+        </member>
+        <member name="M:VisioForge.Types.TVTunerTuneChannelsEventArgs.#ctor(System.Boolean,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:VisioForge.Types.TVTunerTuneChannelsEventArgs"/> class. 
+            </summary>
+            <param name="signalPresent">
+            Value indicating whether signal present.
+            </param>
+            <param name="channel">
+            TV / Radio channel.
+            </param>
+            <param name="frequency">
+            TV / Radio frequency.
+            </param>
+            <param name="progress">
+            Tuning progress.
+            </param>
+        </member>
+        <member name="P:VisioForge.Types.TVTunerTuneChannelsEventArgs.SignalPresent">
+            <summary>
+            Gets a value indicating whether signal present.
+            </summary>
+        </member>
+        <member name="P:VisioForge.Types.TVTunerTuneChannelsEventArgs.Channel">
+            <summary>
+            Gets a channel.
+            </summary>
+        </member>
+        <member name="P:VisioForge.Types.TVTunerTuneChannelsEventArgs.Frequency">
+            <summary>
+            Gets a frequency.
+            </summary>
+        </member>
+        <member name="P:VisioForge.Types.TVTunerTuneChannelsEventArgs.Progress">
+            <summary>
+            Gets a progress.
+            </summary>
+        </member>
+        <member name="T:VisioForge.Types.MouseEventArgsEx">
+            <summary>
+            Mouse event args class.
+            </summary>
+        </member>
+        <member name="M:VisioForge.Types.MouseEventArgsEx.#ctor(System.Windows.Forms.MouseButtons,System.Int32,System.Int32,System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:VisioForge.Types.MouseEventArgsEx"/> class. 
+            </summary>
+            <param name="button">
+            Mouse button.
+            </param>
+            <param name="x">
+            X coordinate.
+            </param>
+            <param name="y">
+            Y coordinate.
+            </param>
+            <param name="alt">
+            Alt state.
+            </param>
+            <param name="ctrl">
+            Ctrl state.
+            </param>
+            <param name="shift">
+            Shift state.
+            </param>
+        </member>
+        <member name="P:VisioForge.Types.MouseEventArgsEx.Button">
+            <summary>
+            Gets mouse button.
+            </summary>
+        </member>
+        <member name="P:VisioForge.Types.MouseEventArgsEx.X">
+            <summary>
+            Gets X coordinate.
+            </summary>
+        </member>
+        <member name="P:VisioForge.Types.MouseEventArgsEx.Y">
+            <summary>
+            Gets Y coordinate.
+            </summary>
+        </member>
+        <member name="P:VisioForge.Types.MouseEventArgsEx.Alt">
+            <summary>
+            Gets a value indicating whether Alt button pressed.
+            </summary>
+        </member>
+        <member name="P:VisioForge.Types.MouseEventArgsEx.Ctrl">
+            <summary>
+            Gets a value indicating whether Ctrl button pressed.
+            </summary>
+        </member>
+        <member name="P:VisioForge.Types.MouseEventArgsEx.Shift">
+            <summary>
+            Gets a value indicating whether Shift button pressed.
+            </summary>
+        </member>
+        <member name="T:VisioForge.Types.VideoFrameBitmapEventArgs">
+            <summary>
+            Frame bitmap event args class.
+            </summary>
+        </member>
+        <member name="M:VisioForge.Types.VideoFrameBitmapEventArgs.#ctor(System.Drawing.Bitmap@,System.Boolean@)">
+            <summary>
+            Initializes a new instance of the <see cref="T:VisioForge.Types.VideoFrameBitmapEventArgs"/> class. 
+            </summary>
+            <param name="frame">
+            Video frame.
+            </param>
+            <param name="updateData">
+            Updated data flag.
+            </param>
+        </member>
+        <member name="P:VisioForge.Types.VideoFrameBitmapEventArgs.Frame">
+            <summary>
+            Gets frame.
+            </summary>
+        </member>
+        <member name="P:VisioForge.Types.VideoFrameBitmapEventArgs.UpdateData">
+            <summary>
+            Gets or sets a value indicating whether frame has been updates and changes must be saved.
+            </summary>
+        </member>
+        <member name="T:VisioForge.Types.DVDDomainChangedEventArgs">
+            <summary>
+            DVD domain args class.
+            </summary>
+        </member>
+        <member name="M:VisioForge.Types.DVDDomainChangedEventArgs.#ctor(VisioForge.Types.VFDVDDomain)">
+            <summary>
+            Initializes a new instance of the <see cref="T:VisioForge.Types.DVDDomainChangedEventArgs"/> class.
+            </summary>
+            <param name="domain">
+            DVD domain.
+            </param>
+        </member>
+        <member name="P:VisioForge.Types.DVDDomainChangedEventArgs.Domain">
+            <summary>
+            Gets DVD domain.
+            </summary>
+        </member>
+        <member name="T:VisioForge.Types.DVDParentalLevelChangedEventArgs">
+            <summary>
+            DVD parental level args class.
+            </summary>
+        </member>
+        <member name="M:VisioForge.Types.DVDParentalLevelChangedEventArgs.#ctor(System.Boolean@)">
+            <summary>
+            Initializes a new instance of the <see cref="T:VisioForge.Types.DVDParentalLevelChangedEventArgs"/> class.
+            </summary>
+            <param name="allow">
+            true - allowed, false - denied.
+            </param>
+        </member>
+        <member name="P:VisioForge.Types.DVDParentalLevelChangedEventArgs.Allow">
+            <summary>
+            Gets a value indicating whether level change allowed.
+            </summary>
+        </member>
+        <member name="T:VisioForge.Types.FilterEventArgs">
+            <summary>
+            Filter event args class.
+            </summary>
+        </member>
+        <member name="M:VisioForge.Types.FilterEventArgs.#ctor(System.String,System.Object)">
+            <summary>
+            Initializes a new instance of the <see cref="T:VisioForge.Types.FilterEventArgs"/> class.
+            </summary>
+            <param name="name">
+            Filter name.
+            </param>
+            <param name="filter">
+            Filter IBaseFilter interface.
+            </param>
+        </member>
+        <member name="P:VisioForge.Types.FilterEventArgs.Name">
+            <summary>
+            Gets filter name.
+            </summary>
+        </member>
+        <member name="P:VisioForge.Types.FilterEventArgs.Filter">
+            <summary>
+            Gets filter IBaseFilter interface.
+            </summary>
+        </member>
+        <member name="T:VisioForge.Types.DVDeviceEventArgs">
+            <summary>
+            DV device event args class.
+            </summary>
+        </member>
+        <member name="M:VisioForge.Types.DVDeviceEventArgs.#ctor(VisioForge.Types.VFDVCommand)">
+            <summary>
+            Initializes a new instance of the <see cref="T:VisioForge.Types.DVDeviceEventArgs"/> class.
+            </summary>
+            <param name="eventCode">
+            Event code.
+            </param>
+        </member>
+        <member name="P:VisioForge.Types.DVDeviceEventArgs.EventCode">
+            <summary>
+            Gets filter IBaseFilter interface.
+            </summary>
+        </member>
+        <member name="T:VisioForge.Types.VideoFrameBufferEventArgs">
+            <summary>
+            Frame bitmap event args class.
+            </summary>
+        </member>
+        <member name="M:VisioForge.Types.VideoFrameBufferEventArgs.#ctor(System.Byte[]@,System.Int32,System.Int32,System.Int32,System.Drawing.Imaging.PixelFormat,System.Boolean@)">
+            <summary>
+            Initializes a new instance of the <see cref="T:VisioForge.Types.VideoFrameBufferEventArgs"/> class. 
+            </summary>
+            <param name="buffer">
+            Buffer data.
+            </param>
+            <param name="size">
+            Buffer size.
+            </param>
+            <param name="width">
+            Video width.
+            </param>
+            <param name="height">
+            Video height.
+            </param>
+            <param name="pixelFormat">
+            Pixel format.
+            </param>
+            <param name="updateData">
+            Updated data flag.
+            </param>
+        </member>
+        <member name="P:VisioForge.Types.VideoFrameBufferEventArgs.Buffer">
+            <summary>
+            Gets frame.
+            </summary>
+        </member>
+        <member name="P:VisioForge.Types.VideoFrameBufferEventArgs.Size">
+            <summary>
+            Gets buffer size.
+            </summary>
+        </member>
+        <member name="P:VisioForge.Types.VideoFrameBufferEventArgs.Width">
+            <summary>
+            Gets width.
+            </summary>
+        </member>
+        <member name="P:VisioForge.Types.VideoFrameBufferEventArgs.Height">
+            <summary>
+            Gets height.
+            </summary>
+        </member>
+        <member name="P:VisioForge.Types.VideoFrameBufferEventArgs.PixelFormat">
+            <summary>
+            Gets pixel format.
+            </summary>
+        </member>
+        <member name="P:VisioForge.Types.VideoFrameBufferEventArgs.UpdateData">
+            <summary>
+            Gets or sets a value indicating whether frame has been updates and changes must be saved.
+            </summary>
+        </member>
+        <member name="T:VisioForge.Types.VideoFrameBufferEventArgs2">
+            <summary>
+            Frame bitmap event args class.
+            </summary>
+        </member>
+        <member name="M:VisioForge.Types.VideoFrameBufferEventArgs2.#ctor(System.IntPtr,System.Int32,System.Int32,System.Int32,System.Drawing.Imaging.PixelFormat,System.Int64,System.Int64,System.Boolean@)">
+            <summary>
+            Initializes a new instance of the <see cref="T:VisioForge.Types.VideoFrameBufferEventArgs2"/> class. 
+            </summary>
+            <param name="buffer">
+            Buffer IntPtr.
+            </param>
+            <param name="bufferLen">
+            Buffer length.
+            </param>
+            <param name="width">
+            Video width.
+            </param>
+            <param name="height">
+            Video height.
+            </param>
+            <param name="pixelFormat">
+            Pixel format.
+            </param>
+            <param name="startTime">
+            Start time.
+            </param>
+            <param name="stopTime">
+            Stop time.
+            </param>
+            <param name="updateData">
+            Updated data flag.
+            </param>
+        </member>
+        <member name="P:VisioForge.Types.VideoFrameBufferEventArgs2.Buffer">
+            <summary>
+            Gets frame.
+            </summary>
+        </member>
+        <member name="P:VisioForge.Types.VideoFrameBufferEventArgs2.BufferLen">
+            <summary>
+            Gets buffer size.
+            </summary>
+        </member>
+        <member name="P:VisioForge.Types.VideoFrameBufferEventArgs2.Width">
+            <summary>
+            Gets width.
+            </summary>
+        </member>
+        <member name="P:VisioForge.Types.VideoFrameBufferEventArgs2.Height">
+            <summary>
+            Gets height.
+            </summary>
+        </member>
+        <member name="P:VisioForge.Types.VideoFrameBufferEventArgs2.PixelFormat">
+            <summary>
+            Gets pixel format.
+            </summary>
+        </member>
+        <member name="P:VisioForge.Types.VideoFrameBufferEventArgs2.StartTime">
+            <summary>
+            Gets start time.
+            </summary>
+        </member>
+        <member name="P:VisioForge.Types.VideoFrameBufferEventArgs2.StopTime">
+            <summary>
+            Gets stop time.
+            </summary>
+        </member>
+        <member name="P:VisioForge.Types.VideoFrameBufferEventArgs2.UpdateData">
+            <summary>
+            Gets or sets a value indicating whether frame has been updates and changes must be saved.
+            </summary>
+        </member>
+        <member name="T:VisioForge.Types.AudioFrameBufferEventArgs">
+            <summary>
+            Frame bitmap event args class.
+            </summary>
+        </member>
+        <member name="M:VisioForge.Types.AudioFrameBufferEventArgs.#ctor(System.IntPtr,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:VisioForge.Types.AudioFrameBufferEventArgs"/> class. 
+            </summary>
+            <param name="buffer">
+            Audio buffer.
+            </param>
+            <param name="size">
+            Buffer size.
+            </param>
+            <param name="sampleRate">
+            Audio sample rate.
+            </param>
+            <param name="channels">
+            Audio channels.
+            </param>
+            <param name="bps">
+            Audio BPS.
+            </param>
+            <param name="streamID">
+            Audio stream ID.
+            </param>
+        </member>
+        <member name="P:VisioForge.Types.AudioFrameBufferEventArgs.Buffer">
+            <summary>
+            Gets frame.
+            </summary>
+        </member>
+        <member name="P:VisioForge.Types.AudioFrameBufferEventArgs.Size">
+            <summary>
+            Gets buffer size.
+            </summary>
+        </member>
+        <member name="P:VisioForge.Types.AudioFrameBufferEventArgs.SampleRate">
+            <summary>
+            Gets audio sample rate.
+            </summary>
+        </member>
+        <member name="P:VisioForge.Types.AudioFrameBufferEventArgs.Channels">
+            <summary>
+            Gets audio channels.
+            </summary>
+        </member>
+        <member name="P:VisioForge.Types.AudioFrameBufferEventArgs.BPS">
+            <summary>
+            Gets audio BPS.
+            </summary>
+        </member>
+        <member name="P:VisioForge.Types.AudioFrameBufferEventArgs.StreamID">
+            <summary>
+            Gets audio stream ID.
+            </summary>
+        </member>
+        <member name="T:VisioForge.Types.VFMediaPlayerStatus">
+            <summary>
+            Media Player control status.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFMediaPlayerStatus.Play">
+            <summary>
+            Playback is active.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFMediaPlayerStatus.Pause">
+            <summary>
+            Playback paused.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFMediaPlayerStatus.Free">
+            <summary>
+            Control is free.
+            </summary>
+        </member>
+        <member name="T:VisioForge.Types.VFFilePlaybackError">
+            <summary>
+            File playback error.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFFilePlaybackError.OK">
+            <summary>
+            All OK.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFFilePlaybackError.AudioError">
+            <summary>
+            Audio playback error.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFFilePlaybackError.VideoError">
+            <summary>
+            Video playback error.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFFilePlaybackError.OtherStreamError">
+            <summary>
+            Non-video and non-audio stream playback error.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFFilePlaybackError.OutOfMemory">
+            <summary>
+            Out of memory.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFFilePlaybackError.CannotConnectFilters">
+            <summary>
+            Cannot connect graph filters.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFFilePlaybackError.CannotLoadSourceFilter">
+            <summary>
+            Cannot load source filter.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFFilePlaybackError.CannotRender">
+            <summary>
+            Cannot render file.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFFilePlaybackError.InvalidFileFormat">
+            <summary>
+            invalid file format.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFFilePlaybackError.UnknownFileType">
+            <summary>
+            Unknown file format.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFFilePlaybackError.UnsupportedStream">
+            <summary>
+            Unsupported stream.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFFilePlaybackError.UnknownError">
+            <summary>
+            Unknown error.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFFilePlaybackError.Fail">
+            <summary>
+            Playback failed.
+            </summary>
+        </member>
+        <member name="T:VisioForge.Types.VFDVDMenu">
+            <summary>
+            DVD menu.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFDVDMenu.Title">
+            <summary>
+            Title.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFDVDMenu.Root">
+            <summary>
+            Root.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFDVDMenu.Subpicture">
+            <summary>
+            Subpicture.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFDVDMenu.Audio">
+            <summary>
+            Audio.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFDVDMenu.Angle">
+            <summary>
+            Angle.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFDVDMenu.Chapter">
+            <summary>
+            Chapter.
+            </summary>
+        </member>
+        <member name="T:VisioForge.Types.VFDVDDisplayMode">
+            <summary>
+            DVD display modes.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFDVDDisplayMode.Default">
+            <summary>
+            Default.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFDVDDisplayMode.Mode16X9">
+            <summary>
+            Aspect is 16:9.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFDVDDisplayMode.Mode4X3Panscan">
+            <summary>
+            Aspect is 4:3 (panscan).
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFDVDDisplayMode.Mode4X3Letterbox">
+            <summary>
+            Aspect is 4:3 (letterbox).
+            </summary>
+        </member>
+        <member name="T:VisioForge.Types.VFDVDDomain">
+            <summary>
+            DVD domain.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFDVDDomain.FirstPlay">
+            <summary>
+            Performing default initialization of a DVD disc.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFDVDDomain.VideoManagerMenu">
+            <summary>
+            Displaying menus for the entire disc. Also known as topMenu for Windows Media Player. 
+            Commonly called the title menu or the top menu.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFDVDDomain.VideoTitleSetMenu">
+            <summary>
+            Displaying menus for current title set. Also known as titleMenu for Windows Media Player. 
+            Commonly called the root menu.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFDVDDomain.Title">
+            <summary>
+            Usually displaying the current title.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFDVDDomain.Stop">
+            <summary>
+            The DVD Navigator is in the DVD Stop domain.
+            </summary>
+        </member>
+        <member name="T:VisioForge.Types.VFMediaPlayerSource">
+            <summary>
+            Media Player SDK .Net source.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFMediaPlayerSource.File">
+            <summary>
+            File.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFMediaPlayerSource.Memory">
+            <summary>
+            Memory.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFMediaPlayerSource.DVD">
+            <summary>
+            DVD.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFMediaPlayerSource.MMS_WMV">
+            <summary>
+            MMS / WMV network stream.
+            </summary>
+        </member>
+        <member name="T:VisioForge.Types.VFMSMPEGOutputFormat">
+            <summary>
+            Specifies the encoding format.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFMSMPEGOutputFormat.MPEG1">
+            <summary>
+            MPEG-1.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFMSMPEGOutputFormat.MPEG2">
+            <summary>
+            MPEG-2.
+            </summary>
+        </member>
+        <member name="T:VisioForge.Types.VFMSMPEGVideoFormatConstraint">
+            <summary>
+            Specifies the target format for an encoder.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFMSMPEGVideoFormatConstraint.None">
+            <summary>
+            No format constraint.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFMSMPEGVideoFormatConstraint.DVD">
+            <summary>
+            DVD-Video.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFMSMPEGVideoFormatConstraint.VCD">
+            <summary>
+            Video-CD (VCD).
+            </summary>
+        </member>
+        <member name="T:VisioForge.Types.VFMSMPEGVideoBitrateMode">
+            <summary>
+            Specifies the rate control mode for an encoder.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFMSMPEGVideoBitrateMode.CBR">
+            <summary>
+            Constant bit rate (CBR) encoding.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFMSMPEGVideoBitrateMode.PeakConstrainedVBR">
+            <summary>
+            Constrained variable bit rate (VBR) encoding.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFMSMPEGVideoBitrateMode.Quality">
+            <summary>
+            Quality-based VBR encoding. The encoder selects the bit rate to match a specified quality level. 
+            </summary>
+        </member>
+        <member name="T:VisioForge.Types.VFMSMPEGVideoSystem">
+            <summary>
+            Specifies the video system of the source content.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFMSMPEGVideoSystem.None">
+            <summary>
+            The video system is not specified.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFMSMPEGVideoSystem.PAL">
+            <summary>
+            PAL television.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFMSMPEGVideoSystem.NTSC">
+            <summary>
+            NTSC television.
+            </summary>
+        </member>
+        <member name="T:VisioForge.Types.VFMSMPEGSourceInterlacing">
+            <summary>
+            Specifies whether the input frames are progressive or interlaced.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFMSMPEGSourceInterlacing.Interlaced">
+            <summary>
+            Input frames are interlaced.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFMSMPEGSourceInterlacing.Progressive">
+            <summary>
+            Input frames are progressive.
+            </summary>
+        </member>
+        <member name="T:VisioForge.Types.VFMSMPEGAudioMode">
+            <summary>
+            Specifies the MPEG-1 audio encoding mode.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFMSMPEGAudioMode.Mono">
+            <summary>
+            Single channel.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFMSMPEGAudioMode.Stereo">
+            <summary>
+            Stereo channels.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFMSMPEGAudioMode.DualChannel">
+            <summary>
+            Two mono channels.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFMSMPEGAudioMode.JointStereo">
+            <summary>
+            Joint stereo mode. This mode uses similarities between the two channels to achieve greater compression.
+            </summary>
+        </member>
+        <member name="T:VisioForge.Types.VFMSMPEGAudioEmphasisType">
+            <summary>
+            Specifies the type of de-emphasis filter that should be used when decoding.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFMSMPEGAudioEmphasisType.None">
+            <summary>
+            None.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFMSMPEGAudioEmphasisType.Type50x15">
+            <summary>
+            50/15 μs.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFMSMPEGAudioEmphasisType.Reserved">
+            <summary>
+            Reserved. Do not use.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFMSMPEGAudioEmphasisType.CCITT_J17">
+            <summary>
+            CCITT J.17.
+            </summary>
+        </member>
+        <member name="T:VisioForge.Types.VFMSMPEGAudioCodec">
+            <summary>
+            Specifies the MPEG audio layer.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFMSMPEGAudioCodec.Layer1">
+            <summary>
+            MPEG Audio Layer-1.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFMSMPEGAudioCodec.Layer2">
+            <summary>
+            MPEG Audio Layer-2.
+            </summary>
+        </member>
+        <member name="T:VisioForge.Types.VFMSMPEGVideoProfileAndLevel">
+            <summary>
+            MPEG-2 profile and level.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFMSMPEGVideoProfileAndLevel.SimpleAndMain">
+            <summary>
+            Simple profile, main level.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFMSMPEGVideoProfileAndLevel.MainAndLow">
+            <summary>
+            Main profile, low level.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFMSMPEGVideoProfileAndLevel.MainAndMain">
+            <summary>
+            Main profile, main level.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFMSMPEGVideoProfileAndLevel.MainAndHigh">
+            <summary>
+            Main profile, high level.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFMSMPEGVideoProfileAndLevel.MainAndHigh1440">
+            <summary>
+            Main profile, high 1440 level.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFMSMPEGVideoProfileAndLevel.HighAndMain">
+            <summary>
+            High profile, main level.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFMSMPEGVideoProfileAndLevel.HighAndHigh">
+            <summary>
+            High profile, high level.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFMSMPEGVideoProfileAndLevel.HighAndHigh1440">
+            <summary>
+            High profile, high 1440 level.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFMSMPEGVideoProfileAndLevel.P422AndMain">
+            <summary>
+            4:2:2 Profile, main level.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFMSMPEGVideoProfileAndLevel.P422AndHigh">
+            <summary>
+            4:2:2 Profile, high level.
+            </summary>
+        </member>
+        <member name="T:VisioForge.Types.VFMSMPEGVideoFrameFieldMode">
+            <summary>
+            MPEG-2 Video Frame/Field mode.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFMSMPEGVideoFrameFieldMode.FieldMode">
+            <summary>
+            The encoder produces an MPEG picture for each field in the source video.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFMSMPEGVideoFrameFieldMode.FrameMode">
+            <summary>
+            The encoder produces an MPEG picture for each frame (or pair of fields) in the source video.
+            </summary>
+        </member>
+        <member name="T:VisioForge.Types.VFMSMPEGVideoOutputInterlacing">
+            <summary>
+            Specifies how the encoder interlaces the output video.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFMSMPEGVideoOutputInterlacing.Progressive">
+            <summary>
+            Output frames are progressive.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFMSMPEGVideoOutputInterlacing.Interlaced">
+            <summary>
+            Output frames are interlaced.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFMSMPEGVideoOutputInterlacing.SameAsInput">
+            <summary>
+            The interlacing on the output frames matches the input frames.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFMSMPEGVideoOutputInterlacing.Automatic">
+            <summary>
+            Use the media type on the encoder's input pin to determine whether the frames are progressive or interlaced.
+            </summary>
+        </member>
+        <member name="T:VisioForge.Types.VFLameChannelsMode">
+            <summary>
+            LAME channels mode.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFLameChannelsMode.StandardStereo">
+            <summary>
+            Stereo.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFLameChannelsMode.JointStereo">
+            <summary>
+            Joint stereo.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFLameChannelsMode.DualStereo">
+            <summary>
+            Dual stereo.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFLameChannelsMode.Mono">
+            <summary>
+            Mono.
+            </summary>
+        </member>
+        <member name="T:VisioForge.Types.VFAVIInterleaving">
+            <summary>
+            Interleaving type.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFAVIInterleaving.None">
+            <summary>
+            None.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFAVIInterleaving.Capture">
+            <summary>
+            Capture.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFAVIInterleaving.Full">
+            <summary>
+            Full.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFAVIInterleaving.NoneBuffered">
+            <summary>
+            None (Buffered).
+            </summary>
+        </member>
+        <member name="T:VisioForge.Types.VFDVVideoFormat">
+            <summary>
+            DV video format.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFDVVideoFormat.PAL">
+            <summary>
+            PAL.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFDVVideoFormat.NTSC">
+            <summary>
+            NTSC.
+            </summary>
+        </member>
+        <member name="T:VisioForge.Types.VFVideoRendererAdjustment">
+            <summary>
+            Type of video renderer adjustments.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFVideoRendererAdjustment.Brightness">
+            <summary>
+            Brightness.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFVideoRendererAdjustment.Contrast">
+            <summary>
+            Contrast.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFVideoRendererAdjustment.Hue">
+            <summary>
+            Hue.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFVideoRendererAdjustment.Saturation">
+            <summary>
+            Saturation.
+            </summary>
+        </member>
+        <member name="T:VisioForge.Types.VFVideoRenderer">
+            <summary>
+            Video renderer type (WinForms).
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFVideoRenderer.VideoRenderer">
+            <summary>
+            Old Video renderer, deprecated.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFVideoRenderer.VMR9">
+            <summary>
+            Video Mixing renderer 9.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFVideoRenderer.EVR">
+            <summary>
+            Enhanced Video Renderer, available in Vista and later.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFVideoRenderer.None">
+            <summary>
+            None.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFVideoRenderer.WPFInternalUsage">
+            <summary>
+            WPF renderer, for internal usage only.
+            </summary>
+        </member>
+        <member name="T:VisioForge.Types.VFVideoRendererWPF">
+            <summary>
+            Video renderer type (WPF).
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFVideoRendererWPF.None">
+            <summary>
+            None.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFVideoRendererWPF.WPF">
+            <summary>
+            WPF.
+            </summary>
+        </member>
+        <member name="T:VisioForge.Types.VFSpecialFilterType">
+            <summary>
+            Special filter type.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFSpecialFilterType.MPEG12Muxer">
+            <summary>
+            MPEG 1/2 muxer.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFSpecialFilterType.MPEG12Splitter">
+            <summary>
+            MPEG 1/2 splitter/demuxer.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFSpecialFilterType.MPEG12VideoDecoder">
+            <summary>
+            MPEG 1/2 video decoder.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFSpecialFilterType.MPEG1AudioDecoder">
+            <summary>
+            MPEG-1 audio decoder.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFSpecialFilterType.Muxers">
+            <summary>
+            Muxers.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFSpecialFilterType.AudioEncoders">
+            <summary>
+            Audio encoders.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFSpecialFilterType.VideoEncoders">
+            <summary>
+            Video encoders.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFSpecialFilterType.HardwareVideoEncoder">
+            <summary>
+            Hardware video encoder.
+            </summary>
+        </member>
+        <member name="T:VisioForge.Types.VFImageFormat">
+            <summary>
+            Image format.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFImageFormat.BMP">
+            <summary>
+            BMP.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFImageFormat.JPEG">
+            <summary>
+            JPEG.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFImageFormat.PNG">
+            <summary>
+            PNG.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFImageFormat.GIF">
+            <summary>
+            GIF.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFImageFormat.TIFF">
+            <summary>
+            TIFF.
+            </summary>
+        </member>
+        <member name="T:VisioForge.Types.VFAudioEffectType">
+            <summary>
+            Audio effect type.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFAudioEffectType.Amplify">
+            <summary>
+            Amplify.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFAudioEffectType.BandPass">
+            <summary>
+            BandPass.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFAudioEffectType.ChannelOrder">
+            <summary>
+            Channel order.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFAudioEffectType.DownMix">
+            <summary>
+            Downmix.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFAudioEffectType.DynamicAmplify">
+            <summary>
+            Dynamic amplify.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFAudioEffectType.EchoDelay">
+            <summary>
+            Echo delay.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFAudioEffectType.Equalizer">
+            <summary>
+            Equalizer.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFAudioEffectType.Flanger">
+            <summary>
+            Flanger.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFAudioEffectType.HighPass">
+            <summary>
+            Highpass.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFAudioEffectType.LowPass">
+            <summary>
+            Lowpass.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFAudioEffectType.Notch">
+            <summary>
+            Notch.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFAudioEffectType.PhaseInvert">
+            <summary>
+            Phase invert.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFAudioEffectType.Phaser">
+            <summary>
+            Phaser.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFAudioEffectType.PitchScale">
+            <summary>
+            Pitch scale.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFAudioEffectType.PitchShift">
+            <summary>
+            Pitch shift.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFAudioEffectType.Sound3D">
+            <summary>
+            Sound3D.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFAudioEffectType.Tempo">
+            <summary>
+            Tempo.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFAudioEffectType.TrebleEnhancer">
+            <summary>
+            Treble enhancer.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFAudioEffectType.TrueBass">
+            <summary>
+            TrueBass.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFAudioEffectType.DMOChorus">
+            <summary>
+            DMO Chorus.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFAudioEffectType.DMOCompressor">
+            <summary>
+            DMO Compressor.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFAudioEffectType.DMODistortion">
+            <summary>
+            DMO Distortion.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFAudioEffectType.DMOEcho">
+            <summary>
+            DMO Echo.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFAudioEffectType.DMOFlanger">
+            <summary>
+            DMO Flanger.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFAudioEffectType.DMOGargle">
+            <summary>
+            DMO Gargle.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFAudioEffectType.DMOI3DL2Reverb">
+            <summary>
+            DMO I3DL2Reverb.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFAudioEffectType.DMOParamEQ">
+            <summary>
+            DMO Parametric EQ.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFAudioEffectType.DMOWavesReverb">
+            <summary>
+            DMO waves reverberation.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFAudioEffectType.ParametricEQ">
+            <summary>
+            ParametricEQ.
+            </summary>
+        </member>
+        <member name="T:VisioForge.Types.VFFFTSize">
+            <summary>
+            FFT size.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFFFTSize.Fts2">
+            <summary>
+            Size is 2.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFFFTSize.Fts4">
+            <summary>
+            Size is 4.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFFFTSize.Fts8">
+            <summary>
+            Size is 8.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFFFTSize.Fts16">
+            <summary>
+            Size is 16.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFFFTSize.Fts32">
+            <summary>
+            Size is 32.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFFFTSize.Fts64">
+            <summary>
+            Size is 64.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFFFTSize.Fts128">
+            <summary>
+            Size is 128.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFFFTSize.Fts256">
+            <summary>
+            Size is 256.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFFFTSize.Fts512">
+            <summary>
+            Size is 512.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFFFTSize.Fts1024">
+            <summary>
+            Size is 1024.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFFFTSize.Fts2048">
+            <summary>
+            Size is 2048.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFFFTSize.Fts4096">
+            <summary>
+            Size is 4096.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFFFTSize.Fts8192">
+            <summary>
+            Size is 8192.
+            </summary>
+        </member>
+        <member name="T:VisioForge.Types.VFWMVStreamMode">
+            <summary>
+            WMV stream mode.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFWMVStreamMode.CBR">
+            <summary>
+            CBR.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFWMVStreamMode.VBRQuality">
+            <summary>
+            VBR quality.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFWMVStreamMode.VBRBitrate">
+            <summary>
+            VBR bitrate.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFWMVStreamMode.VBRPeakBitrate">
+            <summary>
+            VBR peak bitrate.
+            </summary>
+        </member>
+        <member name="T:VisioForge.Types.VFWMVMode">
+            <summary>
+            WMV mode.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFWMVMode.ExternalProfile">
+            <summary>
+            External profile.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFWMVMode.InternalProfile">
+            <summary>
+            Internal profile.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFWMVMode.CustomSettings">
+            <summary>
+            Custom settings.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFWMVMode.V8SystemProfile">
+            <summary>
+            V8 system profile.
+            </summary>
+        </member>
+        <member name="T:VisioForge.Types.VFWMVTVSystem">
+            <summary>
+            WMV TV system.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFWMVTVSystem.PAL">
+            <summary>
+            PAL.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFWMVTVSystem.NTSC">
+            <summary>
+            NTSC.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFWMVTVSystem.Other">
+            <summary>
+            Other.
+            </summary>
+        </member>
+        <member name="T:VisioForge.Types.VFVorbisMode">
+            <summary>
+            Vorbis mode.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFVorbisMode.Quality">
+            <summary>
+            Quality.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFVorbisMode.Bitrate">
+            <summary>
+            Bitrate.
+            </summary>
+        </member>
+        <member name="T:VisioForge.Types.VP8QualityMode">
+            <summary>
+            VP8 quality mode.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VP8QualityMode.BestQualityBetaDoNotUse">
+            <summary>
+            Best quality.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VP8QualityMode.GoodQuality">
+            <summary>
+            Good quality.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VP8QualityMode.RealtimeMode">
+            <summary>
+            Real-time.
+            </summary>
+        </member>
+        <member name="T:VisioForge.Types.VP8EndUsageMode">
+            <summary>
+            VP8 end usage mode.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VP8EndUsageMode.CBR">
+            <summary>
+            CBR.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VP8EndUsageMode.Default">
+            <summary>
+            Default.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VP8EndUsageMode.VBR">
+            <summary>
+            VBR.
+            </summary>
+        </member>
+        <member name="T:VisioForge.Types.VFFFMPEGOutputFormat">
+            <summary>
+            FFMPEG output format.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFFFMPEGOutputFormat.FLV">
+            <summary>
+            Flash video.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFFFMPEGOutputFormat.MPEG1">
+            <summary>
+            MPEG-1.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFFFMPEGOutputFormat.MPEG1VCD">
+            <summary>
+            MPEG-1 VCD.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFFFMPEGOutputFormat.MPEG2">
+            <summary>
+            MPEG-2.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFFFMPEGOutputFormat.MPEG2TS">
+            <summary>
+            MPEG-2 Transport Stream.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFFFMPEGOutputFormat.MPEG2SVCD">
+            <summary>
+            MPEG-2 SVCD.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFFFMPEGOutputFormat.MPEG2DVD">
+            <summary>
+            MPEG-2 DVD.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFFFMPEGOutputFormat.MPEG4">
+            <summary>
+            MPEG-4 ASP.
+            </summary>
+        </member>
+        <member name="T:VisioForge.Types.VFFFMPEGTVSystem">
+            <summary>
+            FFMPEG TV System
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFFFMPEGTVSystem.None">
+            <summary>
+            Unknown or default.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFFFMPEGTVSystem.PAL">
+            <summary>
+            PAL.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFFFMPEGTVSystem.NTSC">
+            <summary>
+            NTSC.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFFFMPEGTVSystem.Film">
+            <summary>
+            Film.
+            </summary>
+        </member>
+        <member name="T:VisioForge.Types.VFOpenCLEffectType">
+            <summary>
+            OpenCL effect type.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFOpenCLEffectType.Brightness">
+            <summary>
+            Brightness effect. Integer parameter required.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFOpenCLEffectType.Contrast">
+            <summary>
+            Contrast effect. Integer parameter required.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFOpenCLEffectType.Grayscale">
+            <summary>
+            Grayscale effect. No parameters required.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFOpenCLEffectType.Red">
+            <summary>
+            Red effect. No parameters required.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFOpenCLEffectType.Green">
+            <summary>
+            Green effect. No parameters required.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFOpenCLEffectType.Blue">
+            <summary>
+            Blue effect. No parameters required.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFOpenCLEffectType.Darkness">
+            <summary>
+            Darkness effect. Integer parameter required.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFOpenCLEffectType.Saturation">
+            <summary>
+            Saturation effect. Integer parameter required.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFOpenCLEffectType.FilterRed">
+            <summary>
+            Filter red effect. Two integer parameters required.
+            </summary>
+            <remarks>
+            Parameter 1 is a minimimal threshold, parameter 2 is a maximal threshold.
+            </remarks>
+        </member>
+        <member name="F:VisioForge.Types.VFOpenCLEffectType.FilterGreen">
+            <summary>
+            Filter green effect. Two integer parameters required.
+            </summary>
+            <remarks>
+            Parameter 1 is a minimimal threshold, parameter 2 is a maximal threshold.
+            </remarks>
+        </member>
+        <member name="F:VisioForge.Types.VFOpenCLEffectType.FilterBlue">
+            <summary>
+            Filter blue effect. Two integer parameters required.
+            </summary>
+            <remarks>
+            Parameter 1 is a minimimal threshold, parameter 2 is a maximal threshold.
+            </remarks>
+        </member>
+        <member name="F:VisioForge.Types.VFOpenCLEffectType.FilterRed2">
+            <summary>
+            Filter red 2 effect. Two integer parameters required.
+            </summary>
+            <remarks>
+            Parameter 1 is a minimimal threshold, parameter 2 is a maximal threshold.
+            </remarks>
+        </member>
+        <member name="F:VisioForge.Types.VFOpenCLEffectType.FilterGreen2">
+            <summary>
+            Filter green 2 effect. Two integer parameters required.
+            </summary>
+            <remarks>
+            Parameter 1 is a minimimal threshold, parameter 2 is a maximal threshold.
+            </remarks>
+        </member>
+        <member name="F:VisioForge.Types.VFOpenCLEffectType.FilterBlue2">
+            <summary>
+            Filter blue 2 effect. Two integer parameters required.
+            </summary>
+            <remarks>
+            Parameter 1 is a minimimal threshold, parameter 2 is a maximal threshold.
+            </remarks>
+        </member>
+        <member name="F:VisioForge.Types.VFOpenCLEffectType.Invert">
+            <summary>
+            Invert effect. No parameters required.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFOpenCLEffectType.Solorize">
+            <summary>
+            Solorize effect. Integer parameter required.
+            </summary>
+        </member>
+        <member name="T:VisioForge.Types.VFDVVideoResolution">
+            <summary>
+            DV video resolution.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFDVVideoResolution.Full">
+            <summary>
+            Full. 720×480 for NTSC, 720×576 for PAL.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFDVVideoResolution.Half">
+            <summary>
+            Half. 360×240 for NTSC, 360×288 for PAL.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFDVVideoResolution.Quarter">
+            <summary>
+            Quarter. 180×120 for NTSC, 180×144 for PAL.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFDVVideoResolution.DC">
+            <summary>
+            DC. 88×60 for NTSC, 88×72 for PAL.
+            </summary>
+        </member>
+        <member name="T:VisioForge.Types.VFVideoCaptureOutputFormat">
+            <summary>
+            Video Capture SDK output format.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFVideoCaptureOutputFormat.AVI">
+            <summary>
+            AVI.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFVideoCaptureOutputFormat.WMV">
+            <summary>
+            Windows Media Video.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFVideoCaptureOutputFormat.DV">
+            <summary>
+            DV.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFVideoCaptureOutputFormat.MKV">
+            <summary>
+            Matroska.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFVideoCaptureOutputFormat.PCM_ACM">
+            <summary>
+            PCM or ACM.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFVideoCaptureOutputFormat.WMA">
+            <summary>
+            Windows Media Audio.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFVideoCaptureOutputFormat.LAME">
+            <summary>
+            MP3 output using LAME encoder.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFVideoCaptureOutputFormat.Custom">
+            <summary>
+            Custom output format.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFVideoCaptureOutputFormat.DirectCaptureDV">
+            <summary>
+            DV AVI output without reencoding. Part of VisioForge DirectCapture technology.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFVideoCaptureOutputFormat.DirectCaptureMPEG">
+            <summary>
+            MPEG TS or PS output without reencoding. Part of VisioForge DirectCapture technology.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFVideoCaptureOutputFormat.DirectCaptureMKV">
+            <summary>
+            MKV container output without reencoding. Can be used for H264/AAC and other codecs. 
+            Part of VisioForge DirectCapture technology.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFVideoCaptureOutputFormat.MSMPEG2">
+            <summary>
+            Microsoft MPEG-2 Encoder. Available in Vista / Windows 7 Home Premium and better. 
+            Not implemented in SDK yet, only for internal testing. Please do not use. 
+            </summary>
+            <remarks>
+            Will be available in 5.1.
+            </remarks>
+        </member>
+        <member name="F:VisioForge.Types.VFVideoCaptureOutputFormat.FFMPEG">
+            <summary>
+            FFMPEG codecs output.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFVideoCaptureOutputFormat.WebM">
+            <summary>
+            Google WebM output. http://www.webmproject.org/ .
+            </summary>
+        </member>
+        <member name="T:VisioForge.Types.VFVideoCaptureStatus">
+            <summary>
+            Status.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFVideoCaptureStatus.Work">
+            <summary>
+            Work.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFVideoCaptureStatus.Free">
+            <summary>
+            Free.
+            </summary>
+        </member>
+        <member name="T:VisioForge.Types.VFDeviceType">
+            <summary>
+            Device type.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFDeviceType.Standard">
+            <summary>
+            Standard.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFDeviceType.StandardAndMPEG2">
+            <summary>
+            Standard output and MPEG-2.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFDeviceType.MPEG2Only">
+            <summary>
+            MPEG-2 only.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFDeviceType.DV">
+            <summary>
+            DV camcorder.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFDeviceType.MPEG2HDV">
+            <summary>
+            MPEG-2 HDV camcorder.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFDeviceType.Unknown">
+            <summary>
+            Unknown device type.
+            </summary>
+        </member>
+        <member name="T:VisioForge.Types.VFDeviceSubtype">
+            <summary>
+            Device subtype.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFDeviceSubtype.Default">
+            <summary>
+            Standard.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFDeviceSubtype.FaceVision">
+            <summary>
+            FaceVision cam.
+            </summary>
+        </member>
+        <member name="T:VisioForge.Types.VFVideoCaptureMode">
+            <summary>
+            Video capture mode.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFVideoCaptureMode.VideoCapture">
+            <summary>
+            Video capture.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFVideoCaptureMode.VideoPreview">
+            <summary>
+            Video preview.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFVideoCaptureMode.AudioCapture">
+            <summary>
+            Audio capture.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFVideoCaptureMode.AudioPreview">
+            <summary>
+            Audio preview.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFVideoCaptureMode.ScreenCapture">
+            <summary>
+            Screen capture.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFVideoCaptureMode.ScreenPreview">
+            <summary>
+            Screen preview.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFVideoCaptureMode.IPCapture">
+            <summary>
+            IP capture.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFVideoCaptureMode.IPPreview">
+            <summary>
+            IP preview.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFVideoCaptureMode.BDACapture">
+            <summary>
+            BDA DVB-x / ATSC device capture. 
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFVideoCaptureMode.BDAPreview">
+            <summary>
+            BDA DVB-x / ATSC device preview.
+            </summary>
+        </member>
+        <member name="T:VisioForge.Types.VFVideoHardwareAdjustment">
+            <summary>
+            Type of hardware video adjustments.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFVideoHardwareAdjustment.Brightness">
+            <summary>
+            Brightness.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFVideoHardwareAdjustment.Contrast">
+            <summary>
+            Contrast.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFVideoHardwareAdjustment.Hue">
+            <summary>
+            Hue.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFVideoHardwareAdjustment.Saturation">
+            <summary>
+            Saturation.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFVideoHardwareAdjustment.Sharpness">
+            <summary>
+            Sharpness.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFVideoHardwareAdjustment.Gamma">
+            <summary>
+            Gamma.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFVideoHardwareAdjustment.ColorEnable">
+            <summary>
+            ColorEnable.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFVideoHardwareAdjustment.WhiteBalance">
+            <summary>
+            WhiteBalance.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFVideoHardwareAdjustment.BacklightCompensation">
+            <summary>
+            Backlight compensation.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFVideoHardwareAdjustment.Gain">
+            <summary>
+            Gain.
+            </summary>
+        </member>
+        <member name="T:VisioForge.Types.VFDVCommand">
+            <summary>
+            DV command.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFDVCommand.Play">
+            <summary>
+            Play.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFDVCommand.Stop">
+            <summary>
+            Stop.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFDVCommand.Pause">
+            <summary>
+            Pause.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFDVCommand.Rew">
+            <summary>
+            REW.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFDVCommand.FastForward">
+            <summary>
+            Fast forward.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFDVCommand.StepFw">
+            <summary>
+            Step forward.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFDVCommand.StepRev">
+            <summary>
+            Step rewind.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFDVCommand.FastestFwd">
+            <summary>
+            Fastest forward.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFDVCommand.SlowestFwd">
+            <summary>
+            Slowest forward.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFDVCommand.FastestRev">
+            <summary>
+            Fastest rev.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFDVCommand.SlowestRev">
+            <summary>
+            Slowest rev.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFDVCommand.Record">
+            <summary>
+            Record.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFDVCommand.RecordPause">
+            <summary>
+            Record pause.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFDVCommand.PlaySlowFwd6">
+            <summary>
+            Play slow forward 6.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFDVCommand.PlaySlowFwd5">
+            <summary>
+            Play slow forward 5.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFDVCommand.PlaySlowFwd4">
+            <summary>
+            Play slow forward 4.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFDVCommand.PlaySlowFwd3">
+            <summary>
+            Play slow forward 3.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFDVCommand.PlaySlowFwd2">
+            <summary>
+            Play slow forward 2.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFDVCommand.PlaySlowFwd1">
+            <summary>
+            Play slow forward 1.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFDVCommand.PlayFastFwd1">
+            <summary>
+            Play fast forward 1.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFDVCommand.PlayFastFwd2">
+            <summary>
+            Play fast forward 2.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFDVCommand.PlayFastFwd3">
+            <summary>
+            Play fast forward 3.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFDVCommand.PlayFastFwd4">
+            <summary>
+            Play fast forward 4.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFDVCommand.PlayFastFwd5">
+            <summary>
+            Play fast forward 5.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFDVCommand.PlayFastFwd6">
+            <summary>
+            Play fast forward 6.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFDVCommand.PlaySlowRev6">
+            <summary>
+            Play slow rev 6. 
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFDVCommand.PlaySlowRev5">
+            <summary>
+            Play slow rev 5.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFDVCommand.PlaySlowRev4">
+            <summary>
+            Play slow rev 4.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFDVCommand.PlaySlowRev3">
+            <summary>
+            Play slow rev 3.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFDVCommand.PlaySlowRev2">
+            <summary>
+            Play slow rev 2.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFDVCommand.PlaySlowRev1">
+            <summary>
+            Play slow rev 1.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFDVCommand.PlayFastRev1">
+            <summary>
+            Play fast rev 1. 
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFDVCommand.PlayFastRev2">
+            <summary>
+            Play fast rev 2.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFDVCommand.PlayFastRev3">
+            <summary>
+            Play fast rev 3.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFDVCommand.PlayFastRev4">
+            <summary>
+            Play fast rev 4.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFDVCommand.PlayFastRev5">
+            <summary>
+            Play fast rev 5.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFDVCommand.PlayFastRev6">
+            <summary>
+            Play fast rev 6.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFDVCommand.Reverse">
+            <summary>
+            Reverse.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFDVCommand.ReversePause">
+            <summary>
+            Reverse pause.
+            </summary>
+        </member>
+        <member name="T:VisioForge.Types.VFIPSource">
+            <summary>
+            IP camera / network source type.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFIPSource.HTTP_JPEG">
+            <summary>
+            JPEG. PCM, G.711 and G.726 audio supported.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFIPSource.HTTP_MJPEGorMPEG4orH264">
+            <summary>
+            MJPEG or MPEG-4 ASP or MPEG-4 H.264. PCM, G.711 and G.726 audio supported.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFIPSource.RTSP_UDP">
+            <summary>
+            RTSP via UDP source. MJPEG, MPEG-4 ASP and MPEG-4 H264 supported. PCM, G.711, G.726, AAC, MP3 audio supported.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFIPSource.RTSP_TCP">
+            <summary>
+            RTSP via TCP source. MJPEG, MPEG-4 ASP and MPEG-4 H264 supported. PCM, G.711, G.726, AAC, MP3 audio supported.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFIPSource.RTSP_HTTP">
+            <summary>
+            RTSP via HTTP source. MJPEG, MPEG-4 ASP and MPEG-4 H264 supported. PCM, G.711, G.726, AAC, MP3 audio supported.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFIPSource.MMS_WMV">
+            <summary>
+            MMS / WMV stream from any device. 
+            </summary>
+        </member>
+        <member name="T:VisioForge.Types.VFPIPType">
+            <summary>
+            Picture-In-Picture type.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFPIPType.Preview">
+            <summary>
+            Preview.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFPIPType.PreviewAndCapture">
+            <summary>
+            Preview and capture.
+            </summary>
+        </member>
+        <member name="T:VisioForge.Types.VFPIPMode">
+            <summary>
+            Picture-In-Picture mode.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFPIPMode.PIP">
+            <summary>
+            PIP.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFPIPMode.LeftRight">
+            <summary>
+            Left-Right.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFPIPMode.RigthLeft">
+            <summary>
+            Right-Left.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFPIPMode.TopBottom">
+            <summary>
+            Top-Bottom.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFPIPMode.BottomTop">
+            <summary>
+            Bottom-Top.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFPIPMode.Cell_1x3">
+            <summary>
+            Cell 1x3.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFPIPMode.Cell_1x4">
+            <summary>
+            Cell 1x4.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFPIPMode.Cell_1x5">
+            <summary>
+            Cell 1x5.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFPIPMode.Cell_2x2">
+            <summary>
+            Cell 2x2.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFPIPMode.Cell_3x2">
+            <summary>
+            Cell 3x2.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFPIPMode.Cell_2x3">
+            <summary>
+            Cell 2x3.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFPIPMode.Cell_4x4">
+            <summary>
+            Cell 4x4.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFPIPMode.Cell_3x1">
+            <summary>
+            Cell 3x1.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFPIPMode.Cell_4x1">
+            <summary>
+            Cell 4x1.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFPIPMode.Cell_5x1">
+            <summary>
+            Cell 5x1.
+            </summary>
+        </member>
+        <member name="T:VisioForge.Types.VFTVTunerVideoFormat">
+            <summary>
+            TV tuner video format.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFTVTunerVideoFormat.None">
+            <summary>
+            None.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFTVTunerVideoFormat.NTSC_M">
+            <summary>
+            NTSC M.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFTVTunerVideoFormat.NTSC_M_J">
+            <summary>
+            NTSC M J.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFTVTunerVideoFormat.NTSC_433">
+            <summary>
+            NTSC 433.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFTVTunerVideoFormat.PAL_B">
+            <summary>
+            PAL B.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFTVTunerVideoFormat.PAL_D">
+            <summary>
+            PAL D.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFTVTunerVideoFormat.PAL_G">
+            <summary>
+            PAL G.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFTVTunerVideoFormat.PAL_H">
+            <summary>
+            PAL H.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFTVTunerVideoFormat.PAL_I">
+            <summary>
+            PAL I.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFTVTunerVideoFormat.PAL_M">
+            <summary>
+            PAL M.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFTVTunerVideoFormat.PAL_N">
+            <summary>
+            PAL N.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFTVTunerVideoFormat.PAL_60">
+            <summary>
+            PAL 60.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFTVTunerVideoFormat.SECAM_B">
+            <summary>
+            SECAM B.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFTVTunerVideoFormat.SECAM_D">
+            <summary>
+            SECAM D.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFTVTunerVideoFormat.SECAM_G">
+            <summary>
+            SECAM G.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFTVTunerVideoFormat.SECAM_H">
+            <summary>
+            SECAM H.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFTVTunerVideoFormat.SECAM_K">
+            <summary>
+            SECAM K.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFTVTunerVideoFormat.SECAM_K1">
+            <summary>
+            SECAM K1.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFTVTunerVideoFormat.SECAM_L">
+            <summary>
+            SECAM L.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFTVTunerVideoFormat.SECAM_L1">
+            <summary>
+            SECAM L1.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFTVTunerVideoFormat.PAL_N_COMBO">
+            <summary>
+            PAL N combo.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFTVTunerVideoFormat.NTSCMask">
+            <summary>
+            NTSC mask.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFTVTunerVideoFormat.PALMask">
+            <summary>
+            PAL mask.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFTVTunerVideoFormat.SECAMMask">
+            <summary>
+            SECAM mask.
+            </summary>
+        </member>
+        <member name="T:VisioForge.Types.VFTVTunerSubChannel">
+            <summary>
+            TV tuner subchannel.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFTVTunerSubChannel.NoTune">
+            <summary>
+            No tune.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFTVTunerSubChannel.Default">
+            <summary>
+            Default.
+            </summary>
+        </member>
+        <member name="T:VisioForge.Types.VFVideoEditOutputFormat">
+            <summary>
+            Video Edit SDK output format.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFVideoEditOutputFormat.AVI">
+            <summary>
+            AVI.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFVideoEditOutputFormat.WMV">
+            <summary>
+            Windows Media Video.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFVideoEditOutputFormat.DV">
+            <summary>
+            DV.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFVideoEditOutputFormat.MKV">
+            <summary>
+            Matroska.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFVideoEditOutputFormat.PCM_ACM">
+            <summary>
+            PCM or ACM.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFVideoEditOutputFormat.WMA">
+            <summary>
+            Windows Media Audio.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFVideoEditOutputFormat.LAME">
+            <summary>
+            MP3 output using LAME encoder.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFVideoEditOutputFormat.Custom">
+            <summary>
+            Custom output format.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFVideoEditOutputFormat.OGGVorbis">
+            <summary>
+            OGG Vorbis.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFVideoEditOutputFormat.FFMPEG">
+            <summary>
+            FFMPEG codecs output.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFVideoEditOutputFormat.WebM">
+            <summary>
+            Google WebM output. http://www.webmproject.org/ .
+            </summary>
+        </member>
+        <member name="T:VisioForge.Types.VFVideoEditStatus">
+            <summary>
+            Status.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFVideoEditStatus.Work">
+            <summary>
+            Work.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFVideoEditStatus.Free">
+            <summary>
+            Free.
+            </summary>
+        </member>
+        <member name="T:VisioForge.Types.VFVideoEditMode">
+            <summary>
+            Video Edit SDK mode.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFVideoEditMode.Convert">
+            <summary>
+            Converting mode.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFVideoEditMode.Preview">
+            <summary>
+            Preview mode.
+            </summary>
+        </member>
+        <member name="T:VisioForge.Types.VFVideoEditAspectRatio">
+            <summary>
+            Video Edit SDK aspect ratio.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFVideoEditAspectRatio.Same">
+            <summary>
+            Same as input.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFVideoEditAspectRatio.AR4To3">
+            <summary>
+            Aspect ratio is 4:3.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFVideoEditAspectRatio.AR16To9">
+            <summary>
+            Aspect ratio is 16:9.
+            </summary>
+        </member>
+        <member name="T:VisioForge.Types.VFVideoEditStreamType">
+            <summary>
+            Stream type.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFVideoEditStreamType.Video">
+            <summary>
+            Video stream.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFVideoEditStreamType.Audio">
+            <summary>
+            Audio stream.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFVideoEditStreamType.Picture">
+            <summary>
+            Picture stream.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFVideoEditStreamType.VideoBlank">
+            <summary>
+            Fake video stream for OnPushFrame event.
+            </summary>
+        </member>
+        <member name="T:VisioForge.Types.VFVideoEditStretchMode">
+            <summary>
+            Stretch mode.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFVideoEditStretchMode.Stretch">
+            <summary>
+            Stretch video.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFVideoEditStretchMode.Letterbox">
+            <summary>
+            Letterbox mode.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFVideoEditStretchMode.Crop">
+            <summary>
+            Crop video.
+            </summary>
+        </member>
+        <member name="T:VisioForge.Types.VFPropertyPage">
+            <summary>
+            Property page type.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFPropertyPage.Default">
+            <summary>
+            Default
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFPropertyPage.VFWCapDisplay">
+            <summary>
+            Capture display dialog
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFPropertyPage.VFWCapFormat">
+            <summary>
+            Capture format dialog
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFPropertyPage.VFWCapSource">
+            <summary>
+            Capture source dialog
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFPropertyPage.VFWCompConfig">
+            <summary>
+            Compressor config
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFPropertyPage.VFWCompAbout">
+            <summary>
+            Compressor about
+            </summary>
+        </member>
+        <member name="T:VisioForge.Types.VFVideoEffectType">
+            <summary>
+            Video effect type.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFVideoEffectType.TextLogo">
+            <summary>
+            Text logo.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFVideoEffectType.GraphicalLogo">
+            <summary>
+            Graphical logo.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFVideoEffectType.Blue">
+            <summary>
+            Blue.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFVideoEffectType.Blur">
+            <summary>
+            Blur.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFVideoEffectType.ColorNoise">
+            <summary>
+            Color noise.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFVideoEffectType.Contrast">
+            <summary>
+            Contrast.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFVideoEffectType.Darkness">
+            <summary>
+            Darkness.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFVideoEffectType.FilterBlue">
+            <summary>
+            Filter blue.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFVideoEffectType.FilterBlue2">
+            <summary>
+            Filter blue 2.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFVideoEffectType.FilterGreen">
+            <summary>
+            Filter green.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFVideoEffectType.FilterGreen2">
+            <summary>
+            Filter green 2.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFVideoEffectType.FilterRed">
+            <summary>
+            Filter red.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFVideoEffectType.FilterRed2">
+            <summary>
+            Filter red.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFVideoEffectType.FlipDown">
+            <summary>
+            Flip down.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFVideoEffectType.FlipRight">
+            <summary>
+            Flip right.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFVideoEffectType.Green">
+            <summary>
+            Green.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFVideoEffectType.Greyscale">
+            <summary>
+            Grayscale.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFVideoEffectType.Invert">
+            <summary>
+            invert. 
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFVideoEffectType.Lightness">
+            <summary>
+            Lightness.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFVideoEffectType.Marble">
+            <summary>
+            Marble.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFVideoEffectType.MirrorDown">
+            <summary>
+            Mirror down.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFVideoEffectType.MirrorRight">
+            <summary>
+            Mirror right.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFVideoEffectType.MonoNoise">
+            <summary>
+            Mono noise.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFVideoEffectType.Mosaic">
+            <summary>
+            Mosaic.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFVideoEffectType.Posterize">
+            <summary>
+            Posterize.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFVideoEffectType.Red">
+            <summary>
+            Red.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFVideoEffectType.Saturation">
+            <summary>
+            Saturation.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFVideoEffectType.ShakeDown">
+            <summary>
+            Shake down.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFVideoEffectType.Solorize">
+            <summary>
+            Solorize.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFVideoEffectType.Spray">
+            <summary>
+            Spray.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFVideoEffectType.DenoiseCAST">
+            <summary>
+            Denoise CAST.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFVideoEffectType.DenoiseAdaptive">
+            <summary>
+            Denoise adaptive.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFVideoEffectType.DenoiseMosquito">
+            <summary>
+            Denoise mosquito.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFVideoEffectType.DeintBlend">
+            <summary>
+            Deinterlace blend.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFVideoEffectType.DeintTriangle">
+            <summary>
+            Deinterlace triangle.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFVideoEffectType.DeintCAVT">
+            <summary>
+            Deinterlace CAVT.
+            </summary>
+        </member>
+        <member name="T:VisioForge.Types.VFVideoEffectStretchMode">
+            <summary>
+            Stretch mode.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFVideoEffectStretchMode.Stretch">
+            <summary>
+            Stretch.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFVideoEffectStretchMode.Letterbox">
+            <summary>
+            Letterbox.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFVideoEffectStretchMode.Crop">
+            <summary>
+            Crop.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFVideoEffectStretchMode.None">
+            <summary>
+            None.
+            </summary>
+        </member>
+        <member name="T:VisioForge.Types.VFTextAntialiasingMode">
+            <summary>
+            Antialiasing mode.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFTextAntialiasingMode.SystemDefault">
+            <summary>
+            System default.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFTextAntialiasingMode.SingleBitPerPixelGridFit">
+            <summary>
+            Single bit per pixel (grid fit).
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFTextAntialiasingMode.SingleBitPerPixel">
+            <summary>
+            Single bit per pixel.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFTextAntialiasingMode.AntiAliasGridFit">
+            <summary>
+            Antialiasing (grid fit).
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFTextAntialiasingMode.AntiAlias">
+            <summary>
+            Antialiasing.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFTextAntialiasingMode.ClearTypeGridFit">
+            <summary>
+            ClearType (grid fit).
+            </summary>
+        </member>
+        <member name="T:VisioForge.Types.VFTextGradientMode">
+            <summary>
+            Text gradient mode.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFTextGradientMode.Horizontal">
+            <summary>
+            Horizontal.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFTextGradientMode.Vertical">
+            <summary>
+            Vertical.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFTextGradientMode.ForwardDiagonal">
+            <summary>
+            Forward diagonal.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFTextGradientMode.BackwardDiagonal">
+            <summary>
+            Backward diagonal.
+            </summary>
+        </member>
+        <member name="T:VisioForge.Types.VFTextEffectMode">
+            <summary>
+            Text effect mode.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFTextEffectMode.None">
+            <summary>
+            None.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFTextEffectMode.Inner">
+            <summary>
+            Inner.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFTextEffectMode.Outer">
+            <summary>
+            Outer.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFTextEffectMode.InnerAndOuter">
+            <summary>
+            Inner and outer.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFTextEffectMode.Embossed">
+            <summary>
+            Embossed.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFTextEffectMode.Outline">
+            <summary>
+            Outline.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFTextEffectMode.FilledOutline">
+            <summary>
+            Filled outline.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFTextEffectMode.Halo">
+            <summary>
+            Halo.
+            </summary>
+        </member>
+        <member name="T:VisioForge.Types.VFTextAlign">
+            <summary>
+            Text align.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFTextAlign.Left">
+            <summary>
+            Left.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFTextAlign.Center">
+            <summary>
+            Center.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFTextAlign.Right">
+            <summary>
+            Right.
+            </summary>
+        </member>
+        <member name="T:VisioForge.Types.VFTextDrawMode">
+            <summary>
+            Text draw mode.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFTextDrawMode.BicubicHQ">
+            <summary>
+            Bicubic HQ.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFTextDrawMode.BilinearHQ">
+            <summary>
+            Bilinear HQ.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFTextDrawMode.NearestNeighbor">
+            <summary>
+            Nearest neighbor.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFTextDrawMode.Bicubic">
+            <summary>
+            Bicubic.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFTextDrawMode.Bilinear">
+            <summary>
+            Bilinear.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFTextDrawMode.StandardHQ">
+            <summary>
+            Standard HQ,
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFTextDrawMode.StandardLQ">
+            <summary>
+            Standard LQ.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFTextDrawMode.SystemDefault">
+            <summary>
+            System default.
+            </summary>
+        </member>
+        <member name="T:VisioForge.Types.VFTextShapeType">
+            <summary>
+            Text shape type.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFTextShapeType.Rectangle">
+            <summary>
+            Rectangle.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFTextShapeType.Ellipse">
+            <summary>
+            Ellipse.
+            </summary>
+        </member>
+        <member name="T:VisioForge.Types.VFTextFlipMode">
+            <summary>
+            Text flip mode.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFTextFlipMode.None">
+            <summary>
+            None.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFTextFlipMode.X">
+            <summary>
+            X.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFTextFlipMode.Y">
+            <summary>
+            Y.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFTextFlipMode.XAndY">
+            <summary>
+            X and Y.
+            </summary>
+        </member>
+        <member name="T:VisioForge.Types.VFTextRotationMode">
+            <summary>
+            Text rotation mode.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFTextRotationMode.RmNone">
+            <summary>
+            None.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFTextRotationMode.Rm90">
+            <summary>
+            90 degrees.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFTextRotationMode.Rm180">
+            <summary>
+            180 degrees.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFTextRotationMode.Rm270">
+            <summary>
+            270 degrees.
+            </summary>
+        </member>
+        <member name="T:VisioForge.Types.VFResizeMode">
+            <summary>
+            Resize mode.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFResizeMode.CropOnly">
+            <summary>
+            Crop only.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFResizeMode.NearestNeighbor">
+            <summary>
+            Nearest neighbor.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFResizeMode.Bilinear">
+            <summary>
+            Bilinear.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFResizeMode.Bicubic">
+            <summary>
+            Bicubic.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFResizeMode.Lancroz">
+            <summary>
+            Lancroz.
+            </summary>
+        </member>
+        <member name="T:VisioForge.Types.VFChromaColor">
+            <summary>
+            Chroma color.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFChromaColor.Red">
+            <summary>
+            Red.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFChromaColor.Green">
+            <summary>
+            Green.
+            </summary>
+        </member>
+        <member name="F:VisioForge.Types.VFChromaColor.Blue">
+            <summary>
+            Blue.
+            </summary>
+        </member>
+    </members>
+</doc>
